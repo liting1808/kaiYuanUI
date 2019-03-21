@@ -1,0 +1,49 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 89px;
+}
+header .title{
+    display: flex;
+    font-size: 20px;
+    color: #ab8eeb;
+    align-items: center;
+    line-height: 70px;
+}
+header img{
+    padding-left: 20px;
+}
+header ul{
+    display: flex;
+    padding-right: 20px;
+}
+header ul li a{
+    font-size: 20px;
+    color: #ab8eeb;
+    display: block;
+    padding-left: 26px;
+    padding-right: 26px;
+    line-height: 70px;
+}
+
+body{
+    background:linear-gradient(to right,#5d8fa2 20%,#f9e17b 100%);
+}
+#wrapper #range{
+    right: -5%;
+    top:-5%
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

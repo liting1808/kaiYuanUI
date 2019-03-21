@@ -1,0 +1,372 @@
+@charset "utf-8";
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,input,textarea,p,th,td {
+    margin: 0;
+    padding: 0;
+}
+
+ol,ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input{
+    border: none;
+    outline: none;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+}
+
+/* 背景图 */
+body{
+	background: url(../img/bg.jpg);
+}
+
+/* 滚动条效果 */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb:horizontal {
+    border-radius: 6px;
+    background: #323437;
+}
+
+body::-webkit-scrollbar-button {
+    display: none;
+}
+
+body::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track-piece {
+    background: -webkit-gradient(linear, left);
+}
+
+body::-webkit-scrollbar-track-piece {
+    background: #212224;
+}
+
+/* 标题 */
+h1{
+	text-align: center;
+	font-size: 34px;
+	margin-top: 15px;
+	color: #fff;
+}
+
+/* 内容 */
+.content{
+	width: 100%;
+	height: 100%;
+}
+
+/* left */
+.left{
+	width: 33.33%;
+	height: 100%;
+	float: left;
+	padding-left: 60px;
+	padding-top: 50px;
+	box-sizing: border-box;
+}
+/* 等待办理 */
+.watting img{
+	float: left;
+	width: 16px;
+	height: 18px;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+.watting p{
+	float: left;
+	font-size: 20px;
+	color: #07ece7;
+}
+/* 等待办理图表 */
+#wattingCharts{
+	clear: both;
+	height: 250px;
+}
+/*等候时间*/
+.wattingTime img{
+	float: left;
+	width: 16px;
+	height: 18px;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+.wattingTime p{
+	float: left;
+	font-size: 20px;
+	color: #07ece7;
+	margin-bottom: 40px;
+}
+table{
+	clear: both;
+	color: #fff;
+	font-size: 18px;
+	margin-bottom: 70px;
+}
+td span{
+	color: #02a3ea;
+}
+/* 接待人员 */
+.reception img{
+	float: left;
+	width: 16px;
+	height: 18px;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+.reception p{
+	float: left;
+	font-size: 20px;
+	color: #07ece7;
+	margin-bottom: 30px;
+}
+/* 接待人员图表 */
+#reception{
+	clear: both;
+	height: 250px;
+}
+
+
+/* center */
+.center{
+	width: 33.33%;
+	height: 100%;
+	float: left;
+	box-sizing: border-box;
+	padding-top: 50px;
+	padding-left: 20px;
+}
+/* 地图 */
+#map{
+	width: 100%;
+	height: 450px;
+}
+
+/* 数据展现 */
+.dataShow{
+	overflow: hidden;
+	padding-top: 30px;
+}
+/* 当月数据展现 */
+.dataShow img{
+	float: left;
+	width: 16px;
+	height: 18px;
+	margin-top: 5px;
+	margin-right: 10px;
+	margin-left: 20px;
+}
+.dataShow p{
+	float: left;
+	font-size: 20px;
+	color: #07ece7;
+	margin-bottom: 30px;
+}
+/* 数据展现 */
+#dataShow{
+	clear: both;
+	height: 320px;
+	width: 100%;
+	overflow: hidden;
+	box-sizing: border-box;
+	border: 1px solid #fff;
+}
+.showTop{
+	width: 100%;
+	height: 40px;
+	box-sizing: border-box;
+	line-height: 40px;
+	background: #143f39;
+}
+.showTop li{
+	float: left;
+	width: 16.66%;
+	text-align: center;
+	cursor: pointer;
+	border-bottom: 1px solid #fff;
+}
+.showTop li:nth-child(1){
+	background: #f42945;
+	/*border-bottom: 1px solid #fff;*/
+}
+#dataShow .showCharts:nth-of-type(1){
+	display: block;
+}
+.showCharts{
+	clear: both;
+	width: 100%;
+	height: 280px;
+	display: none;
+}
+#dataShow .showCharts6-left{
+	float: left;
+	width: 50%;
+	height: 100%;
+	text-align: center;
+	position: relative;
+	box-sizing: border-box;
+	padding-top: 60px;
+	color: #fff;
+}
+.showCharts6-left img{
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+.showCharts6-left p{
+	position: absolute;
+	left: 41%;
+}
+.showCharts6-left p:nth-of-type(1){
+	top: 25%;
+}
+.showCharts6-left p:nth-of-type(2){
+	top: 45%;
+	color: #e1e372;
+}
+#dataShow .showCharts6-right{
+	float: left;
+	width: 50%;
+	height: 100%;
+	text-align: center;
+	position: relative;
+	box-sizing: border-box;
+	padding-top: 60px;
+	color: #fff;
+}
+.showCharts6-right img{
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+.showCharts6-right p{
+	position: absolute;
+	left: 41%;
+}
+.showCharts6-right p:nth-of-type(1){
+	top: 25%;
+}
+.showCharts6-right p:nth-of-type(2){
+	top: 45%;
+	color: #e1e372;
+}
+h6{
+	font-size: 20px;
+}
+
+
+/* right */
+.right{
+	width: 33.33%;
+	height: 100%;
+	float: left;
+	box-sizing: border-box;
+	padding-left: 50px;
+	padding-top: 50px;
+}
+/* 大厅 */
+.hall img{
+	float: left;
+	width: 16px;
+	height: 18px;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+.hall p{
+	float: left;
+	font-size: 20px;
+	color: #07ece7;
+}
+/* 大厅图表 */
+#hall{
+	clear: both;
+	height: 250px;
+}
+
+/* 人流量变化 */
+.change{
+	margin-top: 30px;
+}
+.change img{
+	float: left;
+	width: 16px;
+	height: 18px;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+.change p{
+	float: left;
+	font-size: 20px;
+	color: #07ece7;
+}
+/* 人流量变化图表 */
+#change{
+	clear: both;
+	height: 250px;
+}
+
+/* 当月业务办理量 */
+.business{
+	margin-top: 20px;
+}
+.business img{
+	float: left;
+	width: 16px;
+	height: 18px;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+.business p{
+	float: left;
+	font-size: 20px;
+	color: #07ece7;
+}
+/* 当月业务办理量图表 */
+#business{
+	clear: both;
+	height: 250px;
+}
+
+
+
+/* 媒体查询 */
+@media screen and (max-width: 1660px){
+	.content{
+		display: flex;
+		flex-direction: column;
+		/*justify-content: center;*/
+		align-items: center;
+	}
+	table{
+		width: 100%;
+	}
+	.left{
+		width: 840px;
+		flex:1;
+	}
+	.center{
+		width: 840px;
+		flex:1;
+	}
+	.right{
+		width: 840px;
+		flex:1;
+		padding-left: 0px;
+		padding-top: 250px;
+	}
+	#map{
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
+}

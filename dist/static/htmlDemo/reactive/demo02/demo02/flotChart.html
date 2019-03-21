@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/flotChart.css">
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+    <title>UltimatePro Admin - Dashboard Flot Chart</title>
+</head>
+<body>
+    <!-- 头部区域 -->
+    <div class="top">
+        <!-- logo部分 -->
+        <div class="logo">
+            <img src="img/Dashboard/logo.png" alt="" class="indexImg">
+            <p>UltimatePro Admin</p>
+        </div>
+        <!-- 个人信息部分 -->
+        <div class="information">
+            <img src="img/Dashboard/menu.png" class="menu" alt="">
+            <input type="text" class="search" placeholder="Search">
+            <input type="text" class="redSearch" disabled>
+            <div class="personBox">
+                <img src="img/Dashboard/Messages.png" class="set" />
+                <span></span>
+                <div class="alert">
+                    <div class="message">
+                        <p>Messages</p>
+                        <input type="button" value="Clear All">
+                    </div>
+                    <div class="friends">
+                        <div class="friendInt">
+                            <img src="img/Dashboard/friend1.png" class="friend">
+                            <div class="friInf">
+                                <div class="names">
+                                    <p class="name">Lorem Ipsum</p>
+                                    <p class="time">
+                                        <img src="img/Dashboard/time.png" alt="">
+                                        15 mins
+                                    </p>
+                                </div>
+                                <div class="chat">
+                                    Lorem ipsum dolor sit amet , cons...
+                                </div>
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <img src="img/Dashboard/friend2.png" class="friend">
+                            <div class="friInf">
+                                <div class="names">
+                                    <p class="name">Nullam tempor</p>
+                                    <p class="time">
+                                        <img src="img/Dashboard/time.png" alt="">
+                                        4 hours
+                                    </p>
+                                </div>
+                                <div class="chat">
+                                    Curabitur facilisis erat quis metus...
+                                </div>
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <img src="img/Dashboard/friend3.png" class="friend">
+                            <div class="friInf">
+                                <div class="names">
+                                    <p class="name">Proin venenatis</p>
+                                    <p class="time">
+                                        <img src="img/Dashboard/time.png" alt="">
+                                        today
+                                    </p>
+                                </div>
+                                <div class="chat">
+                                    Vestibulum nec ligual nec quam s...
+                                </div>
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <img src="img/Dashboard/friend1.png" class="friend">
+                            <div class="friInf">
+                                <div class="names">
+                                    <p class="name">Lorem lpsum</p>
+                                    <p class="time">
+                                        <img src="img/Dashboard/time.png" alt="">
+                                        15 mins
+                                    </p>
+                                </div>
+                                <div class="chat">
+                                    Lorem ipsum dolor sit amet , cons...
+                                </div>
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <img src="img/Dashboard/friend2.png" class="friend">
+                            <div class="friInf">
+                                <div class="names">
+                                    <p class="name">Lorem lpsum</p>
+                                    <p class="time">
+                                        <img src="img/Dashboard/time.png" alt="">
+                                        4 hours
+                                    </p>
+                                </div>
+                                <div class="chat">
+                                    Lorem ipsum dolor sit amet , cons...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="see">See all e-Mails</div>
+                </div>
+                <img src="img/Dashboard/Notifications.png" class="set" />
+                <span></span>
+                <div class="alert">
+                    <div class="message">
+                        <p>Notifications</p>
+                        <input type="button" value="Clear All">
+                    </div>
+                    <div class="friends">
+                        <div class="friendInt">
+                            <img src="img/Dashboard/Not1.png" class="friend">
+                            <div class="friInf">
+                                Curabitur id eros quis nunc suscipit b...
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <img src="img/Dashboard/Not2.png" class="friend">
+                            <div class="friInf">
+                                 Duis malesuada justo eu sapien elem...
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <img src="img/Dashboard/Not3.png" class="friend">
+                            <div class="friInf">
+                                 Donec at nisi sit amet tortor commo...
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <img src="img/Dashboard/Not4.png" class="friend">
+                            <div class="friInf">
+                                 In gravida mauris et nisi
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <img src="img/Dashboard/Not5.png" class="friend">
+                            <div class="friInf">
+                                 Praesent eu lacus in libero dictum ...
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <img src="img/Dashboard/Not6.png" class="friend">
+                            <div class="friInf">
+                                 Nunc fringilla lorem 
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <img src="img/Dashboard/Not1.png" class="friend">
+                            <div class="friInf">
+                                 Nullam euismod dolor ut quam inter....
+                            </div>
+                        </div>
+                    </div>
+                    <div class="see">View all</div>
+                </div>
+                <img src="img/Dashboard/tasks.png" class="set" />
+                <span></span>
+                <div class="alert">
+                    <div class="message">
+                        <p>Tasks</p>
+                        <input type="button" value="Clear All">
+                    </div>
+                    <div class="friends">
+                        <div class="friendInt">
+                            <div class="friInf">
+                                <p class="name">Lorem ipsum dolor sit amet</p>
+                                <p class="time">30%</p>
+                            </div>
+                            <div class="chat">
+                                <div class="chatZhezhao"></div>
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <div class="friInf">
+                                <p class="name">Vestibulum nec ligual</p>
+                                <p class="time">20%</p>
+                            </div>
+                            <div class="chat">
+                                <div class="chatZhezhao"></div>
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <div class="friInf">
+                                <p class="name">Donec id leo ut ipsum</p>
+                                <p class="time">70%</p>
+                            </div>
+                            <div class="chat">
+                                <div class="chatZhezhao"></div>
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <div class="friInf">
+                                <p class="name">Praesent vitae tellus</p>
+                                <p class="time">40%</p>
+                            </div>
+                            <div class="chat">
+                                <div class="chatZhezhao"></div>
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <div class="friInf">
+                                <p class="name">Nam varius sapien</p>
+                                <p class="time">80%</p>
+                            </div>
+                            <div class="chat">
+                                <div class="chatZhezhao"></div>
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <div class="friInf">
+                                <p class="name">Nunc fringilla</p>
+                                <p class="time">90%</p>
+                            </div>
+                            <div class="chat">
+                                <div class="chatZhezhao"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="see">View all tasks</div>
+                </div>
+                <img src="img/Dashboard/tx.png" alt="" class="set">
+                <div class="alert">
+                    <div class="alertTX">
+                        <img src="img/Dashboard/alertTX.png" alt="">
+                        <div class="ziliao">
+                            <h3>Samuel Brus</h3>
+                            <p>samuel@gmail.com</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><a href="">My Profile</a></li>
+                        <li><a href="">My Balance</a></li>
+                        <li><a href="">Inbox</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="">Account Setting</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="">Logout</a></li>
+                    </ul>
+                    <div class="profile">View Profile</div>
+                </div>
+                <img src="img/Dashboard/setting.png" class="setting set" />
+            </div>
+        </div>
+    </div>
+
+    <!-- 内容区域 -->
+    <div class="centenBox">
+        <!-- 导航条部分 -->
+        <div class="nav">
+            <div class="navBox">
+                <h3>PERSONAL</h3>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Dashboard.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Dashboard</a>
+                    <ul>
+                        <li><a href="javascript:;">Main Dashboard</a></li>
+                        <li><a href="javascript:;">e-Commerce Dashboard</a></li>
+                        <li><a href="javascript:;">Analytics</a></li>
+                        <li><a href="javascript:;">Hospital</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Layout-Options.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Layout Options</a>
+                    <ul>
+                        <li><a href="javascript:;">Boxed</a></li>
+                        <li><a href="javascript:;">Fixed</a></li>
+                        <li><a href="javascript:;">Mini Sidebar</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Page-Layouts.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Page Layouts</a>
+                    <ul>
+                        <li><a href="javascript:;">Inner Left Sidebar</a></li>
+                        <li><a href="javascript:;">Inner Right Sidebar</a></li>
+                        <li><a href="javascript:;">Inner Fixed Left Sidebar</a></li>
+                        <li><a href="javascript:;">Inner Fixed Right Sidebar</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navBox">
+                <h3>APPS</h3>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/MailBox.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">MailBox</a>
+                    <ul>
+                        <li><a href="javascript:;">Inbox</a></li>
+                        <li><a href="javascript:;">Compose</a></li>
+                        <li><a href="javascript:;">Read</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Contact.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Contact</a>
+                    <ul>
+                        <li><a href="javascript:;">Chat app</a></li>
+                        <li><a href="javascript:;">Contact / Employee</a></li>
+                        <li><a href="javascript:;">Userlist Grid</a></li>
+                        <li><a href="javascript:;">Userlist</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Extra.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Extra</a>
+                    <ul>
+                        <li><a href="javascript:;">Support Ticket</a></li>
+                        <li><a href="javascript:;">Calendar</a></li>
+                        <li><a href="javascript:;">Profile</a></li>
+                        <li><a href="javascript:;">Project DashBoard</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navBox">
+                <h3>UI</h3>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/UI-Elements.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">UI Elements</a>
+                    <ul>
+                        <li><a href="javascript:;">Badges</a></li>
+                        <li><a href="javascript:;">Border</a></li>
+                        <li><a href="javascript:;">Buttons</a></li>
+                        <li><a href="javascript:;">Color</a></li>
+                        <li><a href="javascript:;">Dropdown</a></li>
+                        <li><a href="javascript:;">Dropdown Grid</a></li>
+                        <li><a href="javascript:;">Typography</a></li>
+                        <li><a href="javascript:;">Progress Bars</a></li>
+                        <li><a href="javascript:;">Grid</a></li>
+                        <li><a href="javascript:;">Ribbons</a></li>
+                        <li><a href="javascript:;">Sliders</a></li>
+                        <li><a href="javascript:;">Tabs</a></li>
+                        <li><a href="javascript:;">Timeline</a></li>
+                        <li><a href="javascript:;">Horizontal Timeline</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Icons.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Icons</a>
+                    <ul>
+                        <li><a href="javascript:;">Font Awesome</a></li>
+                        <li><a href="javascript:;">Glyphicons</a></li>
+                        <li><a href="javascript:;">Meterial Icons</a></li>
+                        <li><a href="javascript:;">Themy Icons</a></li>
+                        <li><a href="javascript:;">Simple Line Icons</a></li>
+                        <li><a href="javascript:;">Gryptocoins Icons</a></li>
+                        <li><a href="javascript:;">Flag Icons</a></li>
+                        <li><a href="javascript:;">Weather Icons</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Components.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Components</a>
+                    <ul>
+                        <li><a href="javascript:;">Bootstrap Switch</a></li>
+                        <li><a href="javascript:;">Date Paginator</a></li>
+                        <li><a href="javascript:;">Advanced Medias</a></li>
+                        <li><a href="javascript:;">Modals</a></li>
+                        <li><a href="javascript:;">Nestable</a></li>
+                        <li><a href="javascript:;">Notification</a></li>
+                        <li><a href="javascript:;">Draggable Protlets</a></li>
+                        <li><a href="javascript:;">Sweet Alert</a></li>
+                        <li><a href="javascript:;">Range Slider</a></li>
+                        <li><a href="javascript:;">Ratings</a></li>
+                        <li><a href="javascript:;">Animations</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Box-Cards.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Box Cards</a>
+                    <ul>
+                        <li><a href="javascript:;">User Card</a></li>
+                        <li><a href="javascript:;">Advanced Card</a></li>
+                        <li><a href="javascript:;">Basic Card</a></li>
+                        <li><a href="javascript:;">Card Color</a></li>
+                        <li><a href="javascript:;">Card Group</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Widgets.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Widgets</a>
+                    <ul>
+                        <li><a href="javascript:;">Blog</a></li>
+                        <li><a href="javascript:;">Chart</a></li>
+                        <li><a href="javascript:;">List</a></li>
+                        <li><a href="javascript:;">Soical</a></li>
+                        <li><a href="javascript:;">Statistic</a></li>
+                        <li><a href="javascript:;">Weather</a></li>
+                        <li><a href="javascript:;">Widgets</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navBox">
+                <h3>FORMS And TABLES</h3>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Forms.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Forms</a>
+                    <ul>
+                        <li><a href="javascript:;">Advanced Elements</a></li>
+                        <li><a href="javascript:;">Code Editor</a></li>
+                        <li><a href="javascript:;">Markdown</a></li>
+                        <li><a href="javascript:;">Editors</a></li>
+                        <li><a href="javascript:;">Form Validation</a></li>
+                        <li><a href="javascript:;">Form Wizard</a></li>
+                        <li><a href="javascript:;">General Elements</a></li>
+                        <li><a href="javascript:;">Formatter</a></li>
+                        <li><a href="javascript:;">Xeditable Editor</a></li>
+                        <li><a href="javascript:;">Dropzone</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Tables.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Tables</a>
+                    <ul>
+                        <li><a href="javascript:;">Simple tables</a></li>
+                        <li><a href="javascript:;">Date tables</a></li>
+                        <li><a href="javascript:;">Editable tables</a></li>
+                        <li><a href="javascript:;">Table Color</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navBox">
+                <h3>CHARTS</h3>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/ChartJS.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu noBackground">ChartJS</a>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Flot.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu noBackground">Flot</a>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Inline-charts.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu noBackground">Inline charts</a>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Morris.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu noBackground">Morris</a>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Peity.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu noBackground">Peity</a>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Chartist.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu noBackground">Chartist</a>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/C3-Charts.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">C3 Charts</a>
+                    <ul>
+                        <li><a href="javascript:;">Axis Chart</a></li>
+                        <li><a href="javascript:;">Bar Chart</a></li>
+                        <li><a href="javascript:;">Data Chart</a></li>
+                        <li><a href="javascript:;">Line Chart</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Echarts.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Echarts</a>
+                    <ul>
+                        <li><a href="javascript:;">Basic Charts</a></li>
+                        <li><a href="javascript:;">Bar Chart</a></li>
+                        <li><a href="javascript:;">Pie & Doughnut Chart</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navBox">
+                <h3>EXTRA COMPONENTS</h3>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Emails.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu noBackground">Emails</a>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Map.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Map</a>
+                    <ul>
+                        <li><a href="javascript:;">Google Map</a></li>
+                        <li><a href="javascript:;">Vector Map</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Extension.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Extension</a>
+                    <ul>
+                        <li><a href="javascript:;">Fullscreen</a></li>
+                        <li><a href="javascript:;">Pace</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navBox">
+                <h3>SAMPLE PAGES</h3>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Ecommerce Pages.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Ecommerce Pages</a>
+                    <ul>
+                        <li><a href="javascript:;">Products</a></li>
+                        <li><a href="javascript:;">Products Card</a></li>
+                        <li><a href="javascript:;">Products Edit</a></li>
+                        <li><a href="javascript:;">Products Details</a></li>
+                        <li><a href="javascript:;">Products Orders</a></li>
+                        <li><a href="javascript:;">Products Checkout</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Authentication.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Authentication</a>
+                    <ul>
+                        <li><a href="Login.html">Login</a></li>
+                        <li><a href="Login.html">Login 2</a></li>
+                        <li><a href="Register.html">Register</a></li>
+                        <li><a href="Register.html">Register 2</a></li>
+                        <li><a href="lockscreen.html">Lockscreen</a></li>
+                        <li><a href="RecoverPass.html">Recover password</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Invoice.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Invoice</a>
+                    <ul>
+                        <li><a href="javascript:;">Invoice</a></li>
+                        <li><a href="javascript:;">Invoice List</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Error-Pages.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Error Pages</a>
+                    <ul>
+                        <li><a href="javascript:;">Error 400</a></li>
+                        <li><a href="javascript:;">Error 403</a></li>
+                        <li><a href="javascript:;">Error 404</a></li>
+                        <li><a href="javascript:;">Error 500</a></li>
+                        <li><a href="javascript:;">Error 503</a></li>
+                        <li><a href="javascript:;">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Sample-Pages.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Sample Pages</a>
+                    <ul>
+                        <li><a href="javascript:;">Blank</a></li>
+                        <li><a href="javascript:;">Comming Soon</a></li>
+                        <li><a href="javascript:;">Custom Scrolls</a></li>
+                        <li><a href="javascript:;">FAQ</a></li>
+                        <li><a href="javascript:;">Gallery</a></li>
+                        <li><a href="javascript:;">Lightbox Popup</a></li>
+                        <li><a href="javascript:;">Pricing</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navBox last-navBox">
+                <h3>EXTRA</h3>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Multilevel.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Multilevel</a>
+                    <ul>
+                        <li><a href="javascript:;">Level One</a></li>
+                        <li><a href="javascript:;">Level Two</a></li>
+                        <li><a href="javascript:;">Level Three</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Log-Out.png" alt="">
+                    </div>
+                    <a href="Login.html" target="" class="nav-menu noBackground">Log Out</a>
+                </div>
+            </div>
+        </div>
+        <!-- 内容部分 -->
+        <div class="content">
+            <div class="contents">
+                <div class="conTit">
+                    <h3>Flot Chart</h3>
+                    <img src="img/Dashboard/home.png" alt="">
+                    <p> - chart - Flot chart</p>
+                </div>
+                <div class="haha">
+                	<h3>Interactive Area Chart</h3>
+                	<div id="Interactive"></div>
+                </div>
+                <div class="haha">
+                	<h3>Line Chart</h3>
+                	<div id="Line"></div>
+                </div>
+                <div class="haha">
+                	<h3>Full Width Area Chart</h3>
+                	<div id="Full"></div>
+                </div>
+                <div class="haha">
+                	<h3>Bar Chart</h3>
+                	<div id="Bar"></div>
+                </div>
+                <div class="haha">
+                	<h3>Donut Chart</h3>
+                	<div id="Donut"></div>
+                </div>
+            </div>
+            <!-- footer部分 -->
+            <div class="footer">
+                <p>&copy; 2018 Multi-Purpose Themes. All Rights Reserved</p>
+                <p>FAQ · Purchase Now</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script type="text/javascript" src="js/data/Interactive.js"></script>
+<script type="text/javascript" src="js/data/line.js"></script>
+<script type="text/javascript" src="js/data/full.js"></script>
+<script type="text/javascript" src="js/data/bar.js"></script>
+<script type="text/javascript" src="js/data/donut.js"></script>
+<script type="text/javascript" src="js/Dashboard.js"></script>

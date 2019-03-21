@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>交换选项</title>
+    <style type="text/css">
+    html {
+        box-sizing: border-box;
+        height: 100%;
+        font-size: 10px;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        color: #0f273d;
+        font-family: 'Lato', sans-serif;
+        background: #323437;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    .swappy-radios label {
+        display: block;
+        position: relative;
+        padding-left: 4rem;
+        margin-bottom: 1.5rem;
+        cursor: pointer;
+        font-size: 2rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        color: #555;
+    }
+
+    .swappy-radios label:hover input~.radio {
+        opacity: 0.8;
+    }
+
+    .swappy-radios input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    .swappy-radios input:checked~span {
+        color: #0bae72;
+        transition: color .5s;
+    }
+
+    .swappy-radios input:checked~.radio {
+        background-color: #0ac07d;
+        opacity: 1 !important;
+    }
+
+    .swappy-radios input:checked~.radio::after {
+        opacity: 1;
+    }
+
+    .swappy-radios .radio {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 2.5rem;
+        width: 2.5rem;
+        background: #c9ded6;
+        border-radius: 50%;
+    }
+
+    .swappy-radios .radio::after {
+        display: block;
+        content: '';
+        position: absolute;
+        opacity: 0;
+        top: .5rem;
+        left: .5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        background: #fff;
+    }
+     #download {
+      display: block;
+      position: fixed;
+      z-index: 999999999999999999;
+      top: 20px;
+      right: 20px;
+      padding: 10px;
+      background: #12c2e9; /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      color: #fff;
+      text-shadow: 1px 1px 10px #000;
+      text-decoration: none;
+      border-radius: 10px;
+      animation: downl .2s linear infinite;
+    }
+
+    @keyframes downl {
+      0% {
+        transform: translateX(-2px);
+      }
+      50% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-2px);
+      }
+    </style>
+</head>
+
+<body>
+    <a id="download" href="/static/htmlDemo/JQuery/demo20/demo20.zip" download="交换选项.zip">点击下载</a>
+    <div class="swappy-radios" role="radiogroup" aria-labelledby="swappy-radios-label">
+        <h3 id="swappy-radios-label">Select an option</h3>
+        <label>
+            <input type="radio" name="options" checked /><span class="radio"></span>
+            <span>First option</span>
+        </label>
+        <label>
+            <input type="radio" name="options" /><span class="radio"></span>
+            <span>Second option</span>
+        </label>
+        <label>
+            <input type="radio" name="options" /><span class="radio"></span>
+            <span>Third option</span>
+        </label>
+        <label>
+            <input type="radio" name="options" /><span class="radio"></span>
+            <span>Fourth option</span>
+        </label>
+        <label>
+            <input type="radio" name="options" /><span class="radio"></span>
+            <span>Last option</span>
+        </label>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+let currentValue = 1;
+const timeout = 0.75;
+const radios = document.querySelectorAll('.swappy-radios input');
+const fakeRadios = document.querySelectorAll('.swappy-radios .radio');
+
+//This next bit kinda sucks and could be improved.
+//For simplicity, I'm assuming that the distance between the first and second radios is indicative of the distance between all radios. This will fail if one of the options goes onto two lines.
+//I should really move each radio independantly depending on its own distance to its neighbour. Oh well ˉ\_(ツ)_/ˉ
+//TODO ^^^
+const firstRadioY = document.querySelector('.swappy-radios label:nth-of-type(1) .radio').getBoundingClientRect().y;
+const secondRadioY = document.querySelector('.swappy-radios label:nth-of-type(2) .radio').getBoundingClientRect().y;
+const indicitiveDistance = secondRadioY - firstRadioY;
+//End suckyness :D
+
+//Apply CSS delays in JS, so that if JS doesn't load, it doesn't delay selected radio colour change
+//I'm applying background style delay here so that it doesn't appear slow if JS is disabled/broken
+fakeRadios.forEach(function(radio) {
+    radio.style.cssText = `transition: background 0s ${timeout}s;`;
+});
+//Have to do this bit the long way (i.e. with a <style> element) becuase you can't do inline pseudo element syles
+const css = `.radio::after {transition: opacity 0s ${timeout}s;}`
+const head = document.head;
+const style = document.createElement('style');
+style.type = 'text/css';
+style.appendChild(document.createTextNode(css));
+head.appendChild(style);
+//End no-js animation fallbacks.
+
+radios.forEach(function(radio, i) {
+    //Add an attr to make finding and styling the correct element a lot easier
+    radio.parentElement.setAttribute('data-index', i + 1);
+
+    //The meat: set up the change listener!
+    radio.addEventListener('change', function() {
+        //Stop weirdness of incomplete animation occuring. disable radios until complete.
+        temporarilyDisable();
+
+        //remove old style tag
+        removeStyles();
+        const nextValue = this.parentElement.dataset.index;
+
+        const oldRadio = document.querySelector(`[data-index="${currentValue}"] .radio`);
+        const newRadio = this.nextSibling;
+        const oldRect = oldRadio.getBoundingClientRect();
+        const newRect = newRadio.getBoundingClientRect();
+
+        //Pixel distance between previous and newly-selected radios
+        const yDiff = Math.abs(oldRect.y - newRect.y);
+
+        //Direction. Is the new option higher or lower than the old option?
+        const dirDown = oldRect.y - newRect.y > 0 ? true : false;
+
+        //Figure out which unselected radios actually need to move 
+        //(we don't necessarily want to move them all)
+        const othersToMove = [];
+        const lowEnd = Math.min(currentValue, nextValue);
+        const highEnd = Math.max(currentValue, nextValue);
+
+        const inBetweenies = range(lowEnd, highEnd, dirDown);
+        let othersCss = '';
+        inBetweenies.map(option => {
+            //If there's more than one, add a subtle stagger effect
+            const staggerDelay = inBetweenies.length > 1 ? 0.1 / inBetweenies.length * option : 0;
+            othersCss += `
+        [data-index="${option}"] .radio {
+          animation: moveOthers ${timeout - staggerDelay}s ${staggerDelay}s;
+        }
+      `;
+        });
+
+        const css = `
+      ${othersCss}
+      [data-index="${currentValue}"] .radio { 
+        animation: moveIt ${timeout}s; 
+      }
+      @keyframes moveIt {
+        0% { transform: translateX(0); }
+        33% { transform: translateX(-3rem) translateY(0); }
+        66% { transform: translateX(-3rem) translateY(${dirDown ? '-' : ''}${yDiff}px); }
+        100% { transform: translateX(0) translateY(${dirDown ? '-' : ''}${yDiff}px); }
+      }
+      @keyframes moveOthers {
+        0% { transform: translateY(0); }
+        33% { transform: translateY(0); }
+        66% { transform: translateY(${dirDown ? '' : '-'}${indicitiveDistance}px); }
+        100% { transform: translateY(${dirDown ? '' : '-'}${indicitiveDistance}px); }
+      }
+  `;
+        appendStyles(css);
+        currentValue = nextValue;
+    });
+});
+
+function appendStyles(css) {
+    const head = document.head;
+    const style = document.createElement('style');
+    style.type = 'text/css';
+    style.id = 'swappy-radio-styles';
+    style.appendChild(document.createTextNode(css));
+    head.appendChild(style);
+}
+
+function removeStyles() {
+    const node = document.getElementById('swappy-radio-styles');
+    if (node && node.parentNode) {
+        node.parentNode.removeChild(node);
+    }
+}
+
+function range(start, end, dirDown) {
+    let extra = 1;
+    if (dirDown) {
+        extra = 0;
+    }
+    return [...Array(end - start).keys()].map(v => start + v + extra);
+}
+
+function temporarilyDisable() {
+    radios.forEach((item) => {
+        item.setAttribute('disabled', true);
+        setTimeout(() => {
+            item.removeAttribute('disabled');
+        }, timeout * 1000);
+    });
+}
+</script>

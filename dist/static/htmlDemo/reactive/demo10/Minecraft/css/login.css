@@ -1,0 +1,169 @@
+.LoginCon{
+	width: 41.6%;
+	height: 660px;
+	margin: 0 auto;
+	padding-top: 50px;
+	overflow: hidden;
+}
+.LoginCon h3{
+	font-size: 34px;
+	margin-bottom: 15px;
+}
+.LoginCon h5{
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+.LoginCon p{
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+.LoginCon input{
+	width: 100%;
+	height: 50px;
+	font-size: 30px;
+	text-indent: 20px;
+	margin-bottom: 15px;
+	border: 1px solid black;
+	box-sizing: border-box;
+}
+.LoginCon #btn{
+	height: 65px;
+	background: #36b030;
+	border-left: 4px solid #258e18;
+	border-right: 4px solid #4dd727;
+	border-top: 4px solid #63fc1f;
+	border-bottom: 4px solid #258e18;
+	color: #fff;
+	transition: all .5s;
+}
+#btn:hover{
+	background: #404040;
+	transform: scale(1.1);
+	border-left: 4px solid #303030;
+	border-right: 4px solid #7a7a7a;
+	border-top: 4px solid #7a7a7a;
+	border-bottom: 4px solid #303030;
+}
+.LoginCon p a{
+	color: #288123;
+	text-decoration: underline;
+}
+
+
+
+/*媒体查询*/
+@media screen and (max-width: 1920px){
+	.LoginCon{
+		width: 41.6%;
+	}
+}
+@media screen and (max-width: 1850px){
+	.LoginCon{
+		width: 43%;
+	}
+}
+@media screen and (max-width: 1800px){
+	.LoginCon{
+		width: 44.5%;
+	}
+}
+@media screen and (max-width: 1750px){
+	.LoginCon{
+		width: 45.7%;
+	}
+}
+@media screen and (max-width: 1700px){
+	.LoginCon{
+		width: 47%;
+	}
+}
+@media screen and (max-width: 1650px){
+	.LoginCon{
+		width: 48.5%;
+	}
+}
+@media screen and (max-width: 1600px){
+	.LoginCon{
+		width: 50%;
+	}
+}
+@media screen and (max-width: 1550px){
+	.LoginCon{
+		width: 51.6%;
+	}
+}
+@media screen and (max-width: 1500px){
+	.LoginCon{
+		width: 53.5%;
+	}
+}
+@media screen and (max-width: 1450px){
+	.LoginCon{
+		width: 55%;
+	}
+}
+@media screen and (max-width: 1400px){
+	.LoginCon{
+		width: 57%;
+	}
+}
+@media screen and (max-width: 1350px){
+	.LoginCon{
+		width: 59%;
+	}
+}
+@media screen and (max-width: 1300px){
+	.LoginCon{
+		width: 61.5%;
+	}
+}
+@media screen and (max-width: 1250px){
+	.LoginCon{
+		width: 64%;
+	}
+}
+@media screen and (max-width: 1200px){
+	.LoginCon{
+		width: 66.6%;
+	}
+}
+@media screen and (max-width: 1150px){
+	.LoginCon{
+		width: 69.5%;
+	}
+}
+@media screen and (max-width: 1100px){
+	.LoginCon{
+		width: 72.7%;
+	}
+}
+@media screen and (max-width: 1050px){
+	.LoginCon{
+		width: 76%;
+	}
+}
+@media screen and (max-width: 1000px){
+	.LoginCon{
+		width: 80%;
+	}
+}
+@media screen and (max-width: 950px){
+	.LoginCon{
+		width: 84%;
+	}
+}
+@media screen and (max-width: 900px){
+	.LoginCon{
+		width: 88%;
+	}
+}
+@media screen and (max-width: 850px){
+	.LoginCon{
+		width: 94%;
+	}
+}
+@media screen and (max-width: 800px){
+	.LoginCon{
+		width:100%;
+	}
+}

@@ -1,0 +1,156 @@
+.contents{
+    width: 100%;
+    padding-top: 15px;
+    overflow: hidden;
+    padding: 10px 225px;
+    box-sizing: border-box;
+}
+.contents .conTit{
+    vertical-align: middle;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.contents .conTit h3{
+    display: table;
+    width: 130px;
+    height: 45px;
+    border-right: 1px solid #4b4e5e;
+    line-height: 45px;
+    float: left;
+    color: #d2d9e7;
+    font-size: 20px;
+}
+.conTit img{
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 13px;
+}
+.conTit p{
+    margin-top: 13px;
+    margin-left: 10px;
+    font-size: 16px;
+    float: left;
+    color: #d2d9e7;
+}
+.haha{
+	width: 100%;
+	height: 500px;
+	background: #323437;
+    border-top: 1px solid #3e4044;
+	margin-bottom: 30px;
+}
+.haha h3{
+	height: 100px;
+	line-height: 100px;
+	margin-left: 3%;
+	border-bottom: 1px solid #3e4044;
+	font-size: 25px;
+	color: #d2d9e7;
+}
+.haha div:nth-of-type(1){
+	width: 100%;
+	height: 400px;
+}
+
+/* footer部分 */
+.footer{
+    width: 100%;
+    height: 50px;
+    background: #323437;
+    border-top: 1px solid #3e4044;
+    line-height: 50px;
+    color: #d2d9e7;
+}
+.footer p:nth-child(1){
+    float: left;
+    margin-left: 50px;
+}
+.footer p:nth-child(2){
+    float: right;
+    margin-right: 50px;
+}
+
+
+
+/*媒体查询*/
+@media screen and (max-width: 1920px){
+    .contents{
+        padding: 10px 207px;
+    }
+}
+@media screen and (max-width: 1850px){
+    .contents{
+        padding: 10px 189px;
+    }
+}
+@media screen and (max-width: 1800px){
+    .contents{
+        padding: 10px 162px;
+    }
+}
+@media screen and (max-width: 1750px){
+    .contents{
+        padding: 10px 136px;
+    }
+}
+@media screen and (max-width: 1700px){
+    .contents{
+        padding: 10px 112px;
+    }
+}
+@media screen and (max-width: 1650px){
+    .contents{
+        padding: 10px 88px;
+    }
+}
+@media screen and (max-width: 1600px){
+    .contents{
+        padding: 10px 63px;
+    }
+}
+@media screen and (max-width: 1550px){
+    .contents{
+        padding: 10px 32px;
+    }
+}
+@media screen and (max-width: 1500px){
+    .contents{
+        padding: 10px 15px;
+    }
+}
+@media screen and (max-width: 950px){
+    .footer p:nth-child(1){
+        margin: 0
+    }
+    .footer p:nth-child(2){
+        margin: 0
+    }
+}
+@media screen and (max-width: 600px){
+    .footer p:nth-child(1){
+        font-size: 12px;
+    }
+    .footer p:nth-child(2){
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 500px){
+    .conTit p:nth-of-type(1){
+        display: none;
+    }
+    .conTit .data p{
+        display: block;
+    }
+}
+@media screen and (max-width: 430px){
+    .footer p:nth-child(1){
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .footer p:nth-child(2){
+        display: none;
+    }
+}

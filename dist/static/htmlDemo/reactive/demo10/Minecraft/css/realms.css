@@ -1,0 +1,1123 @@
+.banner{
+	width: 100%;
+	height: 100%;
+	background: #8ad6f6;
+	overflow: hidden;
+}
+.ban-right{
+	width: 70%;
+	height: 100%;
+	float: right;
+	background: url(../img/realms/yun1.png) no-repeat;
+	position: relative;
+	overflow: hidden;
+}
+.ban-right img{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.ban-right img:nth-child(1){
+	left: 0px;
+	top: -10px;
+	width: 110%;
+}
+.ban-right img:nth-child(2){
+	left: 50%;
+	top: 20px;
+	transform: translateX(-50%);
+}
+.ban-left{
+	width: 27%;
+	float: left;
+	padding-top: 10%;
+	padding-left: 3%;
+	z-index: 999;
+}
+.freeBox{
+	width: 410px;
+	height: 122px;
+	background: #36b030;
+	border-left: 4px solid #258e18;
+	border-right: 4px solid #4dd727;
+	border-top: 4px solid #63fc1f;
+	border-bottom: 4px solid #258e18;
+	position: relative;
+	margin-bottom: 30px;
+	transition: all .5s;
+	box-sizing: border-box;
+}
+.freeBox .free1{
+	width: 92px;
+	height: 28px;
+	background: #404040;
+	border-top: 4px solid #7a7a7a;
+	border-left: 4px solid #303030;
+	position: absolute;
+	left: -4px;
+	top: -4px;
+}
+.freeBox .free2{
+	width: 60px;
+	height: 32px;
+	background: #404040;
+	border-left: 4px solid #303030;
+	position: absolute;
+	left: -4px;
+	top: 28px;
+}
+.freeBox .free3{
+	width: 28px;
+	height: 32px;
+	background: #404040;
+	border-left: 4px solid #303030;
+	position: absolute;
+	left: -4px;
+	top: 60px;
+}
+.freeBox span{
+	display: flex;
+	color: #fff;
+	position: absolute;
+	transform: translateY(-50%) translateX(-50%) rotate(-45deg);
+    transform-origin: 50%;
+    top: -24%;
+    left: 34%;
+    width: 75%;
+    height: 75%;
+}
+.freeBox .freeCon{
+	color: #fff;
+	margin-left: 50%;
+	padding-top: 3%;
+	transform: translateX(-20%);
+}
+.freeBox .freeCon p:nth-child(1){
+	font-size: 14px;
+	line-height: 22px;
+}
+.freeBox .freeCon p:nth-child(2){
+	font-size: 18px;
+}
+.freeBox:hover{
+	border-left: 4px solid #303030;
+	border-right: 4px solid #7a7a7a;
+	border-top: 4px solid #7a7a7a;
+	border-bottom: 4px solid #303030;
+	background: #404040;
+	transform: scale(1.1);
+}
+.freeBox:hover .free1{
+	border-top: 4px solid #63fc1f;
+	border-left: 4px solid #258e18;
+	background: #36b030;
+}
+.freeBox:hover .free2{
+	border-left: 4px solid #258e18;
+	background: #36b030;
+	top: 27px;
+}
+.freeBox:hover .free3{
+	border-left: 4px solid #258e18;
+	background: #36b030;
+	top: 58px;
+}
+/*在线*/
+.onLineBox{
+	background: #fff;
+}
+.onLine{
+	width: 62.5%;
+	height: 300px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 34px;
+	font-weight: 900;
+	position: relative;
+	padding-top: 70px;
+	overflow: hidden;
+}
+.onLine img{
+	width: 330px;
+	height: 313px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -20%;
+}
+/*观看视频*/
+.videoBox{
+	height: 530px;
+	background: url(../img/realms/video.jpg) no-repeat center center;
+}
+.video{
+	width: 62.5%;
+	height: 530px;
+	margin: 0 auto;
+	background-size: cover;
+	text-align: center;
+	color: #fff;
+	overflow: hidden;
+}
+.video p{
+	font-size: 20px;
+	margin: 0 auto;
+	line-height: 30px;
+	margin-top: 15%;
+	transform: translateY(-50%);
+}
+.video .watch{
+	width: 340px;
+	height: 80px;
+	background: #36b030;
+	border-left: 4px solid #258e18;
+	border-right: 4px solid #4dd727;
+	border-top: 4px solid #63fc1f;
+	border-bottom: 4px solid #258e18;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 80px;
+	font-size: 18px;
+	transition: all .5s;
+}
+.video .watch:hover{
+	background: #404040;
+	transform: scale(1.1);
+	border-left: 4px solid #303030;
+	border-right: 4px solid #7a7a7a;
+	border-top: 4px solid #7a7a7a;
+	border-bottom: 4px solid #303030;
+}
+/*friend*/
+.friendBox{
+	height: 500px;
+	background: url(../img/realms/friend.png);
+}
+.friend{
+	width: 62.5%;
+	height: 500px;
+	padding-top: 70px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.friend img{
+	width: 520px;
+	height: 420px;
+	float: right;
+}
+.friend .friendCon{
+	margin-top: 100px;
+	margin-left: 100px;
+	float: left;
+	text-align: center;
+	line-height: 30px;
+}
+.friend .friendCon h3{
+	font-size: 28px;
+	margin-bottom: 10px;
+}
+/*play*/
+.playBox{
+	background: #fff;
+}
+.play{
+	width: 62.5%;
+	height: 450px;
+	margin: 0 auto;
+	padding-top: 50px;
+	overflow: hidden;
+}
+.play img{
+	width: 540px;
+	height: 400px;
+	float: left;
+}
+.play .playCon{
+	float: right;
+	text-align: center;
+	line-height: 30px;
+	margin-top: 100px;
+	margin-right: 100px;
+}
+.play .playCon h3{
+	font-size: 28px;
+	margin-bottom: 10px;
+}
+/*always onLine*/
+.alwaysBox{
+	height: 580px;
+	background: url(../img/realms/friend.png)
+}
+.always{
+	width: 62.5%;
+	height: 480px;
+	margin: 0 auto;
+	padding-top: 100px;
+	overflow: hidden;
+}
+.always img{
+	width: 520px;
+	height: 420px;
+	float: right;
+}
+.always .alwaysCon{
+	margin-top: 100px;
+	margin-left: 100px;
+	float: left;
+	text-align: center;
+	line-height: 30px;
+}
+.always .alwaysCon h3{
+	font-size: 28px;
+	margin-bottom: 10px;
+}
+/*join*/
+.joinBox{
+	height: 530px;
+	background: #fff;
+}
+.join{
+	width: 62.5%;
+	height: 530px;
+	margin: 0 auto;
+	padding-top: 100px;
+	overflow: hidden;
+}
+.join img{
+	width: 260px;
+	height: 400px;
+	float: left;
+	margin-left: 150px;
+}
+.join .joinCon{
+	float: right;
+	text-align: center;
+	line-height: 30px;
+	margin-top: 100px;
+	margin-right: 100px;
+}
+.join .joinCon h3{
+	font-size: 28px;
+	margin-bottom: 10px;
+}
+/*choiceBox*/
+.choiceBox{
+	height: 540px;
+	background: url(../img/realms/choice.png) no-repeat center center;
+	background-size: cover;
+}
+.choice{
+	width: 62.5%;
+	height: 380px;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 160px;
+	overflow: hidden;
+}
+.choice h3{
+	color: #fff;
+	font-size: 30px;
+	margin-bottom: 50px;
+}
+.pt .freeBox:nth-child(1){
+	float: left;
+	margin-left: 90px;
+}
+.pt .freeBox:nth-child(2){
+	float: right;
+	margin-right: 90px;
+}
+/*solving*/
+.solvingBox{
+	background: #fff;
+	height: 290px;
+}
+.solving{
+	width: 62.5%;
+	height: 290px;
+	margin: 0 auto;
+	padding-top: 100px;
+	overflow: hidden;
+}
+.solvingCon:nth-child(1){
+	float: left;
+	margin-left: 200px;
+}
+.solvingCon:nth-child(2){
+	float: right;
+	margin-right: 200px;
+}
+.quesition{
+	width: 142px;
+	height: 42px;
+	background: #36b030;
+	border-left: 4px solid #258e18;
+	border-right: 4px solid #4dd727;
+	border-top: 4px solid #63fc1f;
+	border-bottom: 4px solid #258e18;
+	color: #fff;
+	text-align: center;
+	line-height: 42px;
+	transition: all .5s;
+}
+.quesition:hover{
+	background: #404040;
+	transform: scale(1.1);
+	border-left: 4px solid #303030;
+	border-right: 4px solid #7a7a7a;
+	border-top: 4px solid #7a7a7a;
+	border-bottom: 4px solid #303030;
+}
+
+
+
+/*媒体查询*/
+@media screen and (max-width: 1920px){
+	.banner{
+		height: 100%;
+	}
+	.onLine{
+		width: 62.5%;
+	}
+	.video{
+		width: 62.5%;
+	}
+	.friend{
+		width: 62.5%;
+	}
+	.play{
+		width: 62.5%;
+	}
+	.always{
+		width: 62.5%;
+	}
+	.join{
+		width: 62.5%;
+	}
+	.choice{
+		width: 62.5%;
+	}
+	.solving{
+		width: 62.5%;
+	}
+}
+@media screen and (max-width: 1850px){
+	.banner{
+		height: 95%;
+	}
+	.onLine{
+		width: 64.8%;
+	}
+	.video{
+		width: 64.8%;
+	}
+	.friend{
+		width: 64.8%;
+	}
+	.play{
+		width: 64.8%;
+	}
+	.always{
+		width: 64.8%;
+	}
+	.join{
+		width: 64.8%;
+	}
+	.choice{
+		width: 64.8%;
+	}
+	.solving{
+		width: 64.8%;
+	}
+}
+@media screen and (max-width: 1800px){
+	.banner{
+		height: 93%;
+	}
+	.onLine{
+		width: 66.6%;
+	}
+	.video{
+		width: 66.6%;
+	}
+	.friend{
+		width: 66.6%;
+	}
+	.play{
+		width: 66.6%;
+	}
+	.always{
+		width: 66.6%;
+	}
+	.join{
+		width: 66.6%;
+	}
+	.choice{
+		width: 66.6%;
+	}
+	.solving{
+		width: 66.6%;
+	}
+}
+@media screen and (max-width: 1750px){
+	.banner{
+		height: 90%;
+	}
+	.onLine{
+		width: 68.5%;
+	}
+	.video{
+		width: 68.5%;
+	}
+	.friend{
+		width: 68.5%;
+	}
+	.play{
+		width: 68.5%;
+	}
+	.always{
+		width: 68.5%;
+	}
+	.join{
+		width: 68.5%;
+	}
+	.choice{
+		width: 68.5%;
+	}
+	.solving{
+		width: 68.5%;
+	}
+}
+@media screen and (max-width: 1700px){
+	.banner{
+		height: 88%;
+	}
+	.onLine{
+		width: 70.5%;
+	}
+	.video{
+		width: 70.5%;
+	}
+	.friend{
+		width: 70.5%;
+	}
+	.play{
+		width: 70.5%;
+	}
+	.always{
+		width: 70.5%;
+	}
+	.join{
+		width: 70.5%;
+	}
+	.choice{
+		width: 70.5%;
+	}
+	.solving{
+		width: 70.5%;
+	}
+}
+@media screen and (max-width: 1650px){
+	.banner{
+		height: 85%;
+	}
+	.onLine{
+		width: 72.7%;
+	}
+	.video{
+		width: 72.7%;
+	}
+	.friend{
+		width: 72.7%;
+	}
+	.play{
+		width: 72.7%;
+	}
+	.always{
+		width: 72.7%;
+	}
+	.join{
+		width: 72.7%;
+	}
+	.choice{
+		width: 72.7%;
+	}
+	.solving{
+		width: 72.7%;
+	}
+}
+@media screen and (max-width: 1600px){
+	.banner{
+		height: 82%;
+	}
+	.onLine{
+		width: 75%;
+	}
+	.video{
+		width: 75%;
+	}
+	.friend{
+		width: 75%;
+	}
+	.play{
+		width: 75%;
+	}
+	.always{
+		width: 75%;
+	}
+	.join{
+		width: 75%;
+	}
+	.choice{
+		width: 75%;
+	}
+	.solving{
+		width: 75%;
+	}
+}
+@media screen and (max-width: 1550px){
+	.banner{
+		height: 80%;
+	}
+	.onLine{
+		width: 77.4%;
+	}
+	.video{
+		width: 77.4%;
+	}
+	.friend{
+		width: 77.4%;
+	}
+	.play{
+		width: 77.4%;
+	}
+	.always{
+		width: 77.4%;
+	}
+	.join{
+		width: 77.4%;
+	}
+	.choice{
+		width: 77.4%;
+	}
+	.solving{
+		width: 77.4%;
+	}
+}
+@media screen and (max-width: 1500px){
+	.banner{
+		height: 78%;
+	}
+	.onLine{
+		width: 80%;
+	}
+	.video{
+		width: 80%;
+	}
+	.friend{
+		width: 80%;
+	}
+	.play{
+		width: 80%;
+	}
+	.always{
+		width: 80%;
+	}
+	.join{
+		width: 80%;
+	}
+	.choice{
+		width: 80%;
+	}
+	.solving{
+		width: 80%;
+	}
+}
+@media screen and (max-width: 1450px){
+	.banner{
+		height: 75%;
+	}
+	.onLine{
+		width: 82.7%;
+	}
+	.video{
+		width: 82.7%;
+	}
+	.friend{
+		width: 82.7%;
+	}
+	.play{
+		width: 82.7%;
+	}
+	.always{
+		width: 82.7%;
+	}
+	.join{
+		width: 82.7%;
+	}
+	.choice{
+		width: 82.7%;
+	}
+	.solving{
+		width: 82.7%;
+	}
+}
+@media screen and (max-width: 1400px){
+	.banner{
+		height: 72%;
+	}
+	.onLine{
+		width: 85.7%;
+	}
+	.video{
+		width: 85.7%;
+	}
+	.friend{
+		width: 85.7%;
+	}
+	.play{
+		width: 85.7%;
+	}
+	.always{
+		width: 85.7%;
+	}
+	.join{
+		width: 85.7%;
+	}
+	.choice{
+		width: 85.7%;
+	}
+	.solving{
+		width: 85.7%;
+	}
+}
+@media screen and (max-width: 1350px){
+	.banner{
+		height: 70%;
+	}
+	.onLine{
+		width: 88.8%;
+	}
+	.video{
+		width: 88.8%;
+	}
+	.friend{
+		width: 88.8%;
+	}
+	.play{
+		width: 88.8%;
+	}
+	.always{
+		width: 88.8%;
+	}
+	.join{
+		width: 88.8%;
+	}
+	.choice{
+		width: 88.8%;
+	}
+	.solving{
+		width: 88.8%;
+	}
+}
+@media screen and (max-width: 1300px){
+	.banner{
+		height: 68%;
+	}
+	.onLine{
+		width: 92.3%;
+	}
+	.video{
+		width: 92.3%;
+	}
+	.friend{
+		width: 92.3%;
+	}
+	.play{
+		width: 92.3%;
+	}
+	.always{
+		width: 92.3%;
+	}
+	.join{
+		width: 92.3%;
+	}
+	.choice{
+		width: 92.3%;
+	}
+	.solving{
+		width: 92.3%;
+	}
+}
+@media screen and (max-width: 1250px){
+	.banner{
+		height: 65%;
+	}
+	.ban-left{
+		width: 32%;
+	}
+	.ban-right{
+		width: 65%;
+	}
+	.ban-right img:nth-child(2){
+		height: 80%;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+	.onLine{
+		width: 96%;
+	}
+	.video{
+		width: 96%;
+	}
+	.friend{
+		width: 96%;
+	}
+	.play{
+		width: 96%;
+	}
+	.always{
+		width: 96%;
+	}
+	.join{
+		width: 96%;
+	}
+	.choice{
+		width: 96%;
+	}
+	.solving{
+		width: 96%;
+	}
+}
+@media screen and (max-width: 1200px){
+	.banner{
+		height: 62%;
+	}
+	.ban-left{
+		width: 34%;
+	}
+	.ban-right{
+		width: 63%;
+	}
+	.onLine{
+		width: 100%;
+	}
+	.video{
+		width: 100%;
+	}
+	.friend{
+		width: 100%;
+	}
+	.play{
+		width: 100%;
+	}
+	.always{
+		width: 100%;
+	}
+	.join{
+		width: 100%;
+	}
+	.choice{
+		width: 100%;
+	}
+	.solving{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 1150px){
+	.banner{
+		height: 60%;
+	}
+	.ban-left{
+		width: 37%;
+	}
+	.ban-right{
+		width: 60%;
+	}
+	.friend img{
+		width: 250px;
+		height: 200px;
+		margin-top: 9%;
+		float: right;
+	}
+	.play img{
+		width: 250px;
+		height: 200px;
+		margin-top: 9%;
+		float: left;
+	}
+	.always img{
+		width: 250px;
+		height: 200px;
+		margin-top: 9%;
+		float: right;
+	}
+	.join img{
+		width: 250px;
+		height: 200px;
+		margin-top: 9%;
+		float: left;
+	}
+}
+@media screen and (max-width: 1100px){
+	.banner{
+		height: 58%;
+	}
+	.ban-left{
+		width: 39%;
+	}
+	.ban-right{
+		width: 58%;
+	}
+}
+@media screen and (max-width: 1050px){
+	.banner{
+		height: 55%;
+	}
+	.choice{
+		padding-top: 30px;
+	}
+	.choice h3{
+		margin-bottom: 50px;
+	}
+	.pt .freeBox:nth-child(1){
+		float: none;
+		margin-left: 0;
+		margin: 0 auto 30px;
+	}
+	.pt .freeBox:nth-child(2){
+		float: none;
+		margin-right: 0;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width: 1000px){
+	.banner{
+		height:52%;
+	}
+	.join img{
+		margin-left: 0;
+	}
+}
+@media screen and (max-width: 950px){
+	
+}
+@media screen and (max-width: 900px){
+	
+}
+@media screen and (max-width: 850px){
+	.banner{
+		height: 55%;
+	}
+	.ban-left{
+		width: 40%;
+	}
+	.ban-right{
+		width: 57%;
+	}
+	.friend{
+		padding-top: 0px;
+		position: relative;
+	}
+	.friend img{
+		position: absolute;
+		float: none;
+		left: 50%;
+		bottom: 20px;
+		transform: translate(-50%);
+	}
+	.friend .friendCon {
+	    margin-left: 50%;
+	    transform: translate(-50%);
+		margin-top: 50px;
+	}
+	.play{
+		padding-top: 0px;
+		position: relative;
+	}
+	.play img{
+		position: absolute;
+		float: none;
+		left: 50%;
+		top: 20px;
+		transform: translate(-50%);
+		margin-top: 0;
+	}
+	.play .playCon {
+	    left: 50%;
+	    transform: translate(-50%);
+	    position: absolute;
+	    bottom: 0;
+	}
+	.always{
+		padding-top: 0px;
+		position: relative;
+	}
+	.always img{
+		position: absolute;
+		float: none;
+		left: 50%;
+		bottom: 20px;
+		transform: translate(-50%);
+	}
+	.always .alwaysCon {
+	    margin-left: 50%;
+	    transform: translate(-50%);
+		margin-top: 50px;
+	}
+	.join{
+		padding-top: 0px;
+		position: relative;
+	}
+	.join img{
+		position: absolute;
+		float: none;
+		left: 50%;
+		bottom: 0px;
+		transform: translate(-50%);
+	}
+	.join .joinCon {
+	    margin-left: 50%;
+	    transform: translate(-50%);
+		margin-top: 50px;
+	}
+}
+@media screen and (max-width: 800px){
+	.solving{
+		width: 100%;
+		padding-top: 40px;
+	}
+	.solvingCon:nth-child(1){
+		width: 100%;
+		float: none;
+		margin: 0 auto;
+		margin-bottom: 40px;
+		text-align: center
+	}
+	.solvingCon .quesition{
+		margin: 0 auto;
+	}
+	.solvingCon:nth-child(2){
+		width: 100%;
+		float: none;
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+@media screen and (max-width: 750px){
+	.banner{
+		height: 700px;
+		background: url(../img/realms/banner.jpg) no-repeat center bottom;
+		background-size: cover;
+	}
+	.ban-left{
+		width: 80%;
+		margin: 0 auto;
+		float: none;
+	}
+	.ban-right{
+		display: none;
+	}
+	.video p{
+		margin-top: 15%;
+		transform: translateY(0);
+		margin-bottom: 50px;
+	}
+}
+@media screen and (max-width: 720px){
+	.onLine{
+		padding-top: 0px;
+	}
+	.onLine img{
+		width: 80%;
+		height: 80%;
+	}
+}
+@media screen and (max-width: 700px){
+	.join .joinCon{
+	    margin-left: 0;
+	    transform: translate(0);
+	    width: 80%;
+		margin: 0 auto;
+		float: none;
+		padding-top: 50px;
+	}
+	.join img{
+	   bottom: 50px;
+	}
+}
+@media screen and (max-width: 550px){
+	.friend .friendCon {
+	    margin-left: 0;
+	    transform: translate(0);
+	    width: 80%;
+		margin: 10px auto;
+		float: none;
+	}
+	.play .playCon {
+	    margin-left: 0;
+	    transform: translateX(-50%);
+	    width: 80%;
+	    left: 50%;
+		float: none;
+	}
+	.always .alwaysCon {
+	    margin-left: 0;
+	    transform: translate(0);
+	    width: 80%;
+		margin: 10px auto;
+		float: none;
+	}
+	.join .joinCon {
+	    margin-left: 0;
+	    transform: translate(0);
+	    width: 80%;
+		margin: 0 auto;
+		float: none;
+	}
+}
+@media screen and (max-width: 500px){
+	.ban-left{
+		width: 90%;
+		margin: 0 auto;
+		padding-left: 0;
+	}
+	.ban-left .freeBox{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 450px){
+	.freeBox span{
+		transform: translateY(-43%) translateX(-48%) rotate(-45deg);
+	}
+	.pt .freeBox:nth-child(1){
+		width: 100%;
+	}
+	.pt .freeBox:nth-child(2){
+		width: 100%;
+	}
+	.pt .freeBox span{
+		transform: translateY(-54%) translateX(-50%) rotate(-45deg);
+	}
+}
+@media screen and (max-width: 440px){
+	.freeBox span{
+		transform: translateY(-39%) translateX(-48%) rotate(-45deg);
+	}
+}
+@media screen and (max-width: 430px){
+	.pt .freeBox span{
+		transform: translateY(-48%) translateX(-50%) rotate(-45deg);
+	}
+}
+@media screen and (max-width: 420px){
+	.freeBox span{
+		transform: translateY(-32%) translateX(-48%) rotate(-45deg);
+	}
+}
+@media screen and (max-width: 410px){
+	.pt .freeBox span{
+		transform: translateY(-43%) translateX(-49%) rotate(-45deg);
+	}
+}

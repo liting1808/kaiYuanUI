@@ -1,0 +1,141 @@
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+ol,
+td,
+input,
+form,
+select,
+option,
+fieldset,
+legend,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: 0;
+  display: block;
+}
+
+ul li {
+  list-style: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #66615b;
+}
+
+body {
+  color: #66615b;
+  font-size: 14px;
+  font-family: 'Muli', Arial, sans-serif;
+}
+
+.tab-top {
+  box-sizing: border-box;
+  margin-right: 30px;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
+  overflow: hidden;
+}
+
+.title-top {
+  height: 64px;
+  margin: 20px 20px 0px 20px;
+  font-weight: 100;
+}
+
+.title-top p {
+  margin-top: 20px;
+  font-size: 22px;
+  height: 25px;
+  color: #252422;
+  font-weight: 100;
+}
+
+.title-top span {
+  color: #9A9A9A;
+  height: 19px;
+  font-size: 14px;
+}
+
+.icons-list {
+  width: 100%;
+  height: auto;
+}
+
+.title-icons {
+  margin: 20px 0px 0px 10px;
+  font-size: 30px;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.icons-arrows {
+  overflow: hidden;
+  padding-left: 20px;
+}
+
+.icons-box {
+  width: 25%;
+  padding: 20px 0px 20px;
+  float: left;
+  position: relative;
+}
+
+.icons-figuer {
+  position: absolute;
+  font-size: 16px;
+}
+
+.icons-text {
+  font-size: 0.8em;
+  position: absolute;
+  margin-left: 35px;
+}
+
+.icons-box:hover .icons-figuer {
+  font-size: 1.825em;
+  transition: all 0.3s;
+  top: 10px;
+}
+
+.icons-box:hover .icons-text {
+  margin-left: 45px;
+  vertical-align: middle;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+@media (max-width: 960px) {
+  .icons-box {
+    width: 33.3%;
+  }
+}
+
+@media (max-width: 796px) {
+  .icons-box {
+    width: 50%;
+  }
+}
+
+@media (max-width: 558px) {
+  .icons-box {
+    width: 100%;
+  }
+}

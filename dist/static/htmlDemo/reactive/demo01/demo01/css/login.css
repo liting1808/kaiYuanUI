@@ -1,0 +1,169 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    background: #212224;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.yuan {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.yuan1 {
+    background: linear-gradient(-135deg, #1de9b6 0%, #1dc4e9 100%);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: -290px;
+    right: -290px;
+    margin: auto;
+    transform-origin: 55% 55%;
+    animation: xuanzhuan1 7s infinite;
+}
+
+.yuan2 {
+    background: linear-gradient(-135deg, #899FD4 0%, #A389D4 100%);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: 290px;
+    right: 290px;
+    margin: auto;
+    transform-origin: 45% 45%;
+    animation: xuanzhuan1 7s infinite;
+}
+
+.yuan3 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #1de9b6;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: 200px;
+    right: 800px;
+    margin: auto;
+    transform-origin: -30% -30%;
+    animation: xuanzhuan1 7s infinite;
+}
+
+.yuan4 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #04a9f5;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: -200px;
+    right: -800px;
+    margin: auto;
+    transform-origin: -30% -30%;
+    animation: xuanzhuan1 7s infinite;
+}
+
+@keyframes xuanzhuan1 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.main {
+    width: 310px;
+    height: 395px;
+    padding: 30px 25px;
+    background: #323437;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.main img {
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.main h3 {
+    text-align: center;
+    font-size: 26px;
+    line-height: 26px;
+    color: #c0c7cb;
+    margin-bottom: 26px;
+}
+
+.main .input {
+    width: 310px;
+    height: 43px;
+    border: 1px solid #1a1a1c;
+    border-radius: 3px;
+    margin-bottom: 16px;
+    background: #282a2c;
+    font-size: 16px;
+    text-indent: 20px;
+    color: #9ba0a4;
+}
+#one{
+    width: 0px;
+    height: 0px;
+}
+#one+label{
+    display: block;
+    overflow: hidden;
+}
+#one+label img{
+    width: 26px;
+    height: 23px;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+#one+label span{
+    display: block;
+    float: left;
+    color: #9ba0a4;
+    font-size: 16px;
+    line-height: 23px;
+    margin-left: 10px;
+}
+.loginbtn{
+    width: 70px;
+    height: 47px;
+    background: #04a9f5;
+    border-radius: 3px;
+    border: none;
+    color: #fff;
+    outline: none;
+    display: block;
+    margin: 20px auto 20px;
+}
+.aBtn{
+    display: block;
+    color: #919ea7;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 5px;
+}

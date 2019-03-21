@@ -1,0 +1,294 @@
+section .da-right .Tasks{
+    width:95%;
+    height:100%;
+    padding-top:45px;
+    padding-bottom:20px; 
+    margin-bottom:30px;
+    border-bottom: 1px solid #d1d1d1;
+    margin: 0 auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center; 
+}
+section .da-right .Tasks .tasks{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center; 
+}
+section .da-right .Tasks .tasks p{
+    width:100%;
+    height:50%;
+}
+section .da-right .Tasks .tasks p a{
+    display:block;
+    font-size:16px;
+    line-height:50%;
+    padding:25px 0;
+}
+section .da-right .Tasks .tasks p:nth-child(1) a:nth-child(1),
+section .da-right .Tasks .tasks p:nth-child(1) a:nth-child(2){
+    color: aqua;
+}
+section .da-right .Tasks .tasks p a:nth-child(1):hover,section .da-right .Tasks .tasks p a:nth-child(2):hover{
+    color: black;
+}
+section .da-right .Tasks .tasks p:nth-child(1) a{
+    display: block;
+    float: left;
+    padding:25px 0;
+}
+section .da-right .Tasks .tasks p:nth-child(1) a span{
+    display:block;
+    float: left;
+}
+section .da-right .Tasks .tasks .xdxA{
+    width: 100%;
+    height: 50%;
+    text-align:left;
+    font-size:25px;
+    font-weight:600px;
+    position: relative;
+}
+section .da-right .Tasks .tasks .xdxA .xdx{
+    width:10%;
+    height:100%;
+    position:absolute;
+    top: 0;
+    right: 50px;
+    
+    float:right;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+section .da-right .Tasks .tasks .xdxA .xdx a{
+    display:block;
+    padding: 0 15px;
+    height: 100%;
+    line-height:30px;
+    font-size: 14px;
+    color: black;
+    border: 1px solid #d1d1d1;
+    text-align: center;
+    background: #e6e6e6;
+}
+section .da-right .Tasks .tasks .xdxA .xdx a:hover{
+    background: #d1d1d1;
+}
+section .da-right .sigetj{
+    width:95%;
+    height: 100%;
+    margin: 0 auto;
+    padding-top:20px;
+    margin-bottom:30px;
+}
+section .da-right .sigetj .sgtj{
+    width:73%;
+    height:100%;
+    margin:0 auto;
+    padding:25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+section .da-right .sigetj .sgtj .shtjA{
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    background: white;
+    border:1px solid #d1d1d1;
+    position: relative;
+}
+section .da-right .sigetj .sgtj .shtjA span{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: 550;
+    font-size:12px; 
+    position: absolute;
+    top:68px;
+    /* left:59px; */
+}
+section .da-right .tonjituB .zuochang{
+    width:66%;
+    height:100%;
+	display:flex;
+	border-radius:3px;
+	flex-direction:column;
+	justify-content:space-between;
+	border:1px solid #d1d1d1;
+}
+section .da-right .tonjituB .zuochang .zcA,
+section .da-right .tonjituB .youduan .ydA{
+    width: 100%;
+    height:50px; 
+	float:left;
+    background: #d1d1d1;
+}
+section .da-right .tonjituB .zuochang .zcB,section .da-right .tonjituB .youduan .ydB{
+    width:100%;
+	height:0px;
+	overflow:hidden;
+	float:left;
+	background:white;
+	border-radius:3px;
+	transition: 1s;
+}
+section .da-right .tonjituB .zuochang .zcB .zcBa{
+    width:100%;
+    height:100%;
+}
+section .da-right .tonjituB .zuochang .zcB .zcBa ul{
+    display:block;
+    width:100%;
+    height:100%;
+    background: #f6f6f6;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-content: center;
+}
+section .da-right .tonjituB .zuochang .zcB .zcBa ul li{
+    width:100%;
+    height:19%;
+    margin-bottom: 8px;
+    display: flex;
+    border-bottom: 1px solid #d1d1d1;
+    border-top: 1px solid #d1d1d1;
+    justify-content:center;
+    align-content:center;
+    background: white;
+}
+section .da-right .tonjituB .zuochang .zcB .zcBa ul li:last-child{
+    height:8%;
+    margin:0px;
+}
+section .da-right .tonjituB .zuochang .zcB .zcBa ul li .zcBa{
+    width:68%;
+    height:100%;
+    padding:0 10px; 
+    border-left:2px solid #E28271;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+}
+section .da-right .tonjituB .zuochang .zcB .zcBa ul li .zcBa p{
+    width:100%;
+    height:100%;
+    text-align:left;
+    color: #292a2f;
+}
+section .da-right .tonjituB .zuochang .zcB .zcBa ul li .zcBa p:nth-child(1){
+    font-size:16px;
+    font-weight:600px;
+}
+section .da-right .tonjituB .zuochang .zcB .zcBa ul li .zcBa p:nth-child(2,3){
+    font-size:14px;
+}
+section .da-right .tonjituB .zuochang .zcB .zcBa ul li .zcBb,section .da-right .tonjituB .zuochang .zcB .zcBa ul li .zcBc{
+    width:15%;
+    height:100%;
+    text-align: center;
+    /* padding:10px;  */
+    border-left:1px solid #d1d1d1;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center; 
+}
+section .da-right .tonjituB .zuochang .zcB .zcBa ul li .zcBb p,section .da-right .tonjituB .zuochang .zcB .zcBa ul li .zcBc p{
+    width:100%;
+    height:100%;
+    text-align:left;
+    color: #292a2f;
+}
+section .da-right .tonjituB .zuochang .zcB .zcBa ul li .zcBb p:nth-child(1),section .da-right .tonjituB .zuochang .zcB .zcBa ul li .zcBc p:nth-child(1){
+    font-size:22px;
+    font-weight:550px;
+    text-align:center;
+    line-height:45px;
+}
+section .da-right .tonjituB .zuochang .zcB .zcBa ul li .zcBb p:nth-child(2),section .da-right .tonjituB .zuochang .zcB .zcBa ul li .zcBc p:nth-child(2){
+    font-size:14px;
+    text-align: center;
+    line-height:23px;
+}
+
+
+section .da-right .tonjituB  .youduan{
+    width:30%;
+    height:100%;
+	display:flex;
+	border-radius:3px;
+	flex-direction:column;
+	justify-content:space-between;
+	border:1px solid #d1d1d1;
+}
+section .da-right .tonjituB .youduan .ydB{
+    /* padding: 10% 10% 15% 10%; */
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
+     
+}
+section .da-right .tonjituB .youduan .ydB .ydBa{
+    width:100%;
+    height:100%;
+    padding: 0 30%;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+section .da-right .tonjituB .youduan .ydB .ydBa .yaa{
+   width:30%;
+   height:45%;
+   padding: 20% 0;
+   display:flex;
+   flex-direction:column;
+   justify-content:space-around;
+   align-content:center;
+   
+}
+section .da-right .tonjituB .youduan .ydB .ydBa .yaa span{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+@media (max-width:980px){
+    section .da-right{
+    box-sizing:border-box; 
+    }
+	.Tasks{
+		width:100%;
+    }
+    .sigetj,.sgtj{
+        width: 100%;
+    }
+    .sgtj{
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+    .sgtj .shtjA{
+        margin-bottom:10%;
+    }
+    .tonjituB {
+		width:100%;
+		flex-direction: column;
+	}
+    section .da-right .tonjituB .zuochang {
+        width: 100%;
+    }
+    section .da-right .tonjituB .youduan {
+        margin-top:10%;
+        width:100%;
+    }
+}
+

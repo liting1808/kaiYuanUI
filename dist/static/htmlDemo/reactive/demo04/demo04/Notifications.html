@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <script src="https://img.hcharts.cn/highcharts/highcharts.js"></script>
+    <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+    <script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
+    <link rel="stylesheet" href="css/task.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/Analytics.css">
+    <link rel="stylesheet" href="css/Notifications.css">
+    <style type="text/css">
+        #result {
+            text-align: right;
+            color: gray;
+            min-height: 2em;
+        }
+
+        #table-sparkline {
+            width: 100%;
+
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        tr {
+            width: 100%;
+            height: 100%;
+        }
+
+        tr td:nth-child(3) {
+            float: right;
+            margin-right: 5%;
+            font-weight: 600;
+            color: #E28271;
+        }
+
+        td {
+            padding: 5px;
+
+            height: 20px;
+        }
+
+        .highcharts-tooltip>span {
+            background: white;
+            border: 1px solid silver;
+            border-radius: 3px;
+            box-shadow: 1px 1px 2px #888;
+            padding: 8px;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <section>
+            <div class="flexd-top">
+                    <div class="ft">
+                        <div class="ft-A">
+                            <img src="img/logo.png" alt="">
+                        </div>
+                        <div class="logo-right-liage">
+                            <ul>
+                                <li>
+        
+                                    <img src="img/dt2.png" alt="">
+                                    <a href="">                                
+                                        Messages
+                                    </a>
+                                </li>
+                                <li>
+                                        <img src="img/dt4.png" alt="">
+                                    <a href="">
+                                        Notifications
+                                    </a>
+                                </li>
+        
+                            </ul>
+                        </div>
+                        <div class="logo-right-right-yige">
+                            <ul>
+                                <li>
+                                        <img src="img/dt3.png" alt="">
+                                    <a href="denlu.html">
+                                        Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="long-right-none">
+                            <a href=""><img src="img/dt4.png" alt=""></a>
+                            <a href=""><img src="img/dt3.png" alt=""></a>
+                            <a href=""><img src="img/dt2.png" alt=""></a>
+                            <a href="" id="cc"><img src="img/dt1.png" alt=""></a>
+                        </div>
+        
+                    </div>
+        
+                </div>
+        <div class="flexd-next">
+            <div class="da-left dl">
+                    <div class="dl">
+                        <div class="dl-D">
+                            <div class="dl-A">
+                                <img src="img/odinn.jpg" alt="">
+                                <h5>Odinn</h5>
+                                <a href="">
+                                    <img src="img/sz.png"alt="">
+                                    Settings
+                                </a>
+                            </div>
+                            <div class="dl-B">
+                                <div class="dl-a">
+                                    <div class="dl-b">
+                                        <img src="img/lcb.png" alt="">
+                                        <a href="index.html">
+                                            Dashboard
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="dl-a">
+                                    <div class="dl-b dl_b">
+                                        <img src="img/lcb1.png" alt="">
+                                        <a href="#dl-c">
+                                            Features
+                                        </a>
+                                    </div>
+                                    <div class="dl-c" id="dl_c">
+                                        <div class="dl-d dl_d">
+                                            <a href="User Interface.html"> UI Features</a>
+                                            <a href="">Forms</a>
+                                            <a href="">Tables</a>
+                                            <a href="">Buttons</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dl-a">
+                                    <div class="dl-b">
+                                            <img src="img/lcb2.png" alt="">
+                                        <a href="#dl-c">
+                                            Components
+                                        </a>
+                                    </div>
+                                    <div id="dl_c">
+                                        <div class="dl-d">
+                                            <a href="Notifications.html"> UI Features</a>
+                                            <a href="">Forms</a>
+                                            <a href="Gallery.html">Tables</a>    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dl-a">
+                                    <div class="dl-b">
+                                        <img src="img/lcb3.png" alt="">
+                                        <a href="task.html">
+                                            Tasks
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="dl-a">
+                                    <div class="dl-b">
+                                        <img src="img/lcb4.png" alt="">
+                                        <a href="Analytics.html">
+                                            Analytics
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="dl-a">
+                                    <div class="dl-b">
+                                        <img src="img/lcb5.png" alt="">
+                                        <a href="Tickets.html">
+                                            Support Tickets
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="dl-a">
+                                    <div class="dl-b">
+                                        <img src="img/lcb6.png" alt="">
+                                        <a href="">
+                                            Users
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+    
+                    </div>
+            </div>
+            <div class="da-right ">
+
+                <div class="Tasks">
+                    <div class="tasks">
+                        <p><a href="">Home /</a><a href="">Pages /</a><a href="">Tasks</a></p>
+                        <div class="xdxA">Tasks
+                            <div class="xdx">
+                                <a href=""><img src="" alt="">Export</a>
+                                <a href=""><img src="" alt="">Settings</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tonjituB">
+                    <div class="DcA" id="dca"></div>
+                    <div class="DcB">
+                        <div class="sigetj">
+                            <div class="sgtj">
+                                <p>Unobtrusive Notifications</p>
+                                <p>
+                                    <a href="">Info</a>
+                                    <a href="">Error</a>
+                                    <a href="">Success</a>
+                                </p>
+                                <p>Customizable Dialog Box</p>
+                                <p> 
+                                    <a href="">Alert Dialog</a>
+                                    <a href="">Confirm Dialog</a>
+                                    <a href="">Prompt Dialog</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tonjituB">
+                    <div class="DcA"></div>
+                    <div class="DcB">
+                        <div class="dc">
+                            <p>Unobtrusive Notifications</p>
+                            <p>
+                                <a href="">Add regular notification</a>
+                            </p>
+                            <p>Customizable Dialog Box</p>
+                            <p> 
+                                <a href="">Alert Dialog</a>                               
+                            </p>
+                            <p>Unobtrusive Notifications</p>
+                            <p>
+                                <a href="">Add notification without image</a>
+                            </p>
+                            <p>Customizable Dialog Box</p>
+                            <p> 
+                                <a href="">Alert Dialog</a>                               
+                            </p>
+                            <p>Unobtrusive Notifications</p>
+                            <p>
+                                <a href="">Add notification without image</a>
+                            </p>
+                            <p>Customizable Dialog Box</p>
+                            <p> 
+                                <a href="">Alert Dialog</a>                               
+                            </p>
+                            <p>Unobtrusive Notifications</p>
+                            <p>
+                                <a href="">Add notification without image</a>
+                            </p>
+                            <p>Customizable Dialog Box</p>
+                            <p> 
+                                <a href="">Alert Dialog</a>                               
+                            </p>
+                            <p>Unobtrusive Notifications</p>
+                            <p>
+                                <a href="">Info</a>
+                            </p>
+                            <p> 
+                                <a href="">Alert Dialog</a>                               
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
+<!-- <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script> -->
+<script type="text/javascript">
+    window.onload = function () {
+        let texts = document.getElementsByTagName('text');
+        texts[texts.length - 1].parentNode.removeChild(texts[
+            texts.length - 1
+        ]);
+    }
+    var chart = Highcharts.chart('c', {
+        chart: {
+            type: 'area'
+        },
+        credits: {
+            enabled: false //不显示LOGO
+        },
+        title: {
+            text: ''
+        },
+        xAxis: {
+            categories: ['1750'],
+            tickmarkPlacement: 'on',
+            title: {
+                enabled: false
+            }
+        },
+        yAxis: {
+            title: {
+                text: ''
+            },
+            labels: {
+                formatter: function () {
+                    return this.value / 1000;
+                }
+            }
+        },
+        tooltip: {
+            split: true,
+            valueSuffix: ''
+        },
+        plotOptions: {
+            area: {
+                stacking: 'normal',
+                lineColor: '#3191b9',
+                lineWidth: 1,
+                marker: {
+                    lineWidth: 1,
+                    lineColor: '#3191b9'
+                }
+            }
+        },
+        series: [
+
+            // {
+            //     name: '非洲',
+            //     data: [106, 107, 111, 133, 221, 767, 1766]
+            // },
+            {
+
+                linecolor: ['#9ad4ec'],
+                data: [502, 635, 809, 947, 1402, 3634, 5268]
+
+            }
+        ]
+    });
+</script>
+<script type="text/javascript">
+    window.onload = function () {
+        let texts = document.getElementsByTagName('text');
+        texts[texts.length - 1].parentNode.removeChild(texts[
+            texts.length - 1
+        ]);
+    }
+    var chart = Highcharts.chart('i', {
+        chart: {
+            type: 'area'
+        },
+        credits: {
+            enabled: false //不显示LOGO
+        },
+        title: {
+            text: ''
+        },
+        xAxis: {
+            categories: ['1750'],
+            tickmarkPlacement: 'on',
+            title: {
+                enabled: false
+            }
+        },
+        yAxis: {
+            title: {
+                text: ''
+            },
+            labels: {
+                formatter: function () {
+                    return this.value / 1000;
+                }
+            }
+        },
+        tooltip: {
+            split: true,
+            valueSuffix: ''
+        },
+        plotOptions: {
+            area: {
+                stacking: 'normal',
+                lineColor: '#3191b9',
+                lineWidth: 1,
+                marker: {
+                    lineWidth: 1,
+                    lineColor: '#3191b9'
+                }
+            }
+        },
+        series: [
+        {
+            linecolor: ['#9ad4ec'],
+        name: '非洲',
+        data: [106, 107, 111, 133, 221, 767, 1766]
+    },
+    {
+            linecolor: ['#9ad4ec'],
+            data: [502, 635, 809, 947, 1402, 3634, 5268]
+
+        }]
+    });
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        Highcharts.SparkLine = function (a, b, c) {
+            var hasRenderToArg = typeof a === 'string' || a.nodeName,
+                options = arguments[hasRenderToArg ? 1 : 0],
+                defaultOptions = {
+                    chart: {
+                        renderTo: (options.chart && options.chart.renderTo) || this,
+                        backgroundColor: null,
+                        borderWidth: 0,
+                        type: 'area',
+                        margin: [2, 0, 2, 0],
+                        width: 100,
+                        height: 20,
+                        style: {
+                            overflow: 'visible'
+                        },
+                        skipClone: true
+                    },
+                    title: {
+                        text: ''
+                    },
+                    credits: {
+                        enabled: false
+                    },
+                    xAxis: {
+                        labels: {
+                            enabled: false
+                        },
+                        title: {
+                            text: null
+                        },
+                        startOnTick: false,
+                        endOnTick: false,
+                        tickPositions: []
+                    },
+                    yAxis: {
+                        endOnTick: false,
+                        startOnTick: false,
+                        labels: {
+                            enabled: false
+                        },
+                        title: {
+                            text: null
+                        },
+                        tickPositions: [0]
+                    },
+                    legend: {
+                        enabled: false
+                    },
+                    navigation: {
+                        buttonOptions: {
+                            enabled: false
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: null,
+                        borderWidth: 0,
+                        shadow: false,
+                        useHTML: true,
+                        hideDelay: 0,
+                        shared: true,
+                        padding: 0,
+                        positioner: function (w, h, point) {
+                            return {
+                                x: point.plotX - w / 2,
+                                y: point.plotY - h
+                            };
+                        }
+                    },
+                    plotOptions: {
+                        series: {
+                            animation: false,
+                            lineWidth: 1,
+                            shadow: false,
+                            states: {
+                                hover: {
+                                    lineWidth: 1
+                                }
+                            },
+                            marker: {
+                                radius: 1,
+                                states: {
+                                    hover: {
+                                        radius: 2
+                                    }
+                                }
+                            },
+                            fillOpacity: 0.25
+                        },
+                        column: {
+                            negativeColor: '#910000',
+                            borderColor: 'silver'
+                        }
+                    }
+                };
+            options = Highcharts.merge(defaultOptions, options);
+            return hasRenderToArg ?
+                new Highcharts.Chart(a, options, c) :
+                new Highcharts.Chart(options, b);
+        };
+        var start = +new Date(),
+            $tds = $('td[data-sparkline]'),
+            fullLen = $tds.length,
+            n = 0;
+
+        function doChunk() {
+            var time = +new Date(),
+                i,
+                len = $tds.length,
+                $td,
+                stringdata,
+                arr,
+                data,
+                chart;
+            for (i = 0; i < len; i += 1) {
+                $td = $($tds[i]);
+                stringdata = $td.data('sparkline');
+                arr = stringdata.split('; ');
+                data = $.map(arr[0].split(', '), parseFloat);
+                chart = {};
+                if (arr[1]) {
+                    chart.type = arr[1];
+                }
+                $td.highcharts('SparkLine', {
+                    series: [{
+                        data: data,
+                        pointStart: 1
+                    }],
+                    tooltip: {
+                        headerFormat: '<span>' + $td.parent().find('th').html() +
+                            ', Q{point.x}:</span><br/>',
+                        pointFormat: '<b>{point.y}.000</b> USD'
+                    },
+                    chart: chart
+                });
+                n += 1;
+                // If the process takes too much time, run a timeout to allow interaction with the browser
+                if (new Date() - time > 500) {
+                    $tds.splice(0, i + 1);
+                    setTimeout(doChunk, 0);
+                    break;
+                }
+                // 打印耗时
+                // if (n === fullLen) {
+                // 	$('#result').html('生成' + fullLen + '个迷你图，耗时 ' + (new Date() - start) + ' 毫秒');
+                // }
+            }
+        }
+        doChunk();
+    });
+</script> 
+
+<script>
+var chart = Highcharts.chart('d', {
+    chart: {
+            type: 'column'
+    },
+    title: {
+            text: ''
+    },
+    subtitle: {
+            text: ''
+    },
+    xAxis: {
+            categories: ['一月', '二月', '三月', '四月', '五月', '六月',
+                                     '七月', '八月', '九月', '十月', '十一月', '十二月']
+    },
+    yAxis: {
+            labels: {
+                    x: -15
+            },
+            title: {
+                    text: ''
+            }
+    },
+    series: [{
+            name: '',
+            data: [434, 523, 345, 785, 565, 843, 726, 590, 665, 434, 312, 432]
+    }],
+    responsive: {
+            rules: [{
+                    condition: {
+                            maxWidth: 500
+                    },
+                    // Make the labels less space demanding on mobile
+                    chartOptions: {
+                            xAxis: {
+                                    labels: {
+                                            formatter: function () {
+                                                    return this.value.replace('月', '');
+                                            }
+                                    }
+                            },
+                            yAxis: {
+                                    labels: {
+                                            align: 'left',
+                                            x: 0,
+                                            y: -2
+                                    },
+                                    title: {
+                                            text: ''
+                                    }
+                            }
+                    }
+            }]
+    }
+});
+function setSize(width) {
+    chart.setSize(width, 300);
+}
+</script>
+
+<script type="text/javascript">
+    var num = 0;
+    $(".tjtBa").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "250");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+
+    $(".tjta").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "274");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+
+    $(".ttBa").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "400");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+    $(".ttCa").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "400");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+    var num = 0;
+    $(".dl-b").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "160");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+    window.onload = function () {
+        let texts = document.getElementsByTagName('text');
+        texts[texts.length - 1].parentNode.removeChild(texts[
+            texts.length - 1
+        ]);
+    }
+    var chart = Highcharts.chart('a', {
+        chart: {
+            type: 'area'
+        },
+        credits: {
+            enabled: false //不显示LOGO
+        },
+        title: {
+            text: ''
+        },
+        xAxis: {
+            categories: ['1750'],
+            tickmarkPlacement: 'on',
+            title: {
+                enabled: false
+            }
+        },
+        yAxis: {
+            title: {
+                text: ''
+            },
+            labels: {
+                formatter: function () {
+                    return this.value / 1000;
+                }
+            }
+        },
+        tooltip: {
+            split: true,
+            valueSuffix: ''
+        },
+        plotOptions: {
+            area: {
+                stacking: 'normal',
+                lineColor: '#3191b9',
+                lineWidth: 1,
+                marker: {
+                    lineWidth: 1,
+                    lineColor: '#3191b9'
+                }
+            }
+        },
+        series: [
+            {
+                color: [''],
+                data: [502, 635, 809, 947, 1402, 3634, 5268]
+            }
+        ]
+    });
+</script>
+<script type="text/javascript">
+    window.onload = function () {
+        let texts = document.getElementsByTagName('text');
+        texts[texts.length - 1].parentNode.removeChild(texts[
+            texts.length - 1
+        ]);
+    }
+    var chart = Highcharts.chart('b', {
+        chart: {
+            type: 'area'
+        },
+        credits: {
+            enabled: false //不显示LOGO
+        },
+        title: {
+            text: ''
+        },
+        xAxis: {
+            categories: ['1750'],
+            tickmarkPlacement: 'on',
+            title: {
+                enabled: false
+            }
+        },
+        yAxis: {
+            title: {
+                text: ''
+            },
+            labels: {
+                formatter: function () {
+                    return this.value / 1000;
+                }
+            }
+        },
+        tooltip: {
+            split: true,
+            valueSuffix: ''
+        },
+        plotOptions: {
+            area: {
+                stacking: 'normal',
+                lineColor: '#3191b9',
+                lineWidth: 1,
+                marker: {
+                    lineWidth: 1,
+                    lineColor: '#3191b9'
+                }
+            }
+        },
+        series: [
+        {
+            color: [''],
+        name: '非洲',
+        data: [106, 107, 111, 133, 221, 767, 1766]
+    },
+    {
+            color: [''],
+            data: [502, 635, 809, 947, 1402, 3634, 5268]
+
+        }]
+    });
+</script>
+
+<script type="text/javascript">
+    var dom = document.getElementById("container");
+    var myChart = echarts.init(dom);
+    var dom1 = document.getElementById("con1");
+    var myChart1 = echarts.init(dom1);
+    var dom2 = document.getElementById("con2");
+    var myChart2 = echarts.init(dom2);
+    var dom3 = document.getElementById("con3");
+    var myChart3 = echarts.init(dom3);
+    var app = {};
+    option = null;
+    app.title = '环形图';
+    option = {
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            x: 'left',
+            data: ['', '', '', '', '搜索引擎']
+        },
+        series: [{
+            name: '访问来源',
+            type: 'pie',
+            radius: ['60%', '80%'],
+            avoidLabelOverlap: false,
+            label: {
+                normal: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    show: true,
+                    textStyle: {
+                        fontSize: '30',
+                        fontWeight: 'bold'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            color: ['#c1f8a9', '#6fb3ce'],
+            data: [{
+                    value: 888,
+                    name: '250'
+                },
+                // {value:310,},
+                // {value:234,},
+                // {value:135, },
+                {
+                    value: 1548,
+                    name: '150'
+                }
+            ]
+        }]
+    };;
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+        myChart1.setOption(option, true);
+        myChart2.setOption(option, true);
+        myChart3.setOption(option, true);
+    }
+</script>
+
+<script type="text/javascript">
+    var dom = document.getElementById("co");
+    var myChart = echarts.init(dom);
+    var dom1 = document.getElementById("co1");
+    var myChart1 = echarts.init(dom1);
+    var dom2 = document.getElementById("co2");
+    var myChart2 = echarts.init(dom2);
+    var dom3 = document.getElementById("co3");
+    var myChart3 = echarts.init(dom3);
+    var dom4 = document.getElementById("co4");
+    var myChart4 = echarts.init(dom4);
+    var dom5 = document.getElementById("co5");
+    var myChart5 = echarts.init(dom5);
+
+    var app = {};
+    option = null;
+    app.title = '环形图';
+    option = {
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            x: 'left',
+            data: ['', '', '', '', '搜索引擎']
+        },
+        series: [{
+            name: '访问来源',
+            type: 'pie',
+            radius: ['50%', '70%'],
+            avoidLabelOverlap: false,
+            label: {
+                normal: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    show: true,
+                    textStyle: {
+                        fontSize: '30',
+                        fontWeight: 'bold'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            color: ['#6fb3ce', '#d1d1d1'],
+            data: [{
+                    value: 888,
+                    name: '250'
+                },
+                // {value:310,},
+                // {value:234,},
+                // {value:135, },
+                {
+                    value: 1548,
+                    name: '150'
+                }
+            ]
+        }]
+    };;
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+        myChart1.setOption(option, true);
+        myChart2.setOption(option, true);
+        myChart3.setOption(option, true);
+        myChart4.setOption(option, true);
+        myChart5.setOption(option, true);
+    }
+</script>
+
+<script type="text/javascript">
+    var num = 0;
+    $(".zcA").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "400");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+    $(".ydA").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "400");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    var num = 0;
+    $(".DcA").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "800");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+    $("#dca").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "300");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+    var num = 0;
+    $("#dca").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "200");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+</script>

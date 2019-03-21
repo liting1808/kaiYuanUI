@@ -1,0 +1,13 @@
+section .da-right .sigetj .sgtj{
+    width: 100%;
+    height: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    position: relative;
+}

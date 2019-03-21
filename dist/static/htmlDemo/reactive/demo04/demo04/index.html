@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/theme.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script src="https://img.hcharts.cn/highcharts/highcharts.js"></script>
+    <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+    <script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
+    <style type="text/css">
+        #result {
+            text-align: right;
+            color: gray;
+            min-height: 2em;
+        }
+
+        #table-sparkline {
+            width: 100%;
+
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        tr {
+            width: 100%;
+            height: 100%;
+        }
+
+        tr td:nth-child(3) {
+            float: right;
+            margin-right: 5%;
+            font-weight: 600;
+            color: #E28271;
+        }
+
+        td {
+            padding: 5px;
+
+            height: 20px;
+        }
+
+        .highcharts-tooltip>span {
+            background: white;
+            border: 1px solid silver;
+            border-radius: 3px;
+            box-shadow: 1px 1px 2px #888;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="flexd-top">
+            <div class="ft">
+                <div class="ft-A">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="logo-right-liage">
+                    <ul>
+                        <li>
+
+                            <img src="img/dt2.png" alt="">
+                            <a href="">                                
+                                Messages
+                            </a>
+                        </li>
+                        <li>
+                                <img src="img/dt4.png" alt="">
+                            <a href="">
+                                Notifications
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="logo-right-right-yige">
+                    <ul>
+                        <li>
+                                <img src="img/dt3.png" alt="">
+                            <a href="denlu.html">
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="long-right-none">
+                    <a href=""><img src="img/dt4.png" alt=""></a>
+                    <a href=""><img src="img/dt3.png" alt=""></a>
+                    <a href=""><img src="img/dt2.png" alt=""></a>
+                    <a href="" id="cc"><img src="img/dt1.png" alt=""></a>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="flexd-next">
+            <div class="da-left dl">
+                <div class="dl">
+                    <div class="dl-D">
+                        <div class="dl-A">
+                            <img src="img/odinn.jpg" alt="">
+                            <h5>Odinn</h5>
+                            <a href="">
+                                <img src="img/sz.png"alt="">
+                                Settings
+                            </a>
+                        </div>
+                        <div class="dl-B">
+                            <div class="dl-a">
+                                <div class="dl-b">
+                                    <img src="img/lcb.png" alt="">
+                                    <a href="index.html">
+                                        Dashboard
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="dl-a">
+                                <div class="dl-b dl_b">
+                                    <img src="img/lcb1.png" alt="">
+                                    <a href="#dl-c">
+                                        Features
+                                    </a>
+                                </div>
+                                <div class="dl-c" id="dl_c">
+                                    <div class="dl-d dl_d">
+                                        <a href="User Interface.html"> UI Features</a>
+                                        <a href="">Forms</a>
+                                        <a href="">Tables</a>
+                                        <a href="">Buttons</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dl-a">
+                                <div class="dl-b">
+                                        <img src="img/lcb2.png" alt="">
+                                    <a href="#dl-c">
+                                        Components
+                                    </a>
+                                </div>
+                                <div id="dl_c">
+                                    <div class="dl-d">
+                                        <a href="Notifications.html"> UI Features</a>
+                                        <a href="">Forms</a>
+                                        <a href="Gallery.html">Tables</a>    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dl-a">
+                                <div class="dl-b">
+                                    <img src="img/lcb3.png" alt="">
+                                    <a href="task.html">
+                                        Tasks
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="dl-a">
+                                <div class="dl-b">
+                                    <img src="img/lcb4.png" alt="">
+                                    <a href="Analytics.html">
+                                        Analytics
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="dl-a">
+                                <div class="dl-b">
+                                    <img src="img/lcb5.png" alt="">
+                                    <a href="Tickets.html">
+                                        Support Tickets
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="dl-a">
+                                <div class="dl-b">
+                                    <img src="img/lcb6.png" alt="">
+                                    <a href="">
+                                        Users
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="da-right">
+                <div class="tonjituA">
+                    <div class="tonjituAa">
+                        <div>
+                            <img src="img/tj1.png" alt="">
+                            <p> +530</p>
+                            <p>Visits this month</p>
+                        </div>
+                        <div>
+                            <img src="img/tj2.png" alt="">
+                            <p> 57</p>
+                            <p>New Users</p>
+                        </div>
+                        <div>
+                            <img src="img/tj3.png" alt="">
+                            <p>35/235</p>
+                            <p>Finshed Tickets</p>
+                        </div>
+                    </div>
+                    <div class="tonjituAa">
+                        <div>
+                            <img src="img/tj4.png" alt="">
+                            <p>$14.230</p>
+                            <p>Income</p>
+                        </div>
+                        <div>
+                            <img src="img/tj5.png" alt="">
+                            <p> 152</p>
+                            <p>New likes</p>
+                        </div>
+                        <div>
+                            <img src="img/tj.png" alt="">
+                            <p>592</p>
+                            <p>Leads Generated</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tonjituB">
+                    <div class="tonjituBa">
+                        <div class="tjtBa" click>
+                            <img src="" alt="">
+                            <h5>Weekly Statics</h5>
+                            <img src="" alt="">
+                        </div>
+                        <div class="tjtBb">
+                            <!-- <div id="result"></div> -->
+                            <table id="table-sparkline">
+                                <tbody id="tbody-sparkline">
+                                    <tr>
+                                        <td data-sparkline="66, 98, 56, 99 "></td>
+                                        <td>visiter:</td>
+                                        <td>502</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-sparkline="4, 19, 56, 40 "></td>
+                                        <td>Unique Visitors:</td>
+                                        <td>420</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-sparkline="24, 27, 41, 35 "></td>
+                                        <td>Pageviews:</td>
+                                        <td>560</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-sparkline="40, 11, 63, 51 "></td>
+                                        <td>Pages / Visit:</td>
+                                        <td>080</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-sparkline="66, 56, 97, 29 "></td>
+                                        <td>Avg. Visit Duration:</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-sparkline="24, 55, 21, 83 "></td>
+                                        <td></td>
+                                        <td>00:10:34</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-sparkline="52, 49, 97, 33 "></td>
+                                        <td>Bounce Rate:</td>
+                                        <td>30.30%</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-sparkline="52, 33, 97, 97 "></td>
+                                        <td>Bounce Rate:</td>
+                                        <td>30.30%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tonjituBb">
+                        <div class="tjta">
+                            <img src="" alt="">
+                            <h5>Weekly Statics</h5>
+                            <a href="">See more</a>
+                            <img src="" alt="">
+                        </div>
+                        <div class="tjtb">
+                            <div class="c" id="c" style="height: 274px"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tonjituB">
+                    <div class="tonjituBa">
+                        <div class="tjA" id="tjA" click>
+                        </div>
+                        <div class="tjtBb">
+                            <div class="tonj">
+                                <div class="tonji">
+                                    <div class="tonjiA">
+                                        <div>
+
+                                            <img src="" alt="">
+                                            <a href="">likes</a>
+                                            <img src="img/10k.png" alt="">
+                                        </div>
+                                        <div>
+                                            <img src="" alt="">
+                                            <a href="">likes</a>
+                                            <img src="img/7k.png" alt="">
+                                        </div>
+                                        <div>
+                                            <img src="" alt="">
+                                            <a href="">likes</a>
+                                        </div>
+                                    </div>
+                                    <div class="tonjiA">
+                                        <div>
+                                            <img src="" alt="">
+                                            <a href="">likes</a>
+                                            <img src="img/5.png" alt="">
+                                        </div>
+                                        <div>
+                                            <img src="" alt="">
+                                            <a href="">likes</a>
+                                        </div>
+                                        <div>
+                                            <img src="" alt="">
+                                            <a href="">likes</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tonjituBb">
+                        <div class="tjB" id="tjB" click>
+                            <img src="" alt="">
+                            <h5>Weekly Statics</h5>
+
+                            <img src="" alt="">
+                        </div>
+                        <div class="tjtb">
+                            <div class="yuanquan">
+                                <div class="yuanquanA">
+                                    <div class="yuanquanAa">
+                                        <div class="contain" id="container" style="height: 100%"></div>
+                                        <img src="img/avatars/07.jpg" alt="">
+                                    </div>
+                                    <a href="">Fernando</a>
+                                </div>
+                                <div class="yuanquanA">
+                                    <div class="yuanquanAa">
+                                        <div class="contain" id="container1" style="height:100%"></div>
+                                        <img src="img/avatars/07.jpg" alt="">
+                                    </div>
+                                    <a href="">Fernando</a>
+                                </div>
+                                <div class="yuanquanA">
+                                    <div class="yuanquanAa">
+                                        <div class="contain" id="container2" style="height:100%"></div>
+                                        <img src="img/avatars/07.jpg" alt="">
+                                    </div>
+                                    <a href="">Fernando</a>
+                                </div>
+                                <div class="yuanquanA">
+                                    <div class="yuanquanAa">
+                                        <div class="contain" id="container3" style="height:100%"></div>
+                                        <img src="img/avatars/07.jpg" alt="">
+                                    </div>
+                                    <a href="">Fernando</a>
+                                </div>
+                                <div class="yuanquanA">
+                                    <div class="yuanquanAa">
+                                        <div class="contain" id="container4" style="height:100%"></div>
+                                        <img src="img/avatars/07.jpg" alt="">
+                                    </div>
+                                    <a href="">Fernando</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tonjituB">
+                    <div class="tonjituBa">
+                        <div class="jiluA" click>
+                        </div>
+                        <div class="tjtBb">
+                            <div class="jl">
+                                <div class="jlA">
+                                    <img src="img/avatars/02.jpg" alt="">
+                                    <div class="jla">
+                                        <p>javascript error<span>thursday</span></p>
+                                        <p>There's a javascript error your frontpage if....</p>
+                                    </div>
+                                </div>
+                                <div class="jlA">
+                                    <img src="img/avatars/02.jpg" alt="">
+                                    <div class="jla">
+                                        <p>javascript error<span>thursday</span></p>
+                                        <p>There's a javascript error your frontpage if....</p>
+                                    </div>
+                                </div>
+                                <div class="jlA">
+                                    <img src="img/avatars/02.jpg" alt="">
+                                    <div class="jla">
+                                        <p>javascript error<span>thursday</span></p>
+                                        <p>There's a javascript error your frontpage if....</p>
+                                    </div>
+                                </div>
+                                <div class="jlA">
+                                    <img src="img/avatars/02.jpg" alt="">
+                                    <div class="jla">
+                                        <p>javascript error<span>thursday</span></p>
+                                        <p>There's a javascript error your frontpage if....</p>
+                                    </div>
+                                </div>
+                                <div class="jlA">
+                                    <img src="img/avatars/02.jpg" alt="">
+                                    <div class="jla">
+                                        <p>javascript error<span>thursday</span></p>
+                                        <p>There's a javascript error your frontpage if....</p>
+                                    </div>
+                                </div>
+                                <div class="jlA">
+                                    <img src="img/avatars/02.jpg" alt="">
+                                    <div class="jla">
+                                        <p>javascript error<span>thursday</span></p>
+                                        <p>There's a javascript error your frontpage if....</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="jk">
+                                <a href="">Load mor</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tonjituBb">
+                        <div class="jiluB">
+                        </div>
+                        <div class="tjtb">
+                            <div class="jl">
+                                <div class="jlA">
+                                    <img src="img/avatars/02.jpg" alt="">
+                                    <div class="jla">
+                                        <p>javascript error<span>thursday</span></p>
+                                        <p>There's a javascript error your frontpage if....</p>
+                                    </div>
+                                </div>
+                                <div class="jlA">
+                                    <img src="img/avatars/02.jpg" alt="">
+                                    <div class="jla">
+                                        <p>javascript error<span>thursday</span></p>
+                                        <p>There's a javascript error your frontpage if....</p>
+                                    </div>
+                                </div>
+                                <div class="jlA">
+                                    <img src="img/avatars/02.jpg" alt="">
+                                    <div class="jla">
+                                        <p>javascript error<span>thursday</span></p>
+                                        <p>There's a javascript error your frontpage if....</p>
+                                    </div>
+                                </div>
+                                <div class="jlA">
+                                    <img src="img/avatars/02.jpg" alt="">
+                                    <div class="jla">
+                                        <p>javascript error<span>thursday</span></p>
+                                        <p>There's a javascript error your frontpage if....</p>
+                                    </div>
+                                </div>
+                                <div class="jlA">
+                                    <img src="img/avatars/02.jpg" alt="">
+                                    <div class="jla">
+                                        <p>javascript error<span>thursday</span></p>
+                                        <p>There's a javascript error your frontpage if....</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="jk">
+                                <a href="">Load mor</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tonjituB">
+                    <div class="liugeA">
+                        <a href="">
+                            <img src="img/delu1.png" alt="">
+                            <span>spanvasfbi</span>
+                            <img src="img/5k.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="img/delu2.png" alt="">
+                            <span>spanvasfbi</span>
+                        </a>
+                        <a href="">
+                            <img src="img/delu3.png" alt="">
+                            <span>spanvasfbi</span>
+                        </a>
+                        <a href="">
+                            <img src="img/delu4.png" alt="">
+                            <span>spanvasfbi</span>
+                            <img src="img/2k.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="img/delu5.png" alt="">
+                            <span>spanvasfbi</span>
+
+                        </a>
+                        <a href="">
+                            <img src="img/delu1.png" alt="">
+                            <span>spanvasfbi</span>
+                            <img src="img/102k.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tonjituB">
+                    <div class="ttA">
+                        <div class="ttAa"></div>
+                        <div class="ttAb">
+                            <div id="cont"></div>
+                        </div>
+                    </div>
+                    <div class="ttB">
+                        <div class="ttBa"></div>
+                        <div class="ttAb">
+                            <p>Browser<span>5789</span></p>
+                            <p>Firefox<span>6442</span></p>
+                            <p>Chrome<span>7998</span></p>
+                            <p>Internet Explorer<span>5667</span></p>
+                            <p>Safari<span>2448</span></p>
+                            <p>Opera<span>3458</span></p>
+                            <p>Android Browser<span>4568</span></p>
+                            <p>Opera<span>3458</span></p>
+                        </div>
+                    </div>
+                    <div class="ttC">
+                        <div class="ttCa"></div>
+                        <div class="ttAb">
+                            <p>Browser<span>5789</span></p>
+                            <p>Firefox<span>6442</span></p>
+                            <p>Chrome<span>7998</span></p>
+                            <p>Internet Explorer<span>5667</span></p>
+                            <p>Safari<span>2448</span></p>
+                            <p>Opera<span>3458</span></p>
+                            <p>Android Browser<span>4568</span></p>
+                            <p>Opera<span>3458</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
+
+
+<script type="text/javascript" src="js/echarts.min.js"></script>
+<script type="text/javascript" src="js/chart.js"></script>
+<script type="text/javascript" src="js/hcharts.js"></script>
+<script type="text/javascript">
+    window.onload = function () {
+        let texts = document.getElementsByTagName('text');
+        texts[texts.length - 1].parentNode.removeChild(texts[
+            texts.length - 1
+        ]);
+    }
+</script>
+<script type="text/javascript">
+    window.onload = function () {
+        let texts = document.getElementsByTagName('text');
+        texts[texts.length - 1].parentNode.removeChild(texts[
+            texts.length - 1
+        ]);
+    }
+    var chart = Highcharts.chart('c', {
+        chart: {
+            type: 'area'
+        },
+        credits: {
+            enabled: false //不显示LOGO
+        },
+        title: {
+            text: ''
+        },
+        xAxis: {
+            categories: ['1750'],
+            tickmarkPlacement: 'on',
+            title: {
+                enabled: false
+            }
+        },
+        yAxis: {
+            title: {
+                text: ''
+            },
+            labels: {
+                formatter: function () {
+                    return this.value / 1000;
+                }
+            }
+        },
+        tooltip: {
+            split: true,
+            valueSuffix: ''
+        },
+        plotOptions: {
+            area: {
+                stacking: 'normal',
+                lineColor: '#3191b9',
+                lineWidth: 1,
+                marker: {
+                    lineWidth: 1,
+                    lineColor: '#3191b9'
+                }
+            }
+        },
+        series: [{
+            linecolor: ['#9ad4ec'],
+            data: [502, 635, 809, 947, 1402, 3634, 5268]
+
+        }]
+    });
+</script>
+
+
+<script type="text/javascript">
+    $(function () {
+        Highcharts.SparkLine = function (a, b, c) {
+            var hasRenderToArg = typeof a === 'string' || a.nodeName,
+                options = arguments[hasRenderToArg ? 1 : 0],
+                defaultOptions = {
+                    chart: {
+                        renderTo: (options.chart && options.chart.renderTo) || this,
+                        backgroundColor: null,
+                        borderWidth: 0,
+                        type: 'area',
+                        margin: [2, 0, 2, 0],
+                        width: 100,
+                        height: 20,
+                        style: {
+                            overflow: 'visible'
+                        },
+                        skipClone: true
+                    },
+                    title: {
+                        text: ''
+                    },
+                    credits: {
+                        enabled: false
+                    },
+                    xAxis: {
+                        labels: {
+                            enabled: false
+                        },
+                        title: {
+                            text: null
+                        },
+                        startOnTick: false,
+                        endOnTick: false,
+                        tickPositions: []
+                    },
+                    yAxis: {
+                        endOnTick: false,
+                        startOnTick: false,
+                        labels: {
+                            enabled: false
+                        },
+                        title: {
+                            text: null
+                        },
+                        tickPositions: [0]
+                    },
+                    legend: {
+                        enabled: false
+                    },
+                    navigation: {
+                        buttonOptions: {
+                            enabled: false
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: null,
+                        borderWidth: 0,
+                        shadow: false,
+                        useHTML: true,
+                        hideDelay: 0,
+                        shared: true,
+                        padding: 0,
+                        positioner: function (w, h, point) {
+                            return {
+                                x: point.plotX - w / 2,
+                                y: point.plotY - h
+                            };
+                        }
+                    },
+                    plotOptions: {
+                        series: {
+                            animation: false,
+                            lineWidth: 1,
+                            shadow: false,
+                            states: {
+                                hover: {
+                                    lineWidth: 1
+                                }
+                            },
+                            marker: {
+                                radius: 1,
+                                states: {
+                                    hover: {
+                                        radius: 2
+                                    }
+                                }
+                            },
+                            fillOpacity: 0.25
+                        },
+                        column: {
+                            negativeColor: '#910000',
+                            borderColor: 'silver'
+                        }
+                    }
+                };
+            options = Highcharts.merge(defaultOptions, options);
+            return hasRenderToArg ?
+                new Highcharts.Chart(a, options, c) :
+                new Highcharts.Chart(options, b);
+        };
+        var start = +new Date(),
+            $tds = $('td[data-sparkline]'),
+            fullLen = $tds.length,
+            n = 0;
+
+        function doChunk() {
+            var time = +new Date(),
+                i,
+                len = $tds.length,
+                $td,
+                stringdata,
+                arr,
+                data,
+                chart;
+            for (i = 0; i < len; i += 1) {
+                $td = $($tds[i]);
+                stringdata = $td.data('sparkline');
+                arr = stringdata.split('; ');
+                data = $.map(arr[0].split(', '), parseFloat);
+                chart = {};
+                if (arr[1]) {
+                    chart.type = arr[1];
+                }
+                $td.highcharts('SparkLine', {
+                    series: [{
+                        data: data,
+                        pointStart: 1
+                    }],
+                    tooltip: {
+                        headerFormat: '<span>' + $td.parent().find('th').html() +
+                            ', Q{point.x}:</span><br/>',
+                        pointFormat: '<b>{point.y}.000</b> USD'
+                    },
+                    chart: chart
+                });
+                n += 1;
+                // If the process takes too much time, run a timeout to allow interaction with the browser
+                if (new Date() - time > 500) {
+                    $tds.splice(0, i + 1);
+                    setTimeout(doChunk, 0);
+                    break;
+                }
+                // 打印耗时
+                // if (n === fullLen) {
+                // 	$('#result').html('生成' + fullLen + '个迷你图，耗时 ' + (new Date() - start) + ' 毫秒');
+                // }
+            }
+        }
+        doChunk();
+    });
+</script> 
+
+
+
+<script type="text/javascript">
+    var num = 0;
+    $(".dl-b").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "160");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+    var num = 0;
+    $(".tjtBa").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "250");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+
+    $(".tjta").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "274");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+    var num = 0;
+    $("#tjA").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "155");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+
+    $("#tjB").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "155");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+    var num = 0;
+    $(".jiluA").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "353");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+
+    $(".jiluB").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("overflow", "visibale");
+                $(this).next().css("height", "353");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+    var num = 0;
+    $(".ttAa").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "400");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+
+    $(".ttBa").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "400");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+    $(".ttCa").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "400");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+    var num = 0;
+    $(".cc").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "400");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+</script>

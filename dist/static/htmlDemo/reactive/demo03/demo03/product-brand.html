@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/article-list.css">
+    <link rel="stylesheet" href="css/product-brand.css">
+    <title>品牌管理</title>
+</head>
+<body>
+    <nav class="breadcrumb">
+        <i class="iconfont icon-zhuye"></i>
+        首页
+        <span class="c-gray en">&gt;</span>
+        产品管理 
+        <span class="c-gray en">&gt;</span>
+        品牌管理 
+        <a href="article-list.html" class="shuaxin">
+            <i class="iconfont icon-shuaxin"></i>
+        </a>
+    </nav>
+    <div class="page-container">
+        <div class="text-c">
+            <input type="text" class="input-text" placeholder=" 分类名称" style="width:120px">
+            <span class="form-group">
+                <input type="text" class="input-text Wdate" style="width:200px;">
+                <a href="javascript:;" class="btn-sc">
+                    <i class="iconfont icon-xiajia"></i>
+                    上传Logo
+                </a>
+                <input type="file" class="input-file">
+            </span>
+            
+            <span class="select-box inline" style="width:150px;height: 32px;">
+                <select name="" class="select">
+                    <option value="0">国内品牌</option>
+                    <option value="1">国外品牌</option>
+                </select>
+            </span>
+            <button type="submit" class="btn-success">
+                <i class="iconfont icon-haibijiahao jiahao"></i>
+                添加
+            </button>
+        </div>
+        <div class="cl pd-5 bg-1 bk-gray mt-20">
+            <span class="l">
+                <a href="javascript:;" class="btn-danger">
+                    <i class="iconfont icon-shanchu"></i>
+                    批量删除
+                </a>
+            </span>
+            <span class="r">
+               共有数据：
+               <strong>54</strong>
+               条
+            </span>
+        </div>
+        <div class="mt-20">
+            <div class="dataTables_wrapper no-footer">
+                <div class="dataTables_length">
+                    <label>
+                        显示
+                        <select name="DataTables_Table_0_length" class="select">
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                        条
+                    </label>
+                </div>
+                <div class="dataTables_filter">
+                    <label>
+                       从当前数据中检索:
+                       <input type="search" class="input-text">
+                    </label>
+                </div>
+                <table class="table_zx">
+                    <thead>
+                        <tr class="text-c">
+                            <th width="25">
+                                <input type="checkbox" name="" value="" class="qx">
+                            </th>
+                            <th width="70">ID</th>
+                            <th width="80">排序</th>
+                            <th width="200">LOGO</th>
+                            <th width="120">品牌名称</th>
+                            <th width="525">具体描述</th>
+                            <th width="100">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="text-c">
+                            <td><input type="checkbox" value="" name="" ></td>
+                            <td>1</td>
+                            <td><input type="text" value="1"></td>
+                            <td><img src="images/dongpeng.jpg" alt=""></td>
+                            <td><img src="images/cn.gif" alt="">东鹏</td>
+                            <td>东鹏陶瓷被评为“中国名牌”、“国家免检产品”、“中国驰名商标”、http://www.dongpeng.net/</td>
+                            <td class="f-14 td-manage"> 
+                                <a style="text-decoration:none" class="ml-5" href="javascript:;" title="编辑">
+                                    <i class="iconfont icon-bi"></i>
+                                </a>
+                                <a style="text-decoration:none" class="ml-5" href="javascript:;" title="删除">
+                                    <i class="iconfont icon-shanchu sc"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="text-c">
+                            <td><input type="checkbox" value="" name=""></td>
+                            <td>2</td>
+                            <td><input type="text" value="2"></td>
+                            <td><img src="images/dongpeng.jpg" alt=""></td>
+                            <td><img src="images/cn.gif" alt="">东鹏</td>
+                            <td>东鹏陶瓷被评为“中国名牌”、“国家免检产品”、“中国驰名商标”、http://www.dongpeng.net/</td>
+                            <td class="f-14 td-manage">
+                                <a style="text-decoration:none" class="ml-5" href="javascript:;" title="编辑">
+                                    <i class="iconfont icon-bi"></i>
+                                </a>
+                                <a style="text-decoration:none" class="ml-5" href="javascript:;" title="删除">
+                                    <i class="iconfont icon-shanchu sc"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="dataTables_info">显示 1 到 2 ，共 2 条</div>
+                <div class="dataTables_paginate">
+                    <a href="#" class="paginate_button">上一页</a>
+                    <span>
+                        <a href="#" class="current">1</a>
+                    </span>
+                    <a href="#" class="paginate_button">下一页</a>
+                </div>
+            </div> 
+        </div>
+        <div class="zdc" style="display: none;"></div>
+        <div class="box_up" style="display: none;">
+            <div class="layui-layer-title">信息</div>
+            <div id="" class="layui-layer-content">确认要下架吗？</div>
+            <span class="layui-layer-setwin">
+                <a href="javascript:;" class="layui-layer-ico layui-layer-close layui-layer-close1"></a>
+            </span>
+            <div class="layui-layer-btn">
+                <a href="javascript:;" class="layui-layer-btn0">确定</a>
+                <a href="javascript:;" class="layui-layer-btn1">取消</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/tool.js"></script>
+<script>
+   
+    window.onload = function(){
+        // 发布、下架
+        let kk = $(".btn1");
+        for(let i = 0;i<kk.length;i++){
+            kk[i].onclick = function(){
+                
+                if(kk[i].lastElementChild.style.display == "inline-block"){
+                    $(".zdc")[0].style.display = "block";
+                    $(".box_up")[0].style.display = "block";
+                    $(".layui-layer-content")[0].innerHTML = "确认要发布吗？";
+                    $(".layui-layer-btn0")[0].onclick = function(){
+                        $(".zdc")[0].style.display = "none";
+                        $(".box_up")[0].style.display = "none";
+                        kk[i].firstElementChild.style.display = "inline-block"; 
+                        kk[i].lastElementChild.style.display = "none";
+                        kk[i].parentNode.previousElementSibling.firstElementChild.innerHTML = "已发布";
+                        kk[i].parentNode.previousElementSibling.firstElementChild.style.backgroundColor = "#5eb95e";
+                    }
+                    $(".layui-layer-btn1")[0].onclick = function(){
+                        $(".zdc")[0].style.display = "none";
+                        $(".box_up")[0].style.display = "none";
+                        kk[i].firstElementChild.style.display = "none"; 
+                        kk[i].lastElementChild.style.display = "inline-block";
+                        kk[i].parentNode.previousElementSibling.firstElementChild.innerHTML = "已下架";
+                        kk[i].parentNode.previousElementSibling.firstElementChild.style.backgroundColor = "#999";
+                    }
+                    $(".layui-layer-ico")[0].onclick = function(){
+                        $(".zdc")[0].style.display = "none";
+                        $(".box_up")[0].style.display = "none";
+                        kk[i].firstElementChild.style.display = "none"; 
+                        kk[i].lastElementChild.style.display = "inline-block";
+                        kk[i].parentNode.previousElementSibling.firstElementChild.innerHTML = "已下架";
+                        kk[i].parentNode.previousElementSibling.firstElementChild.style.backgroundColor = "#999";
+                   
+                    }
+                    
+                }else{
+                    $(".zdc")[0].style.display = "block";
+                    $(".box_up")[0].style.display = "block";
+                    $(".layui-layer-content")[0].innerHTML = "确认要下架吗？";
+                    $(".layui-layer-btn0")[0].onclick = function(){
+                        $(".zdc")[0].style.display = "none";
+                        $(".box_up")[0].style.display = "none";
+                        kk[i].firstElementChild.style.display = "none"; 
+                        kk[i].lastElementChild.style.display = "inline-block";
+                        kk[i].parentNode.previousElementSibling.firstElementChild.innerHTML = "已下架";
+                        kk[i].parentNode.previousElementSibling.firstElementChild.style.backgroundColor = "#999";
+                    }
+                    $(".layui-layer-btn1")[0].onclick = function(){
+                        $(".zdc")[0].style.display = "none";
+                        $(".box_up")[0].style.display = "none";
+                        kk[i].firstElementChild.style.display = "inline-block"; 
+                        kk[i].lastElementChild.style.display = "none";
+                        kk[i].parentNode.previousElementSibling.firstElementChild.innerHTML = "已发布";
+                        kk[i].parentNode.previousElementSibling.firstElementChild.style.backgroundColor = "#5eb95e";
+                    }
+                    $(".layui-layer-ico")[0].onclick = function(){
+                        $(".zdc")[0].style.display = "none";
+                        $(".box_up")[0].style.display = "none";
+                        kk[i].firstElementChild.style.display = "inline-block"; 
+                        kk[i].lastElementChild.style.display = "none";
+                        kk[i].parentNode.previousElementSibling.firstElementChild.innerHTML = "已发布";
+                        kk[i].parentNode.previousElementSibling.firstElementChild.style.backgroundColor = "#5eb95e";
+                    
+                    }
+                    
+                }
+                
+            }
+        }
+        // 删除
+        let ss = $(".sc");
+        for(let i = 0;i<ss.length;i++){
+            ss[i].onclick = function(){
+                $(".zdc")[0].style.display = "block";
+                $(".box_up")[0].style.display = "block";
+                $(".layui-layer-content")[0].innerHTML = "确认要删除吗？";
+                $(".layui-layer-btn0")[0].onclick = function(){
+                    $(".zdc")[0].style.display = "none";
+                    $(".box_up")[0].style.display = "none";
+                    $(".sc")[0].parentElement.parentElement.parentElement.remove();
+                    }
+                $(".layui-layer-btn1")[0].onclick = function(){
+                    $(".zdc")[0].style.display = "none";
+                    $(".box_up")[0].style.display = "none";
+                  }
+                $(".layui-layer-ico")[0].onclick = function(){
+                    $(".zdc")[0].style.display = "none";
+                    $(".box_up")[0].style.display = "none";
+                }
+            }
+        }
+        // 全选、反选
+        $(".qx")[0].onclick = function(){
+            if (this.checked) {
+                for(var i=0;i<$("tbody")[0].children.length;i++){
+                    $("tbody")[0].children[i].firstElementChild.firstElementChild.checked = "checked";
+				}
+            } else {
+                for(var i=0;i<$("tbody")[0].children.length;i++){
+                    $("tbody")[0].children[i].firstElementChild.firstElementChild.checked = null;
+				}
+            }
+        }
+
+
+    }
+    // let cc = $("tbody")[0].children[0].firstElementChild.firstElementChild.checked;
+    // for(let i =0;i<cc.length;i++){
+    //     cc[i].firstElementChild.firstElementChild.checked;
+    // }
+    // console.log(cc);
+
+</script>

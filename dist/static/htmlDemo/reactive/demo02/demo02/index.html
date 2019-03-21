@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/Dashboard.css">
+    <link rel="stylesheet" type="text/css" href="css/rainy.css">
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+    <!-- <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script> -->
+    <!-- <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script> -->
+    <!-- <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script> -->
+    <!-- <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script> -->
+    <!-- <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script> -->
+    <!-- <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script> -->
+    <!-- <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script> -->
+    <!-- <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script> -->
+    <!-- <script src="https://img.hcharts.cn/highcharts/highcharts.js"></script> -->
+    <!-- <script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script> -->
+    <!-- <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script> -->
+    <!-- <script src="https://www.amcharts.com/lib/4/core.js"></script> -->
+    <!-- <script src="https://www.amcharts.com/lib/4/charts.js"></script> -->
+    <!-- <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script> -->
+    <title>UltimatePro Admin - Dashboard</title>
+</head>
+<body>
+    <!-- 头部区域 -->
+    <div class="top">
+        <!-- logo部分 -->
+        <div class="logo">
+            <img src="img/Dashboard/logo.png" alt="" class="indexImg">
+            <p>UltimatePro Admin</p>
+        </div>
+        <!-- 个人信息部分 -->
+        <div class="information">
+            <img src="img/Dashboard/menu.png" class="menu" alt="">
+            <input type="text" class="search" placeholder="Search">
+            <input type="text" class="redSearch" disabled>
+            <div class="personBox">
+                <img src="img/Dashboard/Messages.png" class="set" />
+                <span></span>
+                <div class="alert">
+                    <div class="message">
+                        <p>Messages</p>
+                        <input type="button" value="Clear All">
+                    </div>
+                    <div class="friends">
+                        <div class="friendInt">
+                            <img src="img/Dashboard/friend1.png" class="friend">
+                            <div class="friInf">
+                                <div class="names">
+                                    <p class="name">Lorem Ipsum</p>
+                                    <p class="time">
+                                        <img src="img/Dashboard/time.png" alt="">
+                                        15 mins
+                                    </p>
+                                </div>
+                                <div class="chat">
+                                    Lorem ipsum dolor sit amet , cons...
+                                </div>
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <img src="img/Dashboard/friend2.png" class="friend">
+                            <div class="friInf">
+                                <div class="names">
+                                    <p class="name">Nullam tempor</p>
+                                    <p class="time">
+                                        <img src="img/Dashboard/time.png" alt="">
+                                        4 hours
+                                    </p>
+                                </div>
+                                <div class="chat">
+                                    Curabitur facilisis erat quis metus...
+                                </div>
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <img src="img/Dashboard/friend3.png" class="friend">
+                            <div class="friInf">
+                                <div class="names">
+                                    <p class="name">Proin venenatis</p>
+                                    <p class="time">
+                                        <img src="img/Dashboard/time.png" alt="">
+                                        today
+                                    </p>
+                                </div>
+                                <div class="chat">
+                                    Vestibulum nec ligual nec quam s...
+                                </div>
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <img src="img/Dashboard/friend1.png" class="friend">
+                            <div class="friInf">
+                                <div class="names">
+                                    <p class="name">Lorem lpsum</p>
+                                    <p class="time">
+                                        <img src="img/Dashboard/time.png" alt="">
+                                        15 mins
+                                    </p>
+                                </div>
+                                <div class="chat">
+                                    Lorem ipsum dolor sit amet , cons...
+                                </div>
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <img src="img/Dashboard/friend2.png" class="friend">
+                            <div class="friInf">
+                                <div class="names">
+                                    <p class="name">Lorem lpsum</p>
+                                    <p class="time">
+                                        <img src="img/Dashboard/time.png" alt="">
+                                        4 hours
+                                    </p>
+                                </div>
+                                <div class="chat">
+                                    Lorem ipsum dolor sit amet , cons...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="see">See all e-Mails</div>
+                </div>
+                <img src="img/Dashboard/Notifications.png" class="set" />
+                <span></span>
+                <div class="alert">
+                    <div class="message">
+                        <p>Notifications</p>
+                        <input type="button" value="Clear All">
+                    </div>
+                    <div class="friends">
+                        <div class="friendInt">
+                            <img src="img/Dashboard/Not1.png" class="friend">
+                            <div class="friInf">
+                                Curabitur id eros quis nunc suscipit b...
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <img src="img/Dashboard/Not2.png" class="friend">
+                            <div class="friInf">
+                                 Duis malesuada justo eu sapien elem...
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <img src="img/Dashboard/Not3.png" class="friend">
+                            <div class="friInf">
+                                 Donec at nisi sit amet tortor commo...
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <img src="img/Dashboard/Not4.png" class="friend">
+                            <div class="friInf">
+                                 In gravida mauris et nisi
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <img src="img/Dashboard/Not5.png" class="friend">
+                            <div class="friInf">
+                                 Praesent eu lacus in libero dictum ...
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <img src="img/Dashboard/Not6.png" class="friend">
+                            <div class="friInf">
+                                 Nunc fringilla lorem 
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <img src="img/Dashboard/Not1.png" class="friend">
+                            <div class="friInf">
+                                 Nullam euismod dolor ut quam inter....
+                            </div>
+                        </div>
+                    </div>
+                    <div class="see">View all</div>
+                </div>
+                <img src="img/Dashboard/tasks.png" class="set" />
+                <span></span>
+                <div class="alert">
+                    <div class="message">
+                        <p>Tasks</p>
+                        <input type="button" value="Clear All">
+                    </div>
+                    <div class="friends">
+                        <div class="friendInt">
+                            <div class="friInf">
+                                <p class="name">Lorem ipsum dolor sit amet</p>
+                                <p class="time">30%</p>
+                            </div>
+                            <div class="chat">
+                                <div class="chatZhezhao"></div>
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <div class="friInf">
+                                <p class="name">Vestibulum nec ligual</p>
+                                <p class="time">20%</p>
+                            </div>
+                            <div class="chat">
+                                <div class="chatZhezhao"></div>
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <div class="friInf">
+                                <p class="name">Donec id leo ut ipsum</p>
+                                <p class="time">70%</p>
+                            </div>
+                            <div class="chat">
+                                <div class="chatZhezhao"></div>
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <div class="friInf">
+                                <p class="name">Praesent vitae tellus</p>
+                                <p class="time">40%</p>
+                            </div>
+                            <div class="chat">
+                                <div class="chatZhezhao"></div>
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <div class="friInf">
+                                <p class="name">Nam varius sapien</p>
+                                <p class="time">80%</p>
+                            </div>
+                            <div class="chat">
+                                <div class="chatZhezhao"></div>
+                            </div>
+                        </div>
+                        <div class="friendInt">
+                            <div class="friInf">
+                                <p class="name">Nunc fringilla</p>
+                                <p class="time">90%</p>
+                            </div>
+                            <div class="chat">
+                                <div class="chatZhezhao"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="see">View all tasks</div>
+                </div>
+                <img src="img/Dashboard/tx.png" alt="" class="set">
+                <div class="alert">
+                    <div class="alertTX">
+                        <img src="img/Dashboard/alertTX.png" alt="">
+                        <div class="ziliao">
+                            <h3>Samuel Brus</h3>
+                            <p>samuel@gmail.com</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><a href="">My Profile</a></li>
+                        <li><a href="">My Balance</a></li>
+                        <li><a href="">Inbox</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="">Account Setting</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="">Logout</a></li>
+                    </ul>
+                    <div class="profile">View Profile</div>
+                </div>
+                <img src="img/Dashboard/setting.png" class="setting set" />
+            </div>
+        </div>
+    </div>
+
+    <!-- 内容区域 -->
+    <div class="centenBox">
+        <!-- 导航条部分 -->
+        <div class="nav">
+            <div class="navBox">
+                <h3>PERSONAL</h3>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Dashboard.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Dashboard</a>
+                    <ul>
+                        <li><a href="javascript:;">Main Dashboard</a></li>
+                        <li><a href="javascript:;">e-Commerce Dashboard</a></li>
+                        <li><a href="javascript:;">Analytics</a></li>
+                        <li><a href="javascript:;">Hospital</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Layout-Options.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Layout Options</a>
+                    <ul>
+                        <li><a href="javascript:;">Boxed</a></li>
+                        <li><a href="javascript:;">Fixed</a></li>
+                        <li><a href="javascript:;">Mini Sidebar</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Page-Layouts.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Page Layouts</a>
+                    <ul>
+                        <li><a href="javascript:;">Inner Left Sidebar</a></li>
+                        <li><a href="javascript:;">Inner Right Sidebar</a></li>
+                        <li><a href="javascript:;">Inner Fixed Left Sidebar</a></li>
+                        <li><a href="javascript:;">Inner Fixed Right Sidebar</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navBox">
+                <h3>APPS</h3>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/MailBox.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">MailBox</a>
+                    <ul>
+                        <li><a href="javascript:;">Inbox</a></li>
+                        <li><a href="javascript:;">Compose</a></li>
+                        <li><a href="javascript:;">Read</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Contact.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Contact</a>
+                    <ul>
+                        <li><a href="javascript:;">Chat app</a></li>
+                        <li><a href="javascript:;">Contact / Employee</a></li>
+                        <li><a href="javascript:;">Userlist Grid</a></li>
+                        <li><a href="javascript:;">Userlist</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Extra.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Extra</a>
+                    <ul>
+                        <li><a href="javascript:;">Support Ticket</a></li>
+                        <li><a href="javascript:;">Calendar</a></li>
+                        <li><a href="javascript:;">Profile</a></li>
+                        <li><a href="javascript:;">Project DashBoard</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navBox">
+                <h3>UI</h3>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/UI-Elements.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">UI Elements</a>
+                    <ul>
+                        <li><a href="javascript:;">Badges</a></li>
+                        <li><a href="javascript:;">Border</a></li>
+                        <li><a href="javascript:;">Buttons</a></li>
+                        <li><a href="javascript:;">Color</a></li>
+                        <li><a href="javascript:;">Dropdown</a></li>
+                        <li><a href="javascript:;">Dropdown Grid</a></li>
+                        <li><a href="javascript:;">Typography</a></li>
+                        <li><a href="javascript:;">Progress Bars</a></li>
+                        <li><a href="javascript:;">Grid</a></li>
+                        <li><a href="javascript:;">Ribbons</a></li>
+                        <li><a href="javascript:;">Sliders</a></li>
+                        <li><a href="javascript:;">Tabs</a></li>
+                        <li><a href="javascript:;">Timeline</a></li>
+                        <li><a href="javascript:;">Horizontal Timeline</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Icons.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Icons</a>
+                    <ul>
+                        <li><a href="javascript:;">Font Awesome</a></li>
+                        <li><a href="javascript:;">Glyphicons</a></li>
+                        <li><a href="javascript:;">Meterial Icons</a></li>
+                        <li><a href="javascript:;">Themy Icons</a></li>
+                        <li><a href="javascript:;">Simple Line Icons</a></li>
+                        <li><a href="javascript:;">Gryptocoins Icons</a></li>
+                        <li><a href="javascript:;">Flag Icons</a></li>
+                        <li><a href="javascript:;">Weather Icons</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Components.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Components</a>
+                    <ul>
+                        <li><a href="javascript:;">Bootstrap Switch</a></li>
+                        <li><a href="javascript:;">Date Paginator</a></li>
+                        <li><a href="javascript:;">Advanced Medias</a></li>
+                        <li><a href="javascript:;">Modals</a></li>
+                        <li><a href="javascript:;">Nestable</a></li>
+                        <li><a href="javascript:;">Notification</a></li>
+                        <li><a href="javascript:;">Draggable Protlets</a></li>
+                        <li><a href="javascript:;">Sweet Alert</a></li>
+                        <li><a href="javascript:;">Range Slider</a></li>
+                        <li><a href="javascript:;">Ratings</a></li>
+                        <li><a href="javascript:;">Animations</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Box-Cards.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Box Cards</a>
+                    <ul>
+                        <li><a href="javascript:;">User Card</a></li>
+                        <li><a href="javascript:;">Advanced Card</a></li>
+                        <li><a href="javascript:;">Basic Card</a></li>
+                        <li><a href="javascript:;">Card Color</a></li>
+                        <li><a href="javascript:;">Card Group</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Widgets.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Widgets</a>
+                    <ul>
+                        <li><a href="javascript:;">Blog</a></li>
+                        <li><a href="javascript:;">Chart</a></li>
+                        <li><a href="javascript:;">List</a></li>
+                        <li><a href="javascript:;">Soical</a></li>
+                        <li><a href="javascript:;">Statistic</a></li>
+                        <li><a href="javascript:;">Weather</a></li>
+                        <li><a href="javascript:;">Widgets</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navBox">
+                <h3>FORMS And TABLES</h3>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Forms.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Forms</a>
+                    <ul>
+                        <li><a href="javascript:;">Advanced Elements</a></li>
+                        <li><a href="javascript:;">Code Editor</a></li>
+                        <li><a href="javascript:;">Markdown</a></li>
+                        <li><a href="javascript:;">Editors</a></li>
+                        <li><a href="javascript:;">Form Validation</a></li>
+                        <li><a href="javascript:;">Form Wizard</a></li>
+                        <li><a href="javascript:;">General Elements</a></li>
+                        <li><a href="javascript:;">Formatter</a></li>
+                        <li><a href="javascript:;">Xeditable Editor</a></li>
+                        <li><a href="javascript:;">Dropzone</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Tables.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Tables</a>
+                    <ul>
+                        <li><a href="javascript:;">Simple tables</a></li>
+                        <li><a href="javascript:;">Date tables</a></li>
+                        <li><a href="javascript:;">Editable tables</a></li>
+                        <li><a href="javascript:;">Table Color</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navBox">
+                <h3>CHARTS</h3>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/ChartJS.png" alt="">
+                    </div>
+                    <a href="chartJS.html" target="" class="nav-menu noBackground">ChartJS</a>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Flot.png" alt="">
+                    </div>
+                    <a href="flotChart.html" target="" class="nav-menu noBackground">Flot</a>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Inline-charts.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu noBackground">Inline charts</a>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Morris.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu noBackground">Morris</a>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Peity.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu noBackground">Peity</a>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Chartist.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu noBackground">Chartist</a>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/C3-Charts.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">C3 Charts</a>
+                    <ul>
+                        <li><a href="javascript:;">Axis Chart</a></li>
+                        <li><a href="javascript:;">Bar Chart</a></li>
+                        <li><a href="javascript:;">Data Chart</a></li>
+                        <li><a href="javascript:;">Line Chart</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Echarts.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Echarts</a>
+                    <ul>
+                        <li><a href="javascript:;">Basic Charts</a></li>
+                        <li><a href="javascript:;">Bar Chart</a></li>
+                        <li><a href="javascript:;">Pie & Doughnut Chart</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navBox">
+                <h3>EXTRA COMPONENTS</h3>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Emails.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu noBackground">Emails</a>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Map.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Map</a>
+                    <ul>
+                        <li><a href="javascript:;">Google Map</a></li>
+                        <li><a href="javascript:;">Vector Map</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Extension.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Extension</a>
+                    <ul>
+                        <li><a href="javascript:;">Fullscreen</a></li>
+                        <li><a href="javascript:;">Pace</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navBox">
+                <h3>SAMPLE PAGES</h3>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Ecommerce Pages.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Ecommerce Pages</a>
+                    <ul>
+                        <li><a href="javascript:;">Products</a></li>
+                        <li><a href="javascript:;">Products Card</a></li>
+                        <li><a href="javascript:;">Products Edit</a></li>
+                        <li><a href="javascript:;">Products Details</a></li>
+                        <li><a href="javascript:;">Products Orders</a></li>
+                        <li><a href="javascript:;">Products Checkout</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Authentication.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Authentication</a>
+                    <ul>
+                        <li><a href="Login.html">Login</a></li>
+                        <li><a href="Login.html">Login 2</a></li>
+                        <li><a href="Register.html">Register</a></li>
+                        <li><a href="Register.html">Register 2</a></li>
+                        <li><a href="lockscreen.html">Lockscreen</a></li>
+                        <li><a href="RecoverPass.html">Recover password</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Invoice.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Invoice</a>
+                    <ul>
+                        <li><a href="javascript:;">Invoice</a></li>
+                        <li><a href="javascript:;">Invoice List</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Error-Pages.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Error Pages</a>
+                    <ul>
+                        <li><a href="Error400.html">Error 400</a></li>
+                        <li><a href="javascript:;">Error 403</a></li>
+                        <li><a href="Error404.html">Error 404</a></li>
+                        <li><a href="javascript:;">Error 500</a></li>
+                        <li><a href="javascript:;">Error 503</a></li>
+                        <li><a href="javascript:;">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Sample-Pages.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Sample Pages</a>
+                    <ul>
+                        <li><a href="javascript:;">Blank</a></li>
+                        <li><a href="javascript:;">Comming Soon</a></li>
+                        <li><a href="javascript:;">Custom Scrolls</a></li>
+                        <li><a href="javascript:;">FAQ</a></li>
+                        <li><a href="javascript:;">Gallery</a></li>
+                        <li><a href="javascript:;">Lightbox Popup</a></li>
+                        <li><a href="javascript:;">Pricing</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navBox last-navBox">
+                <h3>EXTRA</h3>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Multilevel.png" alt="">
+                    </div>
+                    <a href="javascript:;" target="" class="nav-menu">Multilevel</a>
+                    <ul>
+                        <li><a href="javascript:;">Level One</a></li>
+                        <li><a href="javascript:;">Level Two</a></li>
+                        <li><a href="javascript:;">Level Three</a></li>
+                    </ul>
+                </div>
+                <div class="aBox">
+                    <div class="tit">
+                        <img src="img/Dashboard/Log-Out.png" alt="">
+                    </div>
+                    <a href="Login.html" target="" class="nav-menu noBackground">Log Out</a>
+                </div>
+            </div>
+        </div>
+        <!-- 内容部分 -->
+        <div class="content">
+            <div class="contents">
+                <div class="conTit">
+                    <h3>Dashboard</h3>
+                    <img src="img/Dashboard/home.png" alt="">
+                    <p> - Control</p>
+                    <div class="data">
+                        <p>Today : <span> DEC 10</span></p>
+                        <div class="select">
+                        </div>
+                    </div>
+                    <div class="noneSelect">
+                        <div class="dataSelect">Today</div>
+                        <div class="dataSelect">Yesterday</div>
+                        <div class="dataSelect">Last 7 Days</div>
+                        <div class="dataSelect">Last 30 Days</div>
+                        <div class="dataSelect">This Month</div>
+                        <div class="dataSelect">Last Nonth</div>
+                        <div class="dataSelect">Custom Range</div>
+                        <div class="setApply">
+                            <div class="apply">Apply</div>
+                            <div class="cancle">Cancle</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- product图表 -->
+                <div class="product">
+                    <div class="proTit">
+                        <h3>Product Sales</h3>
+                        <p>Overview of Latest Month</p>
+                    </div>
+                    <div id="Product-Sales" style="min-width:400px;min-height:400px">
+                    </div>
+                </div>
+                <!-- 右板块图表 -->
+                <div class="sales">
+                    <!-- daily sales图表 -->
+                    <div id="Daily-Sales">
+                    </div>
+                    <!-- avg图表 -->
+                    <div class="percentage">
+                        <h3>85.4%</h3>
+                        <p>Current server loading</p>
+                        <span>24.6% avg</span>
+                        <div id="avg"></div>
+                    </div>
+                    <!-- adver图表 -->
+                    <div class="adver">
+                        <div class="adverTop">
+                            Top advertisers
+                        </div>
+                        <div id="advertisers"></div>
+                    </div>
+                </div>
+                <!-- user online图表 -->
+                <div id="user-online"></div>
+                <!-- member profit图表 -->
+                <div id="Member-Profit"></div>
+                <!-- 个人信息 -->
+                <div class="person">
+                    <div class="perTop">
+                        <img src="img/Dashboard/tx2.png" alt="">
+                        <div class="perTopRig">
+                            <h3>Johen Doe</h3>
+                            <p>Web Designer</p>
+                            <h4> + follow</h4>
+                        </div>
+                    </div>
+                    <div class="perCon">
+                        <div class="percon">
+                            <h3>1254</h3>
+                            <p>Photos</p>
+                        </div>
+                        <div class="percon">
+                            <h3>1254</h3>
+                            <p>Videos</p>
+                        </div>
+                        <div class="percon">
+                            <h3>1587</h3>
+                            <p>Tasks</p>
+                        </div>
+                    </div>
+                    <div class="perBot">
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque mauris
+                        augue, molestie tincidunt.</p>
+                        <div class="perImgBox">
+                            <img src="img/Dashboard/website.png" alt="">
+                            <img src="img/Dashboard/twiter.png" alt="">
+                            <img src="img/Dashboard/facebook.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- 天气 -->
+                <div class="weather">
+                    <div class="weaBox">
+                        <h3>City , country</h3>
+                        <h4>Monday May 11 , 2017</h4>
+                        <div class="rainy"></div>
+                        <div class="deg">
+                            <h4>29 ℃</h4>
+                            <p>DAY RAIN</p>
+                        </div>
+                        <div class="weeks">
+                            <div class="weekDay">
+                                <h3>Mon</h3>
+                                <img src="img/Dashboard/sunny.png" alt="">
+                                <p>24℃</p>
+                            </div>
+                            <div class="weekDay">
+                                <h3>Tue</h3>
+                                <img src="img/Dashboard/cloudy.png" alt="">
+                                <p>21℃</p>
+                            </div>
+                            <div class="weekDay">
+                                <h3>Wed</h3>
+                                <img src="img/Dashboard/sunny.png" alt="">
+                                <p>25℃</p>
+                            </div>
+                            <div class="weekDay">
+                                <h3>Hhu</h3>
+                                <img src="img/Dashboard/gale.png" alt="">
+                                <p>20℃</p>
+                            </div>
+                            <div class="weekDay">
+                                <h3>Fri</h3>
+                                <img src="img/Dashboard/thunder.png" alt="">
+                                <p>18℃</p>
+                            </div>
+                            <div class="weekDay">
+                                <h3>Sat</h3>
+                                <img src="img/Dashboard/thunderstorm.png" alt="">
+                                <p>14℃</p>
+                            </div>
+                            <div class="weekDay">
+                                <h3>Sun</h3>
+                                <img src="img/Dashboard/cloudy.png" alt="">
+                                <p>16℃</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- view板块 -->
+                <div class="viewBox">
+                    <h3>REVENUE</h3>
+                    <h2>$845,1258</h2>
+                    <div class="line">
+                        <div class="loading"></div>
+                    </div>
+                    <div class="view">view</div>
+                    <p><img src="img/Dashboard/datajt.png" alt="">%18 decrease from last month</p>
+                </div>
+                <!-- 个人信息二 -->
+                <div class="johen">
+                    <div class="touxiang">
+                        <img src="img/Dashboard/johen.png">
+                        <div class="johenInf">
+                            <h3>Johen Doe</h3>
+                            <p>Designer</p>
+                        </div>
+                        <div class="today">
+                            today , 05:05
+                        </div>
+                    </div>
+                    <div class="material">
+                        <p>Phasellus aliquet</p>
+                        <p>enim vel augue</p>
+                        <p>porttitor posuere</p>
+                        <p>tristique</p>
+                    </div>
+                </div>
+                <!-- Sales Analytics图表 -->
+                <div class="Analytics">
+                    <div class="anaTit">
+                        Sales Analytics
+                    </div>
+                    <div class="chart">
+                        <div class="chartData">
+                            <div class="charts">
+                                <p>Traffic</p>
+                                <h3>4854,22K</h3>
+                                <div class="tabTop">
+                                    <img src="img/Dashboard/tabTop.png" alt="">
+                                    <p> + 18%</p>
+                                </div>
+                            </div>
+                            <div class="charts">
+                                <p>Traffic</p>
+                                <h3>4854,22K</h3>
+                                <div class="tabTop">
+                                    <img src="img/Dashboard/tabTop.png" alt="">
+                                    <p> + 9%</p>
+                                </div>
+                            </div>
+                            <div class="charts lastCharts">
+                                <p>Traffic</p>
+                                <h3>4854,22K</h3>
+                                <div class="tabTop">
+                                    <img src="img/Dashboard/tabBot.png" alt="">
+                                    <p> - 8%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="Analytics"></div>
+                    </div>
+                </div>
+                <!-- earning图表 -->
+                <div class="earning">
+                    <div class="earTit">
+                        <h3>Earnings</h3>
+                        <p>Total earnings of the month</p>
+                        <div class="earImg">
+                            <img src="img/Dashboard/earningCircle.png" alt="">
+                            <img src="img/Dashboard/earningSetting.png" alt="">
+                        </div>
+                        <h2>$45,215.22</h2>
+                        <p class="earTop">
+                            17.10% (S954.23)
+                            <img src="img/Dashboard/tabTop.png" alt="">
+                        </p>
+                        <div id="earning"></div>
+                    </div>
+                    <div class="earBot">
+                        <p>
+                            Last Month Earnings
+                            <img src="img/Dashboard/tabTop.png" alt="">
+                        </p>
+                        <h2>$18,124.74</h2>
+                        <div class="checkWho">Check Whole Report</div>
+                    </div>
+                </div>
+                <!-- 个人资料 -->
+                <div class="Monty">
+                    <div class="MontyZhezhao">
+                        <div class="monImg">
+                            <img src="img/Dashboard/montx.png" alt="">
+                        </div>
+                        <div class="monCen">
+                            <h3>Monty Hulk</h3>
+                            <p>Project Mg...</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="yearly"></div>
+            </div>
+            <!-- footer部分 -->
+            <div class="footer">
+                <p>&copy; 2018 Multi-Purpose Themes. All Rights Reserved</p>
+                <p>FAQ · Purchase Now</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/data/Product-Sales.js"></script>
+<script type="text/javascript" src="js/data/Daily Sales.js"></script>
+<script type="text/javascript" src="js/data/Top Advertisers.js"></script>
+<script type="text/javascript" src="js/data/avg.js"></script>
+<script type="text/javascript" src="js/data/user-online.js"></script>
+<script type="text/javascript" src="js/data/Member-Profit.js"></script>
+<script type="text/javascript" src="js/data/Analytics.js"></script>
+<script type="text/javascript" src="js/data/earning.js"></script>
+<script type="text/javascript" src="js/data/yearly.js"></script>
+
+<script type="text/javascript" src="js/Dashboard.js"></script>

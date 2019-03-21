@@ -1,0 +1,670 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+}
+body {
+    background: url(../img/login/banner.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.login {
+    height: 600px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto 250px;
+}
+
+/* 登录头文字 */
+.login h3 {
+    color: #ff9b00;
+    font-size: 24px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+
+.login p {
+    font-size: 13px;
+    color: #fff;
+    margin-left: 130px;
+    margin-bottom: 30px;
+}
+
+/* 登录背景盒子 */
+.loginBg {
+    width: 450px;
+    height: 480px;
+    margin-left: 15px;
+    background: url(../img/login/bg.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+/* 登录的form表单 */
+form {
+    padding: 30px 30px 0 30px;
+    color: #f7f7f7;
+}
+
+/* 登录盒子 */
+.loginBox {
+    width: 450px;
+    height: 480px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* 用户名和密码盒子 */
+.userBox,.passBox,.email,.checkpassBox {
+    width: 34px;
+    height: 25px;
+    border-bottom: 1px solid #fff;
+    display: inline-block;
+    position: relative;
+    left: 5px;
+    top: 9px;
+}
+
+/* 用户名和密码前面的小图标 */
+.userBox img,.passBox img,.email img,.checkpassBox img {
+    width: 18px;
+    height: 15px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/* 用户名框和密码框 */
+form input:nth-of-type(1),
+form input:nth-of-type(2),
+form input:nth-of-type(3),
+form input:nth-of-type(4) {
+    width: 350px;
+    height: 25px;
+    background: rgba(0, 0, 0, 0.001);
+    border-bottom: 1px solid #3e8ef7;
+    text-indent: 15px;
+    color: #fff;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/* 隐藏复选框 */
+[type=checkbox] {
+    display: none;
+}
+
+/* 复选框和label的起始属性 */
+[type=checkbox]+label {
+    font-weight: 300;
+    position: relative;
+    padding-left: 35px;
+    margin-left: 10px;
+    cursor: pointer;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+    font-size: 13px;
+}
+
+/* 复选框未选中时的属性 */
+[type=checkbox]+label:before,
+[type=checkbox]:not(.filled-in)+label:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    z-index: 0;
+    border: 2px solid #5a5a5a;
+    border-radius: 1px;
+    margin-top: 2px;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+
+/* 复选框选中时的属性 */
+[type=checkbox]:checked+label:before {
+    top: -4px;
+    left: -5px;
+    width: 12px;
+    height: 22px;
+    border: none;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid #3e8ef7;
+    border-bottom: 2px solid #3e8ef7;
+    -webkit-transform: rotate(40deg);
+    -ms-transform: rotate(40deg);
+    transform: rotate(40deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
+
+/* 当复选框选中时，取消未选中时的边框 */
+[type=checkbox]:not(.filled-in)+label:after {
+    border: 0;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+}
+
+.checkbox {
+    float: left;
+}
+
+/* 登录按钮 */
+.btn {
+    width: 100%;
+    height: 35px;
+    border-radius: 3px;
+    background: #3f8ef7;
+    color: #fff;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+form h4 {
+    text-align: center;
+    margin: 15px 0;
+    color: #fff7d0;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+/* 登录方式 */
+.method {
+    width: 100%;
+    height: 40px;
+    padding-left: 95px;
+    margin-bottom: 15px;
+}
+
+.facebook,
+.twitter,
+.google-plus,
+.instagram {
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    float: left;
+    margin-right: 12px;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 8px;
+    cursor: pointer;
+}
+
+.facebook img,
+.twitter img,
+.google-plus img,
+.instagram img {
+    width: 24px;
+    height: 24px;
+}
+
+.facebook {
+    border: 1px solid #3a5999;
+}
+
+.twitter {
+    border: 1px solid #00abeb;
+}
+
+.google-plus {
+    border: 1px solid #dd4c39;
+}
+
+.instagram {
+    border: 1px solid #517fa3;
+}
+
+.reg {
+    text-align: center;
+}
+
+.reg span {
+    margin-right: 15px;
+}
+
+.reg a {
+    color: #ff3d31;
+}
+
+
+/*媒体查询*/
+@media screen and (max-width: 1920px){
+    
+}
+@media screen and (max-width: 1850px){
+    .login{
+        margin: auto 230px;
+    }
+}
+@media screen and (max-width: 1800px){
+    .login{
+        margin: auto 210px;
+    }
+}
+@media screen and (max-width: 1750px){
+    .login{
+        margin: auto 200px;
+    }
+}
+@media screen and (max-width: 1700px){
+    .login{
+        margin: auto 180px;
+    }
+}
+@media screen and (max-width: 1650px){
+    .login{
+        margin: auto 160px;
+    }
+}
+@media screen and (max-width: 1600px){
+    .login{
+        margin: auto 10px;
+    }
+    .loginBg{
+        width: 520px;
+    }
+    .loginBox{
+        width: 520px;
+    }
+    form input:nth-of-type(1),
+    form input:nth-of-type(2),
+    form input:nth-of-type(3),
+    form input:nth-of-type(4){
+        width: 420px;
+    }
+    .method{
+        padding-left: 125px;
+    }
+}
+@media screen and (max-width: 1550px){
+    .loginBg{
+        width: 505px;
+    }
+    .loginBox{
+        width: 505px;
+    }
+    form input:nth-of-type(1),
+    form input:nth-of-type(2),
+    form input:nth-of-type(3),
+    form input:nth-of-type(4){
+        width: 405px;
+    }
+}
+@media screen and (max-width: 1500px){
+    .loginBg{
+        width: 485px;
+    }
+    .loginBox{
+        width: 485px;
+    }
+    form input:nth-of-type(1),
+    form input:nth-of-type(2),
+    form input:nth-of-type(3),
+    form input:nth-of-type(4){
+        width: 385px;
+    }
+    .method{
+        padding-left: 115px;
+    }
+}
+@media screen and (max-width: 1450px){
+    .loginBg{
+        width: 470px;
+    }
+    .loginBox{
+        width: 470px;
+    }
+    form input:nth-of-type(1),
+    form input:nth-of-type(2),
+    form input:nth-of-type(3),
+    form input:nth-of-type(4){
+        width: 370px;
+    }
+    .method{
+        padding-left: 105px;
+    }
+}
+@media screen and (max-width: 1400px){
+    .loginBg{
+        width: 450px;
+    }
+    .loginBox{
+        width: 450px;
+    }
+    form input:nth-of-type(1),
+    form input:nth-of-type(2),
+    form input:nth-of-type(3),
+    form input:nth-of-type(4){
+        width: 350px;
+    }
+    .method{
+        padding-left: 95px;
+    }
+}
+@media screen and (max-width: 1350px){
+    .loginBg{
+        width: 440px;
+    }
+    .loginBox{
+        width: 440px;
+    }
+    form input:nth-of-type(1),
+    form input:nth-of-type(2),
+    form input:nth-of-type(3),
+    form input:nth-of-type(4){
+        width: 310px;
+    }
+    .method{
+        padding-left: 95px;
+    }
+}
+@media screen and (max-width: 1300px){
+    .loginBg{
+        width: 420px;
+    }
+    .loginBox{
+        width: 420px;
+    }
+    form input:nth-of-type(1),
+    form input:nth-of-type(2),
+    form input:nth-of-type(3),
+    form input:nth-of-type(4){
+        width: 320px;
+    }
+    .method{
+        padding-left: 75px;
+    }
+    .login h3{
+        margin-left: 80px;
+    }
+    .login p{
+        margin-left: 110px;
+    }
+    .forgot p{
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 1250px){
+    .loginBg{
+        width: 405px;
+    }
+    .loginBox{
+        width: 405px;
+    }
+    form input:nth-of-type(1),
+    form input:nth-of-type(2),
+    form input:nth-of-type(3),
+    form input:nth-of-type(4){
+        width: 305px;
+    }
+    .method{
+        padding-left: 75px;
+    }
+}
+@media screen and (max-width: 1200px){
+    .loginBg{
+        width: 390px;
+    }
+    .loginBox{
+        width: 390px;
+    }
+    form input:nth-of-type(1),
+    form input:nth-of-type(2),
+    form input:nth-of-type(3),
+    form input:nth-of-type(4){
+        width: 290px;
+    }
+    .method{
+        padding-left: 65px;
+    }
+}
+@media screen and (max-width: 1150px){
+    .loginBg{
+        width: 370px;
+    }
+    .loginBox{
+        width: 370px;
+    }
+    form input:nth-of-type(1),
+    form input:nth-of-type(2),
+    form input:nth-of-type(3),
+    form input:nth-of-type(4){
+        width: 270px;
+    }
+    .method{
+        padding-left: 55px;
+    }
+    .login h3{
+        margin-left: 60px;
+    }
+    .login p{
+        margin-left: 90px;
+    }
+    .forgot p{
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 1100px){
+    .loginBg{
+        width: 350px;
+    }
+    .loginBox{
+        width: 350px;
+    }
+    form input:nth-of-type(1),
+    form input:nth-of-type(2),
+    form input:nth-of-type(3),
+    form input:nth-of-type(4){
+        width: 250px;
+    }
+    .method{
+        padding-left: 45px;
+    }
+}
+@media screen and (max-width: 1050px){
+    .loginBg{
+        width: 340px;
+    }
+    .loginBox{
+        width: 340px;
+    }
+    form input:nth-of-type(1),
+    form input:nth-of-type(2),
+    form input:nth-of-type(3),
+    form input:nth-of-type(4){
+        width: 240px;
+    }
+    .method{
+        padding-left: 35px;
+    }
+}
+@media screen and (max-width: 1000px){
+    .loginBg{
+        width: 320px;
+    }
+    .loginBox{
+        width: 320px;
+    }
+    form input:nth-of-type(1),
+    form input:nth-of-type(2),
+    form input:nth-of-type(3),
+    form input:nth-of-type(4){
+        width: 220px;
+    }
+    .method{
+        padding-left: 30px;
+    }
+}
+@media screen and (max-width: 990px){
+    .loginBg{
+        width: 390px;
+    }
+    .loginBox{
+        width: 390px;
+    }
+    form input:nth-of-type(1),
+    form input:nth-of-type(2),
+    form input:nth-of-type(3),
+    form input:nth-of-type(4){
+        width: 290px;
+    }
+    .method{
+        padding-left: 65px;
+    }
+}
+@media screen and (max-width: 950px){
+    .loginBg{
+        width: 380px;
+    }
+    .loginBox{
+        width: 380px;
+    }
+    form input:nth-of-type(1),
+    form input:nth-of-type(2),
+    form input:nth-of-type(3),
+    form input:nth-of-type(4){
+        width: 280px;
+    }
+    .method{
+        padding-left: 60px;
+    }
+}
+@media screen and (max-width: 900px){
+    .loginBg{
+        width: 360px;
+    }
+    .loginBox{
+        width: 360px;
+    }
+    form input:nth-of-type(1),
+    form input:nth-of-type(2),
+    form input:nth-of-type(3),
+    form input:nth-of-type(4){
+        width: 260px;
+    }
+    .method{
+        padding-left: 50px;
+    }
+}
+@media screen and (max-width: 850px){
+    .loginBg{
+        width: 340px;
+    }
+    .loginBox{
+        width: 340px;
+    }
+    form input:nth-of-type(1),
+    form input:nth-of-type(2),
+    form input:nth-of-type(3),
+    form input:nth-of-type(4){
+        width: 240px;
+    }
+    .method{
+        padding-left: 45px;
+    }
+}
+@media screen and (max-width: 750px){
+    .loginBg{
+        width: 95%;
+    }
+    .loginBox{
+        width: 100%;
+    }
+    form{
+        padding: 30px 20px 0 30px;
+    }
+    form input:nth-of-type(1),
+    form input:nth-of-type(2),
+    form input:nth-of-type(3),
+    form input:nth-of-type(4){
+        width: 92%;
+    }
+    .method{
+        padding-left: 35%;
+        box-sizing: border-box;
+    }
+    .login h3{
+        margin-left: 30%;
+    }
+    .login p{
+        margin-left: 35%;
+    }
+    .forgot p{
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 700px){
+    .method{
+        padding-left: 33%;
+    }
+}
+@media screen and (max-width: 650px){
+    .method{
+        padding-left: 32%;
+    }
+}
+@media screen and (max-width: 600px){
+    .method{
+        padding-left: 31%;
+    }
+    .login h3{
+        margin-left: 25%;
+    }
+    .login p{
+        margin-left: 30%;
+    }
+    .forgot p{
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 580px){
+    form input:nth-of-type(1),
+    form input:nth-of-type(2),
+    form input:nth-of-type(3),
+    form input:nth-of-type(4){
+        width: 90%;
+    }
+}
+@media screen and (max-width: 550px){
+    .method{
+        padding-left: 27%;
+    }
+}
+@media screen and (max-width: 500px){
+    .method{
+        padding-left: 25%;
+    }
+}
+@media screen and (max-width: 490px){
+    form input:nth-of-type(1),
+    form input:nth-of-type(2),
+    form input:nth-of-type(3),
+    form input:nth-of-type(4){
+        width: 88%;
+    }
+}
+@media screen and (max-width: 450px){
+    .method{
+        padding-left: 22%;
+    }
+}

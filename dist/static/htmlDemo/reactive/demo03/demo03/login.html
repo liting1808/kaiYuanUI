@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>登录页面</title>
+  <link rel="stylesheet" href="css/iconfont.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<div class="header"></div>
+<div class="loginWraper">
+  <div class="loginBox" id="loginform">
+    <!--<form action="index.html" method="post" class="form form-horizontal">-->
+    <div class="form form-horizontal">
+      <div class="row c1">
+        <label class="form-label col-xs-3">
+          <i class="iconfont icon-renyuanguanli"></i>
+        </label>
+        <div class="formControls col-xs-8">
+          <input type="text" placeholder="账户" class="input-text size-L">
+        </div>
+      </div>
+      <div class="row c1">
+        <label class="form-label col-xs-3">
+          <i class="iconfont icon-mima"></i>
+        </label>
+        <div class="formControls col-xs-8">
+          <input type="password" placeholder="密码" class="input-text size-L">
+        </div>
+      </div>
+      <div class="row c1">
+        <div class="formControls col-xs-8 col-xs-offset-3">
+          <input type="text" name="login_yzm" class="input-text size-L login_yzm" id="login_yzm" placeholder="验证码">
+          <div class="yzm_txt"></div>
+          <div class="ts"></div>
+        </div>
+      </div>
+      <div class="row c1">
+        <div class="formControls col-xs-8 col-xs-offset-3">
+          <label for="online" class="label_text">
+            <input type="checkbox" name="online" id="online">
+            使我保持登录状态
+          </label>
+        </div>
+      </div>
+      <div class="row c1">
+        <div class="formControls col-xs-8 col-xs-offset-3">
+          <a href="index.html"><input type="submit" class="btn btn-success radius size-L" value=" 登    录 "></a>
+          <input type="reset" class="btn btn-success radius size-L qx" value=" 取    消 ">
+        </div>
+      </div>
+      <!--</form>-->
+    </div>
+  </div>
+</div>
+<div class="footer">
+  Copyright 你的公司名称 by H-ui.admin v3.1
+</div>
+
+</body>
+</html>
+<script src="js/tool.js"></script>
+<script>
+  window.onload = function () {
+    //随机验证码
+    $(".yzm_txt")[0].innerHTML = oRandom();
+    $(".yzm_txt")[0].onclick = function () {
+      this.innerHTML = oRandom();
+    };
+    //	验证码确认
+    $("#login_yzm").onblur = function () {
+      $(".ts")[0].style.display = "inline-block";
+      if (this.value != "") {
+        if (this.value == $(".yzm_txt")[0].innerHTML) {
+          $(".ts")[0].style.color = "green";
+          $(".ts")[0].innerHTML = "* 验证码正确 ";
+        } else {
+          $(".ts")[0].style.color = "red";
+          $(".ts")[0].innerHTML = "* 验证码错误 ";
+        }
+      } else {
+        $(".ts")[0].style.display = "none";
+      }
+    };
+  }
+
+  //	随机数验证码
+  function oRandom() {
+    let str = "";
+    let random = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');//随机数
+    for (let i = 0; i < 4; i++) {
+      let index = Math.floor(Math.random() * 36);//取得随机数的索引（0~35）
+      str += random[index];//根据索引取得随机数加到str上
+    }
+    return str;
+  }
+
+</script>

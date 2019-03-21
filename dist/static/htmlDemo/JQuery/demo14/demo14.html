@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>拖拽滚动数字</title>
+    <style type="text/css">
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        color: #231F20;
+        font-size: 20px;
+        background: #FFF3F5;
+    }
+
+    .wrap {
+        position: relative;
+        margin-left: 65px;
+        margin-top: 65px;
+    }
+
+    .stepper {
+        margin-top: -65px;
+        margin-left: -65px;
+        width: 30px;
+        height: 30px;
+        background: #FF4957;
+        cursor: pointer;
+        width: 130px;
+        height: 130px;
+        border-radius: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 64px;
+        position: relative;
+        box-shadow: -1px 57px 80px -17px rgba(255, 73, 87, 0.25);
+        overflow: hidden;
+        z-index: 2;
+    }
+
+    .stepper span {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        position: absolute;
+        top: 28px;
+        left: 50%;
+        -webkit-transform: translateY(0) translateX(-50%);
+        transform: translateY(0) translateX(-50%);
+    }
+
+    .stepper span.active {
+        -webkit-transform: translateY(0) translateX(-50%);
+        transform: translateY(0) translateX(-50%);
+    }
+
+    .stepper span.hide {
+        opacity: 0;
+    }
+
+    .arrow-top {
+        position: absolute;
+        top: -120px;
+        left: 0;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        width: 50px;
+    }
+
+    .arrow-bottom {
+        position: absolute;
+        bottom: -57px;
+        left: 0;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        width: 50px;
+    }
+
+
+    @-webkit-keyframes github {
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+
+        50% {
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+
+    @keyframes github {
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+
+        50% {
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+
+    .desc {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        color: #ffbac1;
+    }
+    #download {
+      display: block;
+      position: fixed;
+      z-index: 999999999999999999;
+      top: 20px;
+      right: 20px;
+      padding: 10px;
+      background: #12c2e9; /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      color: #fff;
+      text-shadow: 1px 1px 10px #000;
+      text-decoration: none;
+      border-radius: 10px;
+      animation: downl .2s linear infinite;
+    }
+
+    @keyframes downl {
+      0% {
+        transform: translateX(-2px);
+      }
+      50% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-2px);
+      }
+    </style>
+</head>
+
+<body>
+    <a id="download" href="/static/htmlDemo/JQuery/demo14/demo14.zip" download="拖拽滚动数字.zip">点击下载</a>
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+    <div class="wrap">
+        <div class="stepper">
+            <span class="count first active hide">15</span>
+            <span class="count second next"></span>
+        </div>
+        <img src="http://www.jq22.com/jswj/arrow-top.svg" alt="" class="arrow-top">
+        <img src="http://www.jq22.com/jswj/arrow-bottom.svg" alt="" class="arrow-bottom">
+</div>
+        <span class="desc">按住和拖动</span>
+</body>
+
+</html>
+<script type="text/javascript">
+var mousePos = 0;
+var currentPos = 0;
+var position = 0;
+var draggable = false;
+var blockAnimeAdd, countAnimePlus = anime.timeline(),
+    countAnimeMinus = anime.timeline();
+var offset = 130;
+var direction;
+var dur = 2000;
+var count = parseInt($('.active').text());
+
+$(document).on('mousedown', '.stepper', function() {
+    currentPos = mousePos;
+
+    draggable = true;
+    blockAnime.pause();
+
+    if ($('.first').hasClass('active')) {
+        $('.first').removeClass('active').addClass('next');
+        $('.second').removeClass('next').addClass('active');
+    } else if ($('.second').hasClass('active')) {
+        $('.second').removeClass('active').addClass('next');
+        $('.first').removeClass('next').addClass('active');
+    }
+
+    if (direction == 'plus') {
+        countAnimePlus.pause();
+    }
+
+    if (direction == 'minus') {
+        countAnimeMinus.pause();
+    }
+
+
+})
+
+$(document).on("mousemove", function(event) {
+    mousePos = event.pageY;
+
+    if (draggable) {
+        position = mousePos - currentPos;
+        $('.stepper').css('transform', 'translateY(' + position / 2 + 'px)');
+    }
+
+    if (position <= (offset * -1) && draggable) {
+        center();
+        count++;
+        plus();
+    }
+
+    if (position >= offset && draggable) {
+        center();
+        count--;
+        minus();
+    }
+});
+
+$(document).on("mouseup", function(event) {
+    if (draggable) {
+        center();
+    }
+});
+
+
+function center() {
+    draggable = false;
+    blockAnime = anime({
+        targets: '.stepper',
+        duration: dur,
+        translateY: 0,
+    });
+}
+
+function plus() {
+    direction = 'plus';
+    countAnimePlus = anime.timeline();
+
+    $('.next').text(count).css('transform', 'translateY(-100px) translateX(-50%)');
+
+    countAnimePlus.add({
+            targets: '.active',
+            translateY: 100,
+            translateX: '-50%',
+            duration: dur,
+        })
+        .add({
+            targets: '.next',
+            translateY: 0,
+            translateX: '-50%',
+            duration: dur,
+            offset: '-=' + dur,
+        });
+}
+
+function minus() {
+    direction = 'minus';
+    countAnimeMinus = anime.timeline();
+
+    $('.next').text(count).css('transform', 'translateY(100px) translateX(-50%)');
+    console.log(count)
+
+    countAnimeMinus.add({
+            targets: '.active',
+            translateY: -100,
+            translateX: '-50%',
+            duration: dur,
+        })
+        .add({
+            targets: '.next',
+            translateY: 0,
+            translateX: '-50%',
+            duration: 1500,
+            offset: '-=' + dur,
+        });
+}
+
+center();
+plus();
+setTimeout(() => {
+    $('.hide').removeClass('hide');
+}, 300);
+</script>

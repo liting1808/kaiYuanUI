@@ -1,0 +1,89 @@
+.per-list {
+  width: 100%;
+  min-height: 500px;
+  background: white;
+  position: relative;
+  margin-bottom: 60px;
+  padding-bottom: 50px; }
+  .per-list h2 {
+    font-size: 24px;
+    text-indent: 100px;
+    height: 24px;
+    line-height: 24px;
+    padding-top: 50px; }
+    .per-list h2 b {
+      font-size: 12px;
+      color: #9196a7; }
+      .per-list h2 b span {
+        color: red; }
+
+#t1 {
+  position: absolute;
+  left: 0px;
+  top: 0px; }
+
+#formlink {
+  padding-top: 58px; }
+  #formlink p {
+    padding-top: 40px;
+    text-align: center; }
+    #formlink p label {
+      display: inline-block;
+      width: 9%;
+      height: 48px;
+      text-align: left;
+      color: #6f7277; }
+    #formlink p input {
+      width: 42.87%;
+      height: 48px;
+      border: 1px solid #cccccc; }
+    #formlink p textarea {
+      width: 42.87%;
+      height: 160px;
+      resize: none; }
+
+#bz {
+  vertical-align: top; }
+
+.sub {
+  width: 360px;
+  height: 48px;
+  font-size: 14px;
+  color: white;
+  background-color: #f06ca8;
+  text-align: center;
+  line-height: 48px;
+  border: none !important;
+  border-radius: 5px; }
+
+.content {
+  padding: 0px;
+  width: 100%; }
+
+.m-title {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-weight: 100;
+  font-size: 16px;
+  background-color: white; }
+
+.m-title a:hover {
+  color: #f06ca8; }
+
+.intro-right {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0px 8.5% 0px 8.5%; }
+
+@media screen and (max-width: 990px) {
+  #formlink p label {
+    width: 100px;
+    display: block;
+    margin: 0 auto; } }
+
+@media screen and (max-width: 767px) {
+  #formlink p label {
+    width: 100px;
+    display: block;
+    margin: 0 auto; } }

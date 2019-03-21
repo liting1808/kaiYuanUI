@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="css/task.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/Analytics.css">
+    <link rel="stylesheet" href="css/Notifications.css">
+    <link rel="stylesheet" href="css/Gallery.css">
+    <style type="text/css">
+        #result {
+            text-align: right;
+            color: gray;
+            min-height: 2em;
+        }
+
+        #table-sparkline {
+            width: 100%;
+
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        tr {
+            width: 100%;
+            height: 100%;
+        }
+
+        tr td:nth-child(3) {
+            float: right;
+            margin-right: 5%;
+            font-weight: 600;
+            color: #E28271;
+        }
+
+        td {
+            padding: 5px;
+
+            height: 20px;
+        }
+
+        .highcharts-tooltip>span {
+            background: white;
+            border: 1px solid silver;
+            border-radius: 3px;
+            box-shadow: 1px 1px 2px #888;
+            padding: 8px;
+        }
+    </style>
+   <style type="text/css">
+   #box img {
+        width: 263px;
+        display: block;
+    }
+    #box{
+        margin: 0 auto;
+        width:100%;
+        overflow-x:hidden;
+        overflow-y:auto;
+    }
+    #box .item {
+        box-shadow: 2px 2px 2px #999;
+        position: absolute;
+        overflow-x: hidden;
+    overflow-y:auto; 
+    }
+</style>
+</head>
+
+<body>
+    <section>
+            <div class="flexd-top">
+                    <div class="ft">
+                        <div class="ft-A">
+                            <img src="img/logo.png" alt="">
+                        </div>
+                        <div class="logo-right-liage">
+                            <ul>
+                                <li>
+        
+                                    <img src="img/dt2.png" alt="">
+                                    <a href="">                                
+                                        Messages
+                                    </a>
+                                </li>
+                                <li>
+                                        <img src="img/dt4.png" alt="">
+                                    <a href="">
+                                        Notifications
+                                    </a>
+                                </li>
+        
+                            </ul>
+                        </div>
+                        <div class="logo-right-right-yige">
+                            <ul>
+                                <li>
+                                        <img src="img/dt3.png" alt="">
+                                    <a href="denlu.html">
+                                        Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="long-right-none">
+                            <a href=""><img src="img/dt4.png" alt=""></a>
+                            <a href=""><img src="img/dt3.png" alt=""></a>
+                            <a href=""><img src="img/dt2.png" alt=""></a>
+                            <a href="" id="cc"><img src="img/dt1.png" alt=""></a>
+                        </div>
+        
+                    </div>
+        
+                </div>
+        <div class="flexd-next">
+            <div class="da-left dl">
+                    <div class="dl">
+                        <div class="dl-D">
+                            <div class="dl-A">
+                                <img src="img/odinn.jpg" alt="">
+                                <h5>Odinn</h5>
+                                <a href="">
+                                    <img src="img/sz.png"alt="">
+                                    Settings
+                                </a>
+                            </div>
+                            <div class="dl-B">
+                                <div class="dl-a">
+                                    <div class="dl-b">
+                                        <img src="img/lcb.png" alt="">
+                                        <a href="index.html">
+                                            Dashboard
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="dl-a">
+                                    <div class="dl-b dl_b">
+                                        <img src="img/lcb1.png" alt="">
+                                        <a href="#dl-c">
+                                            Features
+                                        </a>
+                                    </div>
+                                    <div class="dl-c" id="dl_c">
+                                        <div class="dl-d dl_d">
+                                            <a href="User Interface.html"> UI Features</a>
+                                            <a href="">Forms</a>
+                                            <a href="">Tables</a>
+                                            <a href="">Buttons</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dl-a">
+                                    <div class="dl-b">
+                                            <img src="img/lcb2.png" alt="">
+                                        <a href="#dl-c">
+                                            Components
+                                        </a>
+                                    </div>
+                                    <div id="dl_c">
+                                        <div class="dl-d">
+                                            <a href="Notifications.html"> UI Features</a>
+                                            <a href="">Forms</a>
+                                            <a href="Gallery.html">Tables</a>    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dl-a">
+                                    <div class="dl-b">
+                                        <img src="img/lcb3.png" alt="">
+                                        <a href="task.html">
+                                            Tasks
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="dl-a">
+                                    <div class="dl-b">
+                                        <img src="img/lcb4.png" alt="">
+                                        <a href="Analytics.html">
+                                            Analytics
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="dl-a">
+                                    <div class="dl-b">
+                                        <img src="img/lcb5.png" alt="">
+                                        <a href="Tickets.html">
+                                            Support Tickets
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="dl-a">
+                                    <div class="dl-b">
+                                        <img src="img/lcb6.png" alt="">
+                                        <a href="">
+                                            Users
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+    
+                    </div>
+            </div>
+            <div class="da-right ">
+
+                <div class="Tasks">
+                    <div class="tasks">
+                        <p><a href="">Home /</a><a href="">Pages /</a><a href="">Tasks</a></p>
+                        <div class="xdxA">Tasks
+                            <div class="xdx">
+                                <a href=""><img src="" alt="">Export</a>
+                                <a href=""><img src="" alt="">Settings</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tonjituB">
+                    <div class="DcA"></div>
+                    <div class="DcB">
+                        <div class="sigetj">
+                            <div class="sgtj">
+                                    <div id="box">
+                                            <div class="item"><img src="img/01.jpg" alt=""></div>
+                                            <div class="item"><img src="img/02.jpg" alt=""></div>
+                                            <div class="item"><img src="img/03.jpg" alt=""></div>
+                                            <div class="item"><img src="img/04.jpg" alt=""></div>
+                                            <div class="item"><img src="img/05.jpg" alt=""></div>
+                                            <div class="item"><img src="img/06.jpg" alt=""></div>
+                                            <div class="item"><img src="img/07.jpg" alt=""></div>
+                                            <div class="item"><img src="img/08.jpg" alt=""></div>
+                                            <div class="item"><img src="img/09.jpg" alt=""></div>
+                                            <div class="item"><img src="img/10.jpg" alt=""></div>
+                                            
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                
+                
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
+
+<script type="text/javascript">
+	/*简单分析:
+		1-先算出页面的宽度,我们就可以算出每一行放几张图片(6列)
+		2-将各个数据块(每一列)的高度放到一个数组中,用来计算每一列的高度.
+		3-先将第一行填满,因为top的值都是一样的(0),记录每一列的高度
+		4-在前面的数组中,找到最小的那个值,后面的数据定位在最小的那个图片的下面
+		5-滚动条滚动到底部,我只要算出最后一个图片距离顶部的距离,这个时候就可以判断,更新列的高度*/
+		
+	var box = document.getElementById('box');
+	var items = box.children;  //所有的item
+	var gap = 10;
+
+	window.onload = function() {
+		// 一进来就调用一次
+		waterFall();
+		// 封装成一个函数
+		function waterFall() {
+			// 1- 确定列数  = 页面的宽度 / 图片的宽度
+			var pageWidth = getClient().width;  //获取当前页面的宽度
+			var itemWidth = items[0].offsetWidth;  //第一个图片的宽度
+			var columns = parseInt(pageWidth / (itemWidth + gap));
+			var arr = [];  //用来存储所有item的DIV的高度
+			for(var i = 0; i < items.length; i++) { 
+				if(i < columns) {  //columns = 6
+					// 2- 确定第一行
+					items[i].style.top = 0;
+					items[i].style.left = (itemWidth + gap) * i + 'px';
+					arr.push(items[i].offsetHeight);
+				} else {
+					// 其他行
+					// 3- 找到数组中最小高度  和 它的索引
+					var minHeight = arr[0];  //假设第一个值为最小值
+					var index = 0;  //临时下标
+					for(var j = 0; j < arr.length; j++) {
+						if(minHeight > arr[j]) {
+							minHeight = arr[j];
+							index = j;
+						}
+					}
+					// 4- 设置下一行的第一个盒子位置
+					// top值就是最小列的高度 + gap
+					items[i].style.top = arr[index] + gap + 'px';
+					// left值就是最小列距离左边的距离
+					items[i].style.left = items[index].offsetLeft + 'px';
+
+					// 5- 修改最小列的高度 
+					// 最小列的高度 = 当前自己的高度 + 拼接过来的图片高度  + 间隙
+					arr[index] = arr[index] + items[i].offsetHeight + gap;
+				}
+			}
+		}
+		// 页面尺寸改变时实时触发
+		window.onresize = function() {
+			waterFall();
+		};
+		// 滚动到页面底部不断的加载
+		window.onscroll = function() {
+			if(getClient().height + getScrollTop() >= items[items.length - 1].offsetTop) {
+				//这些数据应该是模拟ajax获取的    
+				var datas = [
+					// "img/17.jpg",
+					// // "img/18.jpg",
+					// // "img/19.jpg",
+					// // "img/20.jpg",
+					// // "img/21.jpg",
+					// // "img/22.jpg",
+					// "img/35.jpg"
+				];
+				for(var i = 0; i < datas.length; i++) {
+					var div = document.createElement("div");
+					div.className = "item";
+					div.innerHTML = '<img src="' + datas[i] + '">';
+					box.appendChild(div);
+				}
+				waterFall();
+			}
+		};
+	};
+
+	// clientWidth 处理兼容性
+	function getClient() {
+		return {
+			width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+			height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+		}
+	}
+	// scrollTop兼容性处理
+	function getScrollTop() {
+		return window.pageYOffset || document.documentElement.scrollTop;
+	}
+</script>
+
+<script type="text/javascript">
+    var num = 0;
+    $(".dl-b").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "160");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    var num = 0;
+    $(".tjtBa").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "250");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+
+    $(".tjta").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "274");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+
+    $(".ttBa").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "400");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+    $(".ttCa").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "400");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+</script>
+
+
+<script type="text/javascript">
+    var num = 0;
+    $(".zcA").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "400");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+    $(".ydA").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "400");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    var num = 0;
+    $(".DcA").each(function () {
+        $(this).click(function () {
+            num++;
+            if (num % 2 == 1) {
+                $(this).next().css("height", "800");
+            } else {
+                $(this).next().css("height", "0");
+            }
+        });
+    });
+</script>

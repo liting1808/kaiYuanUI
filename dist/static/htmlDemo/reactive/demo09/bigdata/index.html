@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>智能业务大数据监控平台</title>
+	<link rel="stylesheet" type="text/css" href="css/Monitoring Platform.css">
+	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+	<script src="https://www.amcharts.com/lib/4/core.js"></script>
+	<script src="https://www.amcharts.com/lib/4/maps.js"></script>
+	<script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+	<script src="https://www.amcharts.com/lib/4/geodata/usaLow.js"></script>
+	<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+</head>
+<body>
+<!-- 标题 -->
+	<h1>某某市智能业务大数据监控平台</h1>
+<!-- 内容 -->
+	<div class="content">
+		<!-- 左 -->
+		<div class="left">
+			<!-- 等候办理 -->
+			<div class="watting">
+				<img src="img/右.png" alt="">
+				<p>大厅等候办理人数</p>
+			</div>
+			<div id="wattingCharts"></div>
+			<!-- 等候时间 -->
+			<div class="wattingTime">
+				<img src="img/右.png" alt="">
+				<p>预计等候时间/平均办理时间</p>
+			</div>
+			<table border="1" cellspacing="0" cellpadding="0">
+				<tr height="40" align="center" bgcolor="#171d34">
+					<td width="26%">【<span>>></span>　时间</td>
+					<td width="22%">业务类型1</td>
+					<td width="22%">业务类型2</td>
+					<td width="31%">业务类型3　<span><<</span>】</td>
+				</tr>
+				<tr height="50" align="center">
+					<td>平均办理时间/s</td>
+					<td style="color: #ffff01">120</td>
+					<td style="color: #ffff01">120</td>
+					<td style="color: #ffff01">120</td>
+				</tr>
+				<tr height="50" align="center">
+					<td>等候时间/s</td>
+					<td style="color: #ffff01">620</td>
+					<td style="color: #ffff01">800</td>
+					<td style="color: #ffff01">100</td>
+				</tr>
+			</table>
+			<!-- 接待人员情况 -->
+			<div class="reception">
+				<img src="img/右.png" alt="">
+				<p>接待人员情况</p>
+			</div>
+			<div id="reception"></div>
+		</div>
+		<!-- 中 -->
+		<div class="center">
+			<!-- 地图 -->
+			<!-- <img src="img/map.png" alt=""> -->
+			<div id="map"></div>
+			<!-- 当月数据展现 -->
+			<div class="dataShow">
+				<img src="img/右.png" alt="">
+				<p>当月数据展现</p>
+			</div>
+			<div id="dataShow">
+				<ul class="showTop">
+					<li>业务A</li>
+					<li>业务B</li>
+					<li>业务C</li>
+					<li>业务D</li>
+					<li>业务E</li>
+					<li>业务F</li>
+				</ul>
+				<div class="showCharts" id="showCharts1"></div>
+				<div class="showCharts" id="showCharts2"></div>
+				<div class="showCharts" id="showCharts3"></div>
+				<div class="showCharts" id="showCharts4"></div>
+				<div class="showCharts" id="showCharts5"></div>
+				<div class="showCharts" id="showCharts6">
+					<div class="showCharts6-left">
+						<img src="img/6.png" alt="">
+						<p>4910户</p>
+						<img src="img/6.png" alt="">
+						<p>314万元</p>
+						<h6>上月累计收入情况</h6>
+					</div>
+					<div class="showCharts6-right">
+						<img src="img/6.png" alt="">
+						<p>2333户</p>
+						<img src="img/6.png" alt="">
+						<p>190万元</p>
+						<h6>本月累计收入情况</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 右 -->
+		<div class="right">
+			<!-- 大厅 -->
+			<div class="hall">
+				<img src="img/右.png" alt="">
+				<p>当日各时段大厅人流量曲线图</p>
+			</div>
+			<div id="hall"></div>
+			<!-- 人流量变化走势图 -->
+			<div class="change">
+				<img src="img/右.png" alt="">
+				<p>当日各时段大厅人流量曲线图</p>
+			</div>
+			<div id="change"></div>
+			<!-- 当月业务办理量 -->
+			<div class="business">
+				<img src="img/右.png" alt="">
+				<p>当月业务办理量</p>
+			</div>
+			<div id="business"></div>
+		</div>
+	</div>
+</body>
+</html>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/Monitoring Platform.js"></script>
+<script type="text/javascript" src="js/data/wattingCharts.js"></script>
+<script type="text/javascript" src="js/data/reception.js"></script>
+<script type="text/javascript" src="js/data/showCharts1.js"></script> 
+<script type="text/javascript" src="js/data/showCharts2.js"></script>
+<script type="text/javascript" src="js/data/showCharts3.js"></script>
+<script type="text/javascript" src="js/data/showCharts4.js"></script>
+<script type="text/javascript" src="js/data/showCharts5.js"></script>
+<script type="text/javascript" src="js/data/showCharts6.js"></script>
+<script type="text/javascript" src="js/data/hall.js"></script>
+<script type="text/javascript" src="js/data/change.js"></script>
+<script type="text/javascript" src="js/data/business.js"></script>
+<script type="text/javascript" src="js/data/map.js"></script>

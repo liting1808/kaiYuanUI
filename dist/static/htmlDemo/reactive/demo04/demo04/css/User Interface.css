@@ -1,0 +1,178 @@
+section .da-right .tonjituB .tonjituBa {
+    width:45%;
+    height:100%;
+    display:flex;
+    border-radius:3px;
+    border:1px solid #d1d1d1;
+    flex-direction:column;
+    justify-content:space-between;
+}
+section .da-right .tonjituB .tonjituBb {
+    width:45%;
+    height:100%;
+    display:flex;
+    border-radius:3px;
+    flex-direction:column;
+    justify-content:space-between;
+    border:1px solid #d1d1d1;
+}
+section .da-right .tonjituB .tonjituBa .tjtBa,
+section .da-right .tonjituB .tonjituBb .tjta,
+section .da-right .tonjituB .tonjituBa .tjA,
+section .da-right .tonjituB .tonjituBb .tjB {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    float: left;
+    background: #efefef;
+    position: relative;
+}
+section .da-right .tonjituB .tonjituBa .tjtBb,
+section .da-right .tonjituB .tonjituBb .tjtb {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    float: left;
+    background: white;
+    border-radius: 3px;
+    transition: 1s;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+section .da-right .tonjituB .tonjituBa .tjtBb .hh{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+}
+section .da-right .tonjituB .tonjituBa .tjtBb .hh .hhA{
+    width:100%;
+    height:5%;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+section .da-right .tonjituB .tonjituBa .tjtBb .hh .hhA span{
+    display:block;
+    height:100%;
+    text-align:center;
+    font-size:16px;
+}
+section .da-right .tonjituB .tonjituBa .tjtBb .hh .hhA .hhAa{
+    width: 60%;
+    height: 100%;
+    border-radius: 2px;
+    
+    background: #f7f7f7;
+}
+section .da-right .tonjituB .tonjituBa .tjtBb .hh .hhA .hhAa .haha{
+    width:60%;
+    height: 100%;
+    background: #9AD4EC;
+    -webkit-animation: hhAa-hhAa-stripes 2s linear infinite;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+
+}
+section .da-right .tonjituB .tonjituBa .tjtBb .hh .hhA .hhAa .ha{
+    width: 50%;
+    height: 100%;
+    background: #F7C15D;
+    -webkit-animation: hhAa-hhAa-stripes 2s linear infinite;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+
+}
+section .da-right .tonjituB .tonjituBa .tjtBb .hh .hhA .hhAa .h{
+    width: 70%;
+    height: 100%;
+    background: #9DD68B;
+    -webkit-animation: hhAa-hhAa-stripes 2s linear infinite;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+
+}
+section .da-right .tonjituB .tonjituBa .tjtBb .hh .hhA .hhAa .a{
+    width: 70%;
+    height: 100%;
+    background: #F98886;
+    -webkit-animation: hhAa-hhAa-stripes 2s linear infinite;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+section .da-right .tonjituB .tonjituBb .tjtb .hh{
+    width:100%;
+    height:100%;
+    border-radius:5px;  
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+}
+section .da-right .tonjituB .tonjituBb .tjtb .hh .hhA{
+    width:100%;
+    height:10%;
+    display:flex;
+    border-radius:5px;  
+    justify-content:space-around;
+    align-items:center;
+}
+section .da-right .tonjituB .tonjituBb .tjtb .hh .hhA span{
+    display:block;
+    height:100%;
+    text-align:center;
+    font-size:16px;
+}
+section .da-right .tonjituB .tonjituBb .tjtb .hh .hhA .hhAa{
+    width: 70%;
+    height: 100%;
+    border-radius:5px;  
+    background: #f7f7f7;
+}
+section .da-right .tonjituB .tonjituBb .tjtb .hh .hhA .hhAa .haha{
+    width: 100%;
+    height: 100%;
+    border-radius:5px;  
+    background: #9AD4EC;
+    font-size: 18px;
+    text-align: center;
+    line-height:50px;
+}
+section .da-right .tonjituB .tonjituBb .tjtb .hh .hhA .hhAa .ha{
+    width: 100%;
+    height: 100%;
+    border-radius:5px;  
+    background: #F7C15D;
+   
+
+}
+section .da-right .tonjituB .tonjituBb .tjtb .hh .hhA .hhAa .h{
+    width: 100%;
+    height: 100%;
+    border-radius:5px;  
+    background: #9DD68B;
+   
+
+}
+section .da-right .tonjituB .tonjituBb .tjtb .hh .hhA .hhAa .a{
+    width: 100%;
+    height: 100%;
+    border-radius:5px;  
+    background: #F98886;
+
+
+}

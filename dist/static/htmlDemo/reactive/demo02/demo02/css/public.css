@@ -1,0 +1,591 @@
+@charset "utf-8";
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,input,textarea,p,th,td {
+    margin: 0;
+    padding: 0;
+}
+
+ol,ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img {
+    /* display: block; */
+}
+
+input{
+    border: none;
+    outline: none;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+/* 头部区域 */
+.top{
+    width: 100%;
+    display: flex;
+    border-bottom:5px solid #282a2c;
+    overflow: hidden;
+}
+/* logon部分 */
+.top .logo{
+    width: 250px;
+    background: #212224;
+    border-right: 5px solid #282a2c;
+    padding-left: 15px;
+    padding-top: 29px;
+    box-sizing: border-box;
+    color: #fbfbfc;
+    padding-bottom: 25px;
+    transition: all .5s linear;
+}
+.top .logo img{
+    float: left;
+    cursor: pointer;
+}
+.top .logo p{
+    float: left;
+    margin-left: 20px;
+    margin-top: 3px;
+}
+/* 个人信息部分 */
+.top .information{
+    flex: 1;
+    background: #212224;
+}
+.top .information .menu{
+    margin-top: 29px;
+    margin-left: 15px;
+    margin-right: 25px;
+    cursor: pointer;
+}
+.top .information .search {
+    width: 385px;
+    height: 36px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    color: #6c7581;
+    text-indent: 10px;
+}
+.top .information .redSearch {
+    width: 65px;
+    height: 36px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: #ff4961 url(../img/Dashboard/search.png) no-repeat center center;
+    text-indent: 10px;
+    margin-left: -5px;
+    cursor: pointer;
+}
+.top .personBox {
+    height: 100%;
+    float: right;
+    position: relative;
+}
+.top .personBox img{
+    margin-right: 30px;
+    margin-top: 25px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.top .personBox span {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ff4961;
+    animation: spanScale 1s linear infinite;
+}
+.alert{
+    width: 280px;
+    height: 370px;
+    background: #323437;
+    border: 5px solid #80b7d0;
+    position: fixed;
+    z-index: -1;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+}
+.personBox .alert:nth-of-type(1){
+    right: 13%;
+    top: 9%;
+}
+.personBox .alert:nth-of-type(2){
+    right: 10%;
+    top: 9%;
+    font-size: 12px;
+}
+.personBox .alert:nth-of-type(2) .friendInt img{
+    width: 15px;
+    height: 15px;
+}
+.personBox .alert:nth-of-type(3){
+    right: 7%;
+    top: 9%;
+}
+.personBox .alert:nth-of-type(4){
+    right: 4%;
+    top: 9%;
+    height: 420px;
+}
+.alert .message{
+    height: 60px;
+    background: #535969;
+    position: relative;
+    padding-top: 15px;
+    box-sizing: border-box;
+    border-bottom: 2px solid #e1e3e8;
+}
+.message p{
+    font-size: 20px;
+    color: #d2d9e7;
+    margin-left: 20px;
+}
+.message input{
+    width: 70px;
+    height: 30px;
+    position: absolute;
+    right: 5%;
+    top: 25%;
+    line-height: 30px;
+    text-align: center;
+    background: #535969;
+    color: #fa4c53;
+    font-size: 20px;
+}
+.friends{
+    flex: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.personBox .friends img{
+    margin: 0;
+    vertical-align: middle;
+}
+.friends .friend{
+    float: left;
+    width: 30px;
+}
+.friends .friInf{
+    float: left;
+    margin-left: 10px;
+}
+.friInf .names .name{
+    float: left;
+}
+.friInf .names .time{
+    float: right;
+}
+.friends .friInf .chat{
+    clear: both;
+    font-size: 12px;
+}
+.friendInt{
+    height: 80px;
+    border-bottom: 1px solid #4e5165;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 20px 0 10px 10px;
+    color: #d2d9e7;
+}
+.personBox .alert:nth-of-type(2) .friendInt{
+    height: 50px;
+}
+.personBox .alert:nth-of-type(3) .friendInt{
+    font-size: 12px;
+    position: relative;
+}
+.personBox .alert:nth-of-type(3) .friendInt p:nth-child(1){
+    position: absolute;
+    left: 5%;
+}
+.personBox .alert:nth-of-type(3) .friendInt p:nth-child(2){
+    position: absolute;
+    right: 7%;
+}
+.personBox .alert:nth-of-type(3) .friendInt .chat{
+    height: 7px;
+    background: gray;
+    clear: both;
+    margin-top: 30px;
+    margin-right: 20px;
+    position: relative;
+}
+.personBox .alert:nth-of-type(3) .friendInt .chat .chatZhezhao{
+    height: 7px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.personBox .alert:nth-of-type(3) .friendInt:nth-child(1) .chat .chatZhezhao{
+    background: #ff4c52;
+    width: 30%;
+}
+.personBox .alert:nth-of-type(3) .friendInt:nth-child(2) .chat .chatZhezhao{
+    background: #3e8ef7;
+    width: 20%;
+}
+.personBox .alert:nth-of-type(3) .friendInt:nth-child(3) .chat .chatZhezhao{
+    background: #17b3a3;
+    width: 70%;
+}
+.personBox .alert:nth-of-type(3) .friendInt:nth-child(4) .chat .chatZhezhao{
+    background: #faa700;
+    width: 40%;
+}
+.personBox .alert:nth-of-type(3) .friendInt:nth-child(5) .chat .chatZhezhao{
+    background: #0bb2d4;
+    width: 80%;
+}
+.personBox .alert:nth-of-type(3) .friendInt:nth-child(6) .chat .chatZhezhao{
+    background: #3e8ef7;
+    width: 90%;
+}
+.see{
+    height: 50px;
+    background: #535969;
+    color: #d2d9e7;
+    line-height: 50px;
+    text-align: center;
+}
+.alertTX{
+    background: url(../img/Dashboard/aleerBg.jpg) no-repeat center center;
+    background-size: cover;
+    height: 90px;
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+.personBox .alert .alertTX img{
+    float: left;
+    margin: 0;
+}
+.alertTX .ziliao{
+    float: right;
+    color: #fff;
+    padding-top: 10px;
+}
+.alert ul li a{
+    color: #d2d9e7;
+}
+.alert ul{
+    border-bottom: 1px solid #4e5165;
+    padding-left: 20px;
+}
+.alert ul li{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-indent: 40px;
+}
+.alert ul:nth-of-type(1) li:nth-child(1){
+    background: url(../img/Dashboard/alert1.png) no-repeat left center;
+}
+.alert ul:nth-of-type(1) li:nth-child(2){
+    background: url(../img/Dashboard/alert2.png) no-repeat left center;
+}
+.alert ul:nth-of-type(1) li:nth-child(3){
+    background: url(../img/Dashboard/alert3.png) no-repeat left center;
+}
+.alert ul:nth-of-type(2) li{
+    background: url(../img/Dashboard/alert4.png) no-repeat left center;
+}
+.alert ul:nth-of-type(3) li{
+    background: url(../img/Dashboard/alert5.png) no-repeat left center;
+}
+.profile{
+    height: 42px;
+    width: 80%;
+    margin: 0 auto;
+    background: #17b3a3;
+    border-radius: 15px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 42px;
+    color: #d2d9e7;
+}
+
+.top .personBox .setting {
+    animation: imgRotate 2.5s linear infinite;
+}
+.top .personBox span:nth-of-type(1){
+    left: 20px;
+    top: 30px;
+}
+.top .personBox span:nth-of-type(2) {
+    left: 72px;
+    top: 30px;
+}
+.top .personBox span:nth-of-type(3) {
+    left: 128px;
+    top: 30px;
+}
+
+
+/* 内容区域 */
+.centenBox {
+    flex: 1;
+    display: flex;
+}
+/* 导航栏部分 */
+.centenBox .nav {
+    width: 250px;
+    height: 100%;
+    background: #212224;
+    padding-left: 12px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-right: 5px solid #282a2c;
+    box-sizing: border-box;
+    transition: all .5s linear;
+}
+.centenBox .nav::-webkit-scrollbar{
+    display: none;
+}
+.nav .navBox{
+    padding-top: 24px;
+}
+.last-navBox{
+    padding-bottom: 200px;
+}
+.nav .navBox h3{
+    font-weight: 100;
+    font-size: 12px;
+    color: #fff;
+    margin-bottom: 26px;
+}
+.nav .navBox .aBox{
+    clear: both;
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+.nav .navBox .aBox .tit{
+    width: 25px;
+    height: 25px;
+    border: 1px solid #585b67;
+    border-radius: 4px;
+    margin-right: 12px;
+    float: left;
+    padding-left: 8px;
+    padding-top: 8px;
+}
+.nav .navBox .aBox .nav-menu{
+    display: block;
+    width: 170px;
+    height: 35px;
+    background: url(../img/Dashboard/jtrig.png) no-repeat 135px center;
+    float: left;
+    line-height: 35px;
+    color: #fbfbfc;
+    font-size: 12px;
+    margin-left: 10px;
+}
+/* 去掉小箭头的背景图 */
+.nav .navBox .aBox .noBackground{
+    background: url("") no-repeat 0 0;
+}
+.nav .navBox .aBox ul{
+    clear: both;
+    margin-top: 50px;
+    margin-left: 20px;
+    display: none;
+}
+.nav .navBox .aBox ul li{
+    background: url(../img/Dashboard/point.png) left 11px no-repeat;
+    vertical-align: middle;
+    margin-bottom: 10px;
+}
+.nav .navBox .aBox ul li a{
+    color: #8b8d96;
+    font-size: 12px;
+    margin-left: 35px;
+    margin-top: -5px;
+}
+.nav .navBox .aBox ul li a:hover{
+    color: #fbfbfc;
+}
+.nav .navBox .aBox ul li:hover{
+    background: url(../img/Dashboard/menjt.png) left 9px no-repeat;
+}
+
+/* 内容部分 */
+.centenBox .content {
+    flex: 1;
+    height: 100%;
+    background: #212224;
+    overflow-x: hidden;
+    /*position: relative;*/
+}
+
+/* 滚动条效果 */
+.centenBox .content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.centenBox .content::-webkit-scrollbar-thumb,
+.centenBox .content::-webkit-scrollbar-thumb:horizontal {
+    border-radius: 6px;
+    background: #323437;
+}
+
+.centenBox .content::-webkit-scrollbar-button {
+    display: none;
+}
+
+.centenBox .content::-webkit-scrollbar-track,
+.centenBox .content::-webkit-scrollbar-track-piece {
+    background: -webkit-gradient(linear, left);
+}
+
+.centenBox .content::-webkit-scrollbar-track-piece {
+    background: #212224;
+}
+
+/* 滚动条效果 */
+.friends::-webkit-scrollbar {
+    width: 10px;
+}
+
+.friends::-webkit-scrollbar-thumb,
+.friends::-webkit-scrollbar-thumb:horizontal {
+    border-radius: 6px;
+    background: #323437;
+}
+.friends::-webkit-scrollbar-button {
+    display: none;
+}
+
+.friends::-webkit-scrollbar-track,
+.friends::-webkit-scrollbar-track-piece {
+    background: -webkit-gradient(linear, left);
+}
+
+.centenBox .content::-webkit-scrollbar-track-piece {
+    background: #212224;
+}
+
+
+
+/* 动画 */
+@keyframes spanScale{
+    0% {
+        width: 6px;
+        height: 6px;
+    }
+    25% {
+        width: 7px;
+        height: 7px;
+    }
+    50% {
+        width: 8px;
+        height: 8px;
+    }
+    75% {
+        width: 7px;
+        height: 7px;
+    }
+    100% {
+        width: 6px;
+        height: 6px;
+    }
+}
+@keyframes imgRotate{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes buling{
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/*媒体查询*/
+@media screen and (max-width: 1050px){
+    .top .information .search{
+        display: none;
+    }
+    .top .information .redSearch{
+        border: none;
+        background: url(../img/Dashboard/search2.png) no-repeat left 8px;
+    }
+}
+@media screen and (max-width: 800px){
+    .top{
+        position: relative;
+        height: 120px;
+        background: #212224;
+    }
+    .top .logo{
+        position: absolute;
+        left: 35%;
+        top: 0;
+        border-right: none;
+    }
+    .information{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    .top .information .menu{
+        margin-left: 5%;
+    }
+    .information .personBox{
+        float: right;
+        margin-right: 5%;
+    }
+    .centenBox .nav{
+        width: 250px;
+        display: none;
+    }
+    .personBox .alert:nth-of-type(1) {
+        right: 35%;
+        top: 15%;
+    }
+    .personBox .alert:nth-of-type(2) {
+        right: 30%;
+        top: 15%;
+    }
+    .personBox .alert:nth-of-type(3) {
+        right: 25%;
+        top: 15%;
+    }
+    .personBox .alert:nth-of-type(4) {
+        right: 16%;
+        top: 15%;
+    }
+    .noneSelect {
+        right: 3%!important;
+        top: 19%!important;
+    }
+}
+@media screen and (max-width: 500px){
+    .top .logo{
+        left: 25%;
+    }
+}

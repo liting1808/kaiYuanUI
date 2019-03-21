@@ -1,0 +1,826 @@
+.contents{
+    width: 100%;
+    padding-top: 15px;
+    overflow: hidden;
+    padding: 10px 225px;
+    box-sizing: border-box;
+}
+.contents .conTit{
+    vertical-align: middle;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.contents .conTit h3{
+    display: table;
+    width: 130px;
+    height: 45px;
+    border-right: 1px solid #4b4e5e;
+    line-height: 45px;
+    float: left;
+    color: #d2d9e7;
+    font-size: 20px;
+}
+.conTit img{
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 13px;
+}
+.conTit p{
+    margin-top: 13px;
+    margin-left: 10px;
+    font-size: 16px;
+    float: left;
+    color: #d2d9e7;
+}
+.data{
+    float: right;
+    /*width: 150px;*/
+    padding: 0 10px 0 10px;
+    height: 40px;
+    background: #323437;
+    border-radius: 3px;
+}
+.data p{
+    float: left;
+    font-size: 14px;
+    margin-right: 10px;
+}
+.data p span{
+    color: #d2d9e7;
+}
+.data .select{
+    float: right;
+    width: 34px;
+    height: 30px;
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-top: 5px;
+    background: #0bb2d4 url(../img/Dashboard/select-bot.png) no-repeat center center;
+}
+.noneSelect{
+    width: 190px;
+    height: 300px;
+    background: #323437;
+    border: 1px solid #3e4044;
+    position: absolute;
+    right: 12%;
+    top: 15%;
+    box-sizing: border-box;
+    padding: 10px 15px 0;
+    display: none;
+    z-index: 1;
+    cursor: pointer;
+}
+.dataSelect{
+    width: 160px;
+    height: 25px;
+    background: #262626;
+    line-height: 25px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    color: #d2d9e7;
+}
+.setApply .apply{
+    width: 60px;
+    height: 30px;
+    background: #17b3a3;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    float: left;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+.setApply .cancle{ 
+    width: 60px;
+    height: 30px;
+    background: #492c2c;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    float: left;
+}
+
+/* 图表 */
+/* product图表 */
+.product {
+    width: 66%;
+    background: #323437;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    float: left;
+}
+.product .proTit {
+    border-bottom: 1px solid #3e4044;
+    box-sizing: border-box;
+    padding: 20px 0 16px 22px;
+}
+.product .proTit h3{
+    font-size: 24px;
+    color: #d2d9e7;
+    margin-bottom: 5px;
+}
+.product .proTit p{
+    font-size: 14px;
+    color: #d2d9e7;
+}
+#Product-Sales {
+    padding-top: 25px;
+    height: 492px;
+    box-sizing: border-box;
+}
+/* 右板块图表 */
+.sales{
+    width: calc(34% - 30px);
+    height: 800px;
+    float: right;
+}
+/* Daily-Sales图表 */
+#Daily-Sales{
+    width: 100%;
+    height: 180px;
+    background: #323437;
+    margin-bottom: 30px;
+    border: 1px solid #3e4044;
+}
+/* avg图表 */
+.percentage{
+    height: 220px;
+    background: #323437;
+    box-sizing: border-box;
+    padding: 10px 0px 0 22px;
+    border: 1px solid #3e4044;
+    margin-bottom: 30px;
+}
+.percentage h3{
+    color: #d2d9e7;
+    margin-bottom: 10px;
+}
+.percentage p{
+    color: #d2d9e7;
+    margin-bottom: 10px;
+}
+.percentage span{
+    color: #d2d9e7;
+    display: block;
+}
+#avg{
+    height: 100px;
+}
+/* adver图表 */
+.adver{
+    height: 364px;
+    background: #323437;
+    border: 1px solid #3e4044;
+    margin-bottom: 30px;
+}
+.adverTop {
+    height: 60px;
+    border: 1px solid #3e4044;
+    box-sizing: border-box;
+    padding: 20px 0 0 20px;
+    color: #868e96;
+}
+#advertisers{
+    height: 300px;
+}
+/* useronline图表 */
+#user-online {
+    width: 31.5%;
+    height: 200px;
+    float: left;
+    margin-right: 30px;
+    background: #323437;
+    border: 1px solid #3e4044;
+    position: relative;
+}
+/* member profit图表 */
+#Member-Profit {
+    width: 31.5%;
+    height: 200px;
+    float: left;
+    background: #323437;
+    border: 1px solid #3e4044;
+    margin-bottom: 30px;
+}
+/* 个人信息 */
+.person{
+    width: 31.5%;
+    height: 410px;
+    background: #323437;
+    border: 1px solid #3e4044;
+    float: left;
+    clear: both;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+.person .perTop{
+    height: 140px;
+    padding: 20px 0 0 20px;
+    box-sizing: border-box;
+}
+.person .perTop img{
+    float: left;
+}
+.person .perTop .perTopRig{
+    float: left;
+    width: calc(100% - 100px);
+    height: 120px;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+.perTopRig h4{
+    width: 80px;
+    height: 30px;
+    background: #17b3a3;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    color: #d2d9e7;
+}
+.perTopRig h4:hover{
+    background: #ee323b;
+}
+.perTopRig h3{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: #d2d9e7;
+}
+.perTopRig p {
+    margin-bottom: 10px;
+    color: #d2d9e7;
+}
+.perCon{
+    display: flex;
+    height: 80px;
+    box-sizing: border-box;
+    margin-top: 40px;
+}
+.percon{
+    flex: 1;
+    text-align: center;
+    color: #d2d9e7;
+}
+.perBot{
+    text-align: center;
+    font-size: 14px;
+    text-indent: 4px;
+    vertical-align: middle;
+    color: #d2d9e7;
+}
+.perBot p{
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+.perImgBox{
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    padding-left: 130px;
+    padding-top: 10px;
+}
+.perBot .perImgBox img {
+    width: 32px;
+    height: 32px;
+    float: left;
+    margin-right: 20px;
+}
+.perBot .perImgBox img:nth-of-type(1) {
+    width: 20px;
+    height: 20px;
+}
+.perBot .perImgBox img:nth-of-type(2) {
+    margin-top: -6px;
+}
+.perBot .perImgBox img:nth-of-type(3) {
+    width: 25px;
+    height: 25px;
+    margin-top: -3px;
+}
+/* 天气 */
+.weather{
+    width: 40%;
+    height: 410px;
+    background: url(../img/Dashboard/weatherjpg.jpg) no-repeat center center;
+    background-size: cover;
+    border: 1px solid #3e4044;
+    float: left;
+    margin-right: 30px;
+    position: relative;
+}
+.weaBox {
+    width: 100%;
+    height: 410px;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    padding: 40px 0 0 20px;
+    color: #d2d9e7;
+}
+.weather h3{
+    font-size: 24px;
+    margin-bottom: 7px;
+}
+.weather h4 {
+    font-size: 14px;
+}
+.rainy{
+    float: left;
+}
+.deg{
+    float: left;
+    margin-top: 40px;
+    margin-left: 120px;
+}
+.deg h4 {
+    font-size: 40px;
+}
+.deg p{
+    font-size: 14px;
+    font-weight: 600;
+}
+.weeks{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    clear: both;
+    left: 0;
+    bottom: 20px;
+    display: flex;
+}
+.weeks .weekDay{
+    flex: 1;
+    box-sizing: border-box;
+    color: #d2d9e7;
+    text-align: center;
+}
+.weeks .weekDay h3{
+    font-size: 20px;
+}
+.weeks .weekDay img{
+    width: 30px;
+    height: 30px;
+}
+/* view */
+.viewBox{
+    width: 23%;
+    height: 160px;
+    background: #323437;
+    float: left;
+    border: 1px solid #3e4044;
+    box-sizing: border-box;
+    padding: 20px;
+    position: relative;
+    margin-bottom: 30px;
+    color: #d2d9e7;
+}
+.viewBox h3{
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+.viewBox h2{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.view{
+    width: 45px;
+    height: 24px;
+    background: #0bb2d4;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 24px;
+    position: absolute;
+    right: 25px;
+    top: 20px;
+}
+.view:hover{
+    background: #ee323b;
+}
+.line{
+    width: 100%;
+    height: 3px;
+    background: #e0e0e0;
+    position: relative;
+}
+.line .loading{
+    height: 3px;
+    /*width: 30%;*/
+    background: red;
+    left: 0;
+    top: 0;
+}
+.viewBox p{
+    margin-top: 10px;
+    font-size: 13px;
+}
+.viewBox p img{
+    float: left;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+/* johen个人信息2 */
+.johen{
+    width: 23%;
+    height: 222px;
+    float: left;
+    padding: 22px 0 0 22px;
+    box-sizing: border-box;
+    position: relative;
+    background: #323437;
+    border: 1px solid #3e4044;
+    color: #d2d9e7;
+}
+.touxiang{
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.touxiang img{
+    float: left;
+}
+.touxiang .johenInf{
+    float: left;
+    margin-left: 15px;
+}
+.touxiang .johenInf h3{
+    font-size: 18px;
+}
+.touxiang .johenInf p{
+    font-size: 14px;
+}
+.today{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 12px;
+}
+.material{
+    height: 110px;
+    clear: both;
+    margin-left: 25px;
+    padding: 10px 0 0 10px;
+    border-left: 5px solid #eceeef;
+    box-sizing: border-box;
+}
+/*Sales Analytics图表*/
+.Analytics{
+    width: 66%;
+    height: 610px;
+    background: #323437;
+    border: 1px solid #3e4044;
+    color: #d2d9e7;
+    clear: both;
+    margin-bottom: 30px;
+    float: left;
+    margin-right: 30px;
+}
+.anaTit{
+    height: 65px;
+    padding: 20px 0 0 22px;
+    box-sizing: border-box;
+    font-size: 20px;
+    border-bottom: 1px solid #3e4044;
+}
+#Analytics{
+    width: 100%;
+    height: 430px;
+}
+.chartData{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.charts{
+    flex: 1;
+    height: 77px;
+    text-align: center;
+    border-right: 1px solid #ebebeb;
+    position: relative;
+}
+.chartData .lastCharts{
+    border: none;
+}
+.charts p{
+    margin-bottom: 5px;
+}
+.tabTop{
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    position: absolute;
+    left: 38%;
+    bottom: 0;
+}
+.tabTop img{
+    float: left;
+    margin-top: 3px;
+    margin-right: 5px;
+}
+.tabTop p{
+    float: left;
+}
+/* earning图表 */
+.earning{
+    width: 31%;
+    height: 480px;
+    background: #323437;
+    border: 1px solid #3e4044;
+    color: #d2d9e7;
+    float: left;
+    padding: 25px 0 0 22px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+.earTit{
+    position: relative;
+    border-bottom: 1px solid #3e4044;
+}
+.earTit h3{
+    margin-bottom: 10px;
+}
+.earImg{
+    position: absolute;
+    top: 3%;
+    right: 5%;
+}
+.earImg img{
+    vertical-align: middle;
+}
+.earImg img:nth-child(1){
+    margin-right: 10px;
+}
+.earTit h2{
+    margin-top: 40px;
+}
+.earTop{
+    margin-top: 10px;
+    position: relative;
+}
+.earTop img{
+    position: absolute;
+    right: 55%;
+    top: 5px;
+}
+#earning{
+    height: 150px;
+}
+.earBot{
+    padding-top: 20px;
+    overflow: hidden;
+}
+.earBot h2{
+    margin-top: 10px;
+}
+.checkWho{
+    width: 150px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: #17b3a3;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.checkWho:hover{
+    background: #ee323b;
+}
+/* 个人资料 */
+.Monty{
+    width: 31%;
+    height: 100px;
+    background: url(../img/Dashboard/perBg.jpg) center center no-repeat;
+    background-size: cover;
+    border: 1px solid #3e4044;
+    float: left;
+}
+.MontyZhezhao{
+    width: 100%;
+    height: 100px;
+    background: rgb(50,52,55,0.3);
+}
+.monImg{
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background: #484848;
+    text-align: center;
+    padding-top: 3px;
+    box-sizing: border-box;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.monImg img{
+    display: inline;
+}
+.monCen{
+    float: right;
+    color: #d2d9e7;
+    margin-top: 20px;
+    margin-right: 20px;
+    text-align: center;
+}
+.monCen p{
+    font-size: 14px;
+}
+/* yearly图表 */
+#yearly{
+    width: 100%;
+    height: 560px;
+    margin-bottom: 30px;
+    background: #323437;
+    border: 1px solid #3e4044;
+    clear: both;
+}
+/* footer部分 */
+.footer{
+    width: 100%;
+    height: 50px;
+    background: #323437;
+    border-top: 1px solid #3e4044;
+    line-height: 50px;
+    color: #d2d9e7;
+}
+.footer p:nth-child(1){
+    float: left;
+    margin-left: 50px;
+}
+.footer p:nth-child(2){
+    float: right;
+    margin-right: 50px;
+}
+
+
+/*媒体查询*/
+@media screen and (max-width: 1920px){
+    .contents{
+        padding: 10px 207px;
+    }
+}
+@media screen and (max-width: 1850px){
+    .contents{
+        padding: 10px 189px;
+    }
+}
+@media screen and (max-width: 1800px){
+    .contents{
+        padding: 10px 162px;
+    }
+}
+@media screen and (max-width: 1750px){
+    .contents{
+        padding: 10px 136px;
+    }
+}
+@media screen and (max-width: 1700px){
+    .contents{
+        padding: 10px 112px;
+    }
+}
+@media screen and (max-width: 1650px){
+    .contents{
+        padding: 10px 88px;
+    }
+}
+@media screen and (max-width: 1600px){
+    .contents{
+        padding: 10px 63px;
+    }
+}
+@media screen and (max-width: 1550px){
+    .contents{
+        padding: 10px 32px;
+    }
+}
+@media screen and (max-width: 1500px){
+    .contents{
+        padding: 10px 15px;
+    }
+}
+@media screen and (max-width: 1450px){
+    .viewBox{
+        width: 22%;
+    }
+    .johen{
+        width: 22%;
+    }
+}
+@media screen and (max-width: 1360px){
+    .earning{
+        width: 30%;
+    }
+    .Monty{
+        width: 30%;
+    }
+}
+@media screen and (max-width: 1250px){
+    .product {
+        width: 100%;
+        float: none;
+    }
+    .sales{
+        width: 100%;
+        float: none;
+    }
+    #user-online {
+        width: 100%;
+        margin-top: 60px;
+        float: none;
+    }
+    #Member-Profit {
+        width: 100%;
+        float: none;
+        margin-top: 30px;
+    }
+    .person{
+        width: 100%;
+        float: none;
+    }
+    .weather{
+        width: 100%;
+        float: none;
+    }
+    .viewBox{
+        width: 100%;
+        float: none;
+        margin-top: 30px;
+    }
+    .johen{
+        width: 100%;
+        float: none;
+    }
+    .Analytics{
+        width: 100%;
+        float: none;
+        margin-top: 30px;
+    }
+    .earning{
+        width: 100%;
+        float: none;
+    }
+    .Monty{
+        width: 100%;
+        float: none;
+        margin-bottom: 30px;
+    }
+    .perImgBox{
+        padding-left: 45%;
+    }
+    .earTop img{
+        right: 80%;
+    }
+}
+@media screen and (max-width: 1000px){
+    .perImgBox{
+        padding-left: 40%;
+    }
+    .earTop img{
+        right: 70%;
+    }
+}
+@media screen and (max-width: 950px){
+    .footer p:nth-child(1){
+        margin: 0
+    }
+    .footer p:nth-child(2){
+        margin: 0
+    }
+}
+@media screen and (max-width: 600px){
+    .footer p:nth-child(1){
+        font-size: 12px;
+    }
+    .footer p:nth-child(2){
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 500px){
+    .conTit p:nth-of-type(1){
+        display: none;
+    }
+    .conTit .data p{
+        display: block;
+    }
+}
+@media screen and (max-width: 450px){
+    .information .personBox{
+        margin: 0;
+    }
+}
+@media screen and (max-width: 430px){
+    .footer p:nth-child(1){
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .footer p:nth-child(2){
+        display: none;
+    }
+}

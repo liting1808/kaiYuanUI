@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>3D波浪动画焦点轮播图</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #323437
+    }
+
+    li {
+      list-style: none;
+    }
+
+    /*轮播图盒子*/
+    .solid {
+      width: 800px;
+      height: 500px;
+      margin: 70px auto 0;
+      box-shadow: 1px 7px 25px #f60;
+    }
+
+    /*四张图片的盒子*/
+    .solid ul {
+      height: 100%;
+    }
+
+    /*每一个li中放一张图片*/
+    .solid ul li {
+      position: relative;
+      float: left;
+      box-sizing: border-box; /*怪异盒模型*/
+      transform-style: preserve-3d; /*立体3D效果*/
+      transform: translateZ(-250px); /*Z轴位移-250px,即一半*/
+    }
+
+    .solid ul li div {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .solid ul li div:nth-child(1) {
+      top: -500px;
+      background: url("img/02.jpg");
+      transform-origin: bottom; /*改变旋转点的位置*/
+      transform: translateZ(250px) rotateX(90deg); /*Z轴位移一半，X轴旋转90°*/
+    }
+
+    .solid ul li div:nth-child(2) {
+      top: 500px;
+      background: url("img/01.jpg");
+      transform-origin: top; /*改变旋转点的位置*/
+      transform: translateZ(250px) rotateX(-90deg); /*Z轴位移一半，X轴旋转-90°*/
+    }
+
+    .solid ul li div:nth-child(3) {
+      background: url("img/03.jpg");
+      transform: translateZ(250px); /*Z轴位移一半*/
+    }
+
+    .solid ul li div:nth-child(4) {
+      background: url("img/04.jpg");
+      transform: translateZ(-250px) rotateX(180deg); /*Z轴位移一半，X轴旋转180°*/
+    }
+
+    .solid ol {
+      position: absolute;
+      left: 50%;
+      width: 300px;
+      height: 50px;
+      margin-top: 20px;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .solid ol li {
+      width: 50px;
+      height: 50px;
+      background: black;
+      box-shadow: 0 2px 5px white;
+      border-radius: 50%;
+      color: white;
+      text-align: center;
+      font: 20px/50px "Microsoft Yahei"; /*字体大小20，行高50，微软雅黑*/
+      cursor: pointer;
+    }
+
+    /*当前图片所对应的豆豆的显示状态*/
+    .solid ol li.on {
+      background: red;
+    }
+
+    #download {
+      display: block;
+      position: fixed;
+      z-index: 999999999999999999;
+      top: 20px;
+      right: 20px;
+      padding: 10px;
+      background: #12c2e9; /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      color: #fff;
+      text-shadow: 1px 1px 10px #000;
+      text-decoration: none;
+      border-radius: 10px;
+      animation: downl .2s linear infinite;
+    }
+
+    @keyframes downl {
+      0% {
+        transform: translateX(-2px);
+      }
+      50% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-2px);
+      }
+    }
+  </style>
+</head>
+<body>
+<a id="download" href="/static/htmlDemo/JQuery/demo10/demo10.zip" download="3d轮播图.zip">点击下载</a>
+<div class="solid">
+  <ul class="oUl"></ul>
+  <ol>
+    <li class="on">1</li>    <!--默认选中状态-->
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ol>
+</div>
+</body>
+</html>
+<script src="js/Solid.js"></script>

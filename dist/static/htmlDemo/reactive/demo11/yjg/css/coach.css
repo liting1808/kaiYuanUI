@@ -1,0 +1,29 @@
+.c-intro-p {
+  width: 100%;
+  margin: 0px 10px; }
+  .c-intro-p h3 {
+    display: block;
+    font-size: 22px;
+    font-weight: normal;
+    margin: 25px 30px 0 30px;
+    color: black; }
+  .c-intro-p span {
+    color: #aaa;
+    font-size: 14px;
+    text-indent: 10px;
+    display: inline-block; }
+  .c-intro-p h5 {
+    width: 90%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    color: #777;
+    height: auto;
+    min-height: 100px;
+    max-height: 140px; }
+
+.c-intro4 .c-in4-mid ul li {
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 10px 10px; }
+  .c-intro4 .c-in4-mid ul li a {
+    margin: 0px; }

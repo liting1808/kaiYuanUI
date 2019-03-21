@@ -1,0 +1,382 @@
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+ol,
+td,
+input,
+form,
+select,
+option,
+fieldset,
+legend,
+textarea {
+  margin: 0;
+  padding: 0; }
+
+img {
+  border: 0;
+  display: block; }
+
+ul li {
+  list-style: none; }
+
+a:hover {
+  cursor: pointer; }
+
+a {
+  text-decoration: none;
+  color: #66615b;
+
+   }
+  
+  body {
+    color: #66615b;
+    font-size: 14px;
+    font-family: 'Muli', Arial, sans-serif;
+}
+
+// 开始
+// left部分
+.content{
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+}
+.c-left{
+  position: relative;
+  left: 0px;
+  top: 0px;
+  width: 260px;
+  float: left;
+  min-height: 100%;
+  height: 100vh;
+  overflow: auto;
+  overflow-x: hidden;
+  
+ 
+}
+
+.inner{
+  width: 100%;
+ 
+}
+.logo{
+  width: 220px;
+  height: 74px;
+  font-size: 18px;
+  line-height:74px;
+  margin:auto;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  color: #66615b;
+  border-bottom: 1px solid #66615b;
+  a{
+    text-align: center;
+    display: block;
+  }
+}
+
+.ul-list{
+  margin-top: 20px;
+a{
+  display: block;
+    color: #94918d;
+    width: 260px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 60px;
+    position: relative;
+    .angle{
+      display: block;
+      width: 30px;
+      height: 30px;
+      border:1px solid #e7e7e5;
+      position: absolute;
+      right: -15px;
+      top: 15px;
+      display: none;
+  background-color: #f4f3ef;
+  // background-color: red;
+  z-index: 100;
+      transform: rotateZ(45deg);
+    }
+    li{
+      width: 210px;
+      overflow: hidden;
+      padding: 10px 25px 10px 25px;
+
+      i{
+        width: 30px;
+        height: 30px;
+        font-size: 24px;
+        margin-left: 15px;
+        display:inline-block;
+        float: left;
+      }
+      p{
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+        display: inline-block;
+        float: left;
+      }
+    }
+    a:hover{
+    color: #66615b;
+    }
+  }
+  a:first-child{
+    li{
+      color:#F3BB45;
+    }
+    .angle{
+      display: block;
+    }
+  }
+  a:last-child{
+    margin-top: 35px;
+
+  }
+ 
+}
+
+// c-right部分
+.c-right{
+  width: calc(100% - 260px);
+  height:100%;
+  background-color: #f4f3ef;
+  // transform:translateX(0px);
+  overflow: auto;
+  overflow-x: hidden;
+  float: left;
+}
+header{
+  width: 100%;
+  height: 75px;
+  border-bottom: 1px solid #DDDDDD;
+  border-bottom-color: rgb(221, 221, 221);
+  color: #9A9A9A;
+  font-weight: 600;
+  line-height: 75px;
+  .h-left{
+    float: left;
+    display: inline-block;
+    padding-left: 25px;
+    a{
+  color: #9A9A9A;
+    }
+  }
+  ul{
+
+    display: inline-block;
+    float: right;
+    li{
+      float: left;
+      a{
+        padding:10px 15px;
+        margin: 10px 0px;
+        color: #9A9A9A;
+
+        em{
+          font-style: normal;
+          padding-left: 5px;
+        }
+        span{
+          padding:0px 5px;
+        }
+        i{
+          padding-left: 5px;
+        }
+        #angle{
+          
+          width: 0px;
+          height: 0px;
+          display: inline-block;
+          border: 4px solid transparent;
+          border-top-color: #68B3C8;
+        }
+      }
+    }
+  }
+}
+
+/*  */
+footer{
+  margin: 0px 30px;
+  height:70px;
+  line-height: 70px;
+  overflow: hidden;
+  // margin-top: 60px;
+  border-bottom:1px solid #9A9A9A;
+  border-top:1px solid #9A9A9A;
+  
+  p:nth-child(1){
+    float: left;
+    overflow: hidden;
+    display: inline-block;
+    a{
+      display: inline-block;
+      padding:0px 18px;
+      vertical-align: middle;
+    }
+  }
+  .heart{
+    color:#EB5E28;
+  }
+  p:last-child{
+    display: inline-block;
+    float: right;
+    margin-right: 30px;
+    a{
+      color:#68B3C8;
+    }
+  }
+}
+
+
+footer{
+  margin: 0px 30px;
+  height:70px;
+  line-height: 70px;
+  overflow: hidden;
+  // margin-top: 60px;
+  border-bottom:1px solid #9A9A9A;
+  border-top:1px solid #9A9A9A;
+  
+  p:nth-child(1){
+    float: left;
+    overflow: hidden;
+    display: inline-block;
+    a{
+      display: inline-block;
+      padding:0px 18px;
+      vertical-align: middle;
+    }
+  }
+  .heart{
+    color:#EB5E28;
+  }
+  p:last-child{
+    display: inline-block;
+    float: right;
+    margin-right: 30px;
+    a{
+      color:#68B3C8;
+    }
+  }
+}
+.h-btn{
+  display:none;
+}
+.c-content{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 30px 15px;
+  margin-bottom: 20px;
+  
+  iframe{
+    width:calc( 100% + 30px);
+    height: 100vh;
+  }
+}
+.c-c-inner{
+  box-sizing: border-box;
+}
+//进行媒体查询
+@media (max-width: 992px){
+  .c-right header ul{
+    display: none;
+    width: 100%;
+    float: left;
+  }
+  .h-btn{
+    display: block;
+    float: right;
+    width: 24px;
+    height: 20px;    
+    overflow: hidden;
+    text-align: center;
+    margin:30px 15px 10px 0px;
+    span{
+      float: left;
+      margin: 0 auto;
+      width: 24px;
+      height: 2px;
+      display: block;
+      background-color: #9A9A9A;
+      margin-top:4px; 
+      position: relative;
+    transition: all 0.5s;
+    }
+    
+  }
+  .c-left{
+    display: none;
+    transition: all 0.5s;
+  }
+  .ul-list li .angle{
+    left: -20px;
+  }
+  .c-right{
+    width: 100%;
+    position:absolute;
+    transition: all 0.5s;  
+    z-index: 100;  
+  }
+}
+.ban{
+  position: relative;
+}
+.link-a{
+color: #68B3C8;
+}
+//点击下拉菜单的写法
+.ban-list{
+  width: 160px;
+  height: 200px;
+  position: absolute;
+  top: 70px;
+  left: 15px;
+  border-radius: 6px;
+  z-index: 1000;
+  display: none;
+  // padding-bottom: 20px;
+  box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
+  li{
+    width: 160px;
+    height: 40px;
+    background-color: #fff;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    // float: left;
+  }
+  li:first-child{
+    position: relative;
+  }
+  li:hover{
+    background-color: #F3BB45;
+  }
+  .angle1{
+    display: inline-block;
+    border: 11px solid transparent;
+    width: 0px;
+    height: 0px;
+    border-bottom-color: #fff;
+    position: absolute;
+    right: 10px;
+    top: -22px;
+  }
+
+}

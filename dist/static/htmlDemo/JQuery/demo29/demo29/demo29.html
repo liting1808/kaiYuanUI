@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>纯CSS3实现7种扁平天气动画图标 - 【科e互联】</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+    	#download {
+      display: block;
+      position: fixed;
+      z-index: 999999999999999999;
+      top: 20px;
+      right: 20px;
+      padding: 10px;
+      background: #12c2e9; /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      color: #fff;
+      text-shadow: 1px 1px 10px #000;
+      text-decoration: none;
+      border-radius: 10px;
+      animation: downl .2s linear infinite;
+    }
+
+    @keyframes downl {
+      0% {
+        transform: translateX(-2px);
+      }
+      50% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-2px);
+      }
+    </style>
+</head>
+
+<body class="keBody">
+	<a id="download" href="/static/htmlDemo/JQuery/demo29/demo29.zip" download="纯CSS3实现7种扁平天气动画图标.zip">点击下载</a>
+    <h1 class="keTitle">纯CSS3实现7种扁平天气动画图标</h1>
+    <div class="kePublic">
+        <!--效果html开始-->
+        <div class="container">
+            <div class="sunny"></div>
+            <div class="cloudy"></div>
+            <div class="rainy"></div>
+            <div class="snowy"></div>
+            <div class="rainbow"></div>
+            <div class="starry"></div>
+            <div class="stormy"></div>
+        </div>
+        <!--效果html结束-->
+        <div class="clear"></div>
+    </div>
+</body>
+
+</html>

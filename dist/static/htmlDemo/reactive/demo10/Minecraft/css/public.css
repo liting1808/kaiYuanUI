@@ -1,0 +1,767 @@
+@charset "utf-8";
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,input,textarea,p,th,td { 
+	margin: 0; 
+	padding: 0; 
+}
+
+ol, ul { 
+	list-style: none; 
+}
+
+a { 
+	text-decoration: none;
+}
+
+img{
+	display: block;
+}
+
+html,body{
+	height: 100%;
+	background: #f1edec;
+}
+
+/*login部分*/
+.loginBox{
+	height: 28px;
+	background: black;
+	margin: 0 auto;
+}
+.login{
+	text-align: right;
+	width: 58%;
+	height: 28px;
+	margin: 0 auto;
+}
+.login a{
+	color: #fff;
+	font-size: 12px;
+	padding: 0 20px;
+}
+
+/*header部分*/
+.headerBox{
+	width: 100%;
+	height: 112px;
+	background: url(../img/index/HeaderBg.png);
+	margin: 0 auto;
+}
+header{
+	width: 70%;
+	height: 112px;
+	margin: 0 auto;
+	position: relative;
+}
+.titBox{
+	display: block;
+	width: 100px;
+	height: 69px;
+	text-align: center;
+	line-height: 45px;
+	margin-top: 20px;
+	color: #fff;
+	position: absolute;
+}
+.titBox .tit{
+	width: 100px;
+	height: 45px;
+	text-align: center;
+}
+.titBox .tit img{
+	display: inline-block;
+}
+.titBox:nth-child(1){
+	left: 0%;
+}
+.titBox:nth-child(2){
+	left: 13%;
+}
+.titBox:nth-child(4){
+	left: 78%;
+}
+.titBox:nth-child(5){
+	left: 90%;
+}
+.logoImg{
+	width: 47%;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -10%;
+}
+.logoImg img{
+	width: 100%;
+}
+
+/*mojang部分*/
+.mojang{
+	height: 180px;
+	background: #000;
+	overflow: hidden;
+	text-align: center;
+}
+.mojang img{
+	width: 220px;
+	height: 35px;
+	margin-left: 50%;
+	margin-top: 40px;
+	transform: translateX(-50%);
+}
+.mojang p:nth-of-type(1){
+	color: #757575;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+.mojang p:nth-of-type(2){
+	color: #d1cfce;
+}
+.mojang a{
+	color: #d1cfce;	
+}
+
+/*footer部分*/
+footer{
+	height: 95px;
+	background: #313131;
+}
+footer .foot{
+	width:58%;
+	height: 95px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+}
+footer a{
+	color: #fff;
+	float: left;
+	font-size: 12px;
+	flex: 1;
+}
+footer a img{
+	width: 100px;
+	height: 20px;
+}
+
+
+/*媒体查询*/
+@media screen and (max-width: 1920px){
+	.login{
+		width: 58%;
+	}
+	header{
+		width: 62%;
+	}
+	footer .foot{
+		width: 58%;
+	}
+}
+@media screen and (max-width: 1850px){
+	.login{
+		width: 60%;
+	}
+	header{
+		width: 64%;
+	}
+	footer .foot{
+		width: 60%;
+	}
+}
+@media screen and (max-width: 1800px){
+	.login{
+		width: 61%;
+	}
+	header{
+		width: 66.6%;
+	}
+	footer .foot{
+		width: 61.6%;
+	}
+}
+@media screen and (max-width: 1750px){
+	.login{
+		width: 63%;
+	}
+	header{
+		width: 68%;
+	}
+	footer .foot{
+		width: 63.4%;
+	}
+}
+@media screen and (max-width: 1700px){
+	.login{
+		width: 64.7%;
+	}
+	header{
+		width: 70%;
+	}
+	footer .foot{
+		width: 65%;
+	}
+}
+@media screen and (max-width: 1650px){
+	.login{
+		width: 67%;
+	}
+	header{
+		width: 72%;
+	}
+	footer .foot{
+		width: 67%;
+	}
+}
+@media screen and (max-width: 1600px){
+	.login{
+		width: 69%;
+	}
+	header{
+		width: 75%;
+	}
+	footer .foot{
+		width: 69%;
+	}
+}
+@media screen and (max-width: 1550px){
+	.login{
+		width: 71%;
+	}
+	header{
+		width: 77%;
+	}
+	footer .foot{
+		width: 71.6%;
+	}
+}
+@media screen and (max-width: 1500px){
+	.login{
+		width: 74%;
+	}
+	header{
+		width: 80%;
+	}
+	footer .foot{
+		width: 74%;
+	}
+}
+@media screen and (max-width: 1450px){
+	.login{
+		width: 76%;
+	}
+	header{
+		width: 82.7%;
+	}
+	footer .foot{
+		width: 76.5%;
+	}
+}
+@media screen and (max-width: 1400px){
+	.login{
+		width: 79%;
+	}
+	header{
+		width: 85%;
+	}
+	footer .foot{
+		width: 79%;
+	}
+}
+@media screen and (max-width: 1350px){
+	.login{
+		width: 82%;
+	}
+	header{
+		width: 88.8%;
+	}
+	footer .foot{
+		width: 82%;
+	}
+}
+@media screen and (max-width: 1300px){
+	.login{
+		width: 85%;
+	}
+	header{
+		width: 92%;
+	}
+	footer .foot{
+		width: 85%;
+	}
+}
+@media screen and (max-width: 1250px){
+	.login{
+		width: 88%;
+	}
+	header{
+		width: 96%;
+	}
+	footer .foot{
+		width: 88%;
+	}
+}
+@media screen and (max-width: 1200px){
+	.login{
+		width: 92%;
+	}
+	header{
+		width: 97.5%;
+	}
+	footer .foot{
+		width: 92%;
+	}
+}
+@media screen and (max-width: 1150px){
+	.login{
+		width: 81%;
+	}
+	header{
+		width: 97%;
+	}
+	footer .foot{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 1100px){
+	.login{
+		width: 85%;
+	}
+	header{
+		width: 97%;
+	}
+}
+@media screen and (max-width: 1050px){
+	.login{
+		width: 89%;
+	}
+	header{
+		width: 97%;
+	}
+}
+@media screen and (max-width: 1000px){
+	.login{
+		width: 93%;
+	}
+	header{
+		width: 97%;
+	}
+	footer .foot{
+		width: 100%;
+		overflow: hidden;
+		align-items: flex-end;
+		position: relative;
+	}
+	footer .foot a:nth-child(1){
+		flex: none;
+		position: absolute;
+		left: 10%;
+		top: 10%;
+	}
+	footer .foot a:nth-child(7){
+		flex: none;
+		position: absolute;
+		right: 10%;
+		top: 10%;
+	}
+}
+@media screen and (max-width: 950px){
+	.login{
+		width: 72%;
+	}
+	header{
+		width: 78%;
+		height: 78px;
+	}
+	.headerBox{
+		height: 78px;
+	}
+	.titBox{
+		width: 70px;
+		height: 63px;
+		margin-top: 3px;
+	}
+	.titBox .tit{
+		width: 70px;
+		height: 36px;
+	}
+	.logoImg{
+		width: 47%;
+		bottom: 10px;
+	}
+}
+@media screen and (max-width: 900px){
+	.login{
+		width: 76%;
+	}
+	header{
+		width: 83%;
+		height: 78px;
+	}
+	.headerBox{
+		height: 78px;
+	}
+	.titBox{
+		width: 70px;
+		height: 63px;
+		margin-top: 3px;
+	}
+	.titBox .tit{
+		width: 70px;
+		height: 36px;
+	}
+	.logoImg{
+		width: 47%;
+		bottom: 10px;
+	}
+}
+@media screen and (max-width: 850px){
+	.login{
+		width: 81%;
+	}
+	header{
+		width: 88%;
+		height: 78px;
+	}
+	.headerBox{
+		height: 78px;
+	}
+	.titBox{
+		width: 70px;
+		height: 63px;
+		margin-top: 3px;
+	}
+	.titBox .tit{
+		width: 70px;
+		height: 36px;
+	}
+	.logoImg{
+		width: 45%;
+		bottom: 10px;
+	}
+}
+@media screen and (max-width: 800px){
+	.login{
+		width: 86%;
+	}
+	header{
+		width: 90%;
+		height: 78px;
+	}
+	.headerBox{
+		height: 78px;
+	}
+	.titBox{
+		width: 70px;
+		height: 63px;
+		margin-top: 3px;
+	}
+	.titBox .tit{
+		width: 70px;
+		height: 36px;
+	}
+	.logoImg{
+		width: 47%;
+		bottom: 10px;
+	}
+}
+@media screen and (max-width: 750px){
+	.login{
+		width: 92%;
+	}
+	header{
+		width: 90%;
+		height: 78px;
+	}
+	.headerBox{
+		height: 78px;
+	}
+	.titBox{
+		display: none;
+	}
+	.titBox:nth-child(5){
+		display: block;
+	}
+	.titBox:nth-child(5) div{
+		display: none;
+	}
+	.titBox:nth-child(5) .tit{
+		display: block;
+		margin-top: 10px;
+	}
+	.logoImg{
+		width: 40%;
+		bottom: 20px;
+	}
+}
+@media screen and (max-width: 700px){
+	.login{
+		width: 90%;
+	}
+	header{
+		width: 90%;
+		height: 78px;
+	}
+	.headerBox{
+		height: 78px;
+	}
+	.titBox{
+		display: none;
+	}
+	.titBox:nth-child(5){
+		display: block;
+	}
+	.titBox:nth-child(5) div{
+		display: none;
+	}
+	.titBox:nth-child(5) .tit{
+		display: block;
+		margin-top: 10px;
+	}
+	.logoImg{
+		width: 45%;
+		bottom: 20px;
+	}
+}
+@media screen and (max-width: 650px){
+	.login{
+		width: 90%;
+	}
+	header{
+		width: 90%;
+		height: 78px;
+	}
+	.headerBox{
+		height: 78px;
+	}
+	.titBox{
+		display: none;
+	}
+	.titBox:nth-child(5){
+		display: block;
+	}
+	.titBox:nth-child(5) div{
+		display: none;
+	}
+	.titBox:nth-child(5) .tit{
+		display: block;
+		margin-top: 10px;
+	}
+	.logoImg{
+		width: 50%;
+		bottom: 20px;
+	}
+}
+@media screen and (max-width: 600px){
+	.login{
+		width: 90%;
+	}
+	header{
+		width: 90%;
+		height: 78px;
+	}
+	.headerBox{
+		height: 78px;
+	}
+	.titBox{
+		display: none;
+	}
+	.titBox:nth-child(5){
+		display: block;
+	}
+	.titBox:nth-child(5) div{
+		display: none;
+	}
+	.titBox:nth-child(5) .tit{
+		display: block;
+		margin-top: 10px;
+	}
+	.logoImg{
+		width: 55%;
+		bottom: 20px;
+	}
+}
+@media screen and (max-width: 550px){
+	.login{
+		width: 90%;
+	}
+	header{
+		width: 90%;
+		height: 78px;
+	}
+	.headerBox{
+		height: 78px;
+	}
+	.titBox{
+		display: none;
+	}
+	.titBox:nth-child(5){
+		display: block;
+		left: 80%;
+	}
+	.titBox:nth-child(5) div{
+		display: none;
+	}
+	.titBox:nth-child(5) .tit{
+		display: block;
+		margin-top: 10px;
+	}
+	.logoImg{
+		width: 60%;
+		left: 40%;
+		bottom: 20px;
+	}
+}
+@media screen and (max-width: 500px){
+	.login{
+		width: 90%;
+	}
+	header{
+		width: 90%;
+		height: 78px;
+	}
+	.headerBox{
+		height: 78px;
+	}
+	.titBox{
+		display: none;
+	}
+	.titBox:nth-child(5){
+		display: block;
+		left: 80%;
+	}
+	.titBox:nth-child(5) div{
+		display: none;
+	}
+	.titBox:nth-child(5) .tit{
+		display: block;
+		margin-top: 10px;
+	}
+	.logoImg{
+		width: 70%;
+		left: 35%;
+		bottom: 20px;
+	}
+}
+@media screen and (max-width: 450px){
+	.login{
+		width: 90%;
+	}
+	header{
+		width: 90%;
+		height: 78px;
+	}
+	.headerBox{
+		height: 78px;
+	}
+	.titBox{
+		display: none;
+	}
+	.titBox:nth-child(5){
+		display: block;
+		left: 83%;
+	}
+	.titBox:nth-child(5) div{
+		display: none;
+	}
+	.titBox:nth-child(5) .tit{
+		display: block;
+		margin-top: 10px;
+	}
+	.logoImg{
+		width: 70%;
+		left: 35%;
+		bottom: 20px;
+	}
+}
+@media screen and (max-width: 400px){
+	.login{
+		width: 90%;
+	}
+	header{
+		width: 90%;
+		height: 78px;
+	}
+	.headerBox{
+		height: 78px;
+	}
+	.titBox{
+		display: none;
+	}
+	.titBox:nth-child(5){
+		display: block;
+		left: 80%;
+	}
+	.titBox:nth-child(5) div{
+		display: none;
+	}
+	.titBox:nth-child(5) .tit{
+		display: block;
+		margin-top: 10px;
+	}
+	.logoImg{
+		width: 70%;
+		left: 35%;
+		bottom: 20px;
+	}
+}
+@media screen and (max-width: 350px){
+	.login{
+		width: 90%;
+	}
+	header{
+		width: 90%;
+		height: 78px;
+	}
+	.headerBox{
+		height: 78px;
+	}
+	.titBox{
+		display: none;
+	}
+	.titBox:nth-child(5){
+		display: block;
+		left: 75%;
+	}
+	.titBox:nth-child(5) div{
+		display: none;
+	}
+	.titBox:nth-child(5) .tit{
+		display: block;
+		margin-top: 10px;
+	}
+	.logoImg{
+		width: 70%;
+		left: 35%;
+		bottom: 20px;
+	}
+}
+@media screen and (max-width: 300px){
+	.login{
+		width: 90%;
+	}
+	header{
+		width: 90%;
+		height: 78px;
+	}
+	.headerBox{
+		height: 78px;
+	}
+	.titBox{
+		display: none;
+	}
+	.titBox:nth-child(5){
+		display: block;
+		left: 75%;
+	}
+	.titBox:nth-child(5) div{
+		display: none;
+	}
+	.titBox:nth-child(5) .tit{
+		display: block;
+		margin-top: 10px;
+	}
+	.logoImg{
+		width: 70%;
+		bottom: 20px;
+		left: 35%;
+	}
+}

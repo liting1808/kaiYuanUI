@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/article-list.css">
+    <link rel="stylesheet" href="css/feedback-list.css">
+    <title>意见反馈</title>
+</head>
+<body>
+    <nav class="breadcrumb">
+        <i class="iconfont icon-zhuye"></i>
+        首页
+        <span class="c-gray en">&gt;</span>
+        评论管理 
+        <span class="c-gray en">&gt;</span>
+        意见反馈 
+        <a href="article-list.html" class="shuaxin">
+            <i class="iconfont icon-shuaxin"></i>
+        </a>
+    </nav>
+    <div class="page-container">
+        <div class="text-c">
+            范围：
+            <input type="text" class="input-text Wdate" style="width:120px;">
+            -
+            <input type="text" class="input-text Wdate" style="width:120px;">
+            <input type="text" class="input-text" placeholder=" 请输入关键字" style="width:250px">
+            <button type="submit" class="btn-success">
+                <i class="iconfont icon-fangdajing"></i>
+                搜意见
+            </button>
+        </div>
+        <div class="cl pd-5 bg-1 bk-gray mt-20">
+            <span class="l">
+                <a href="javascript:;" class="btn-danger">
+                    <i class="iconfont icon-shanchu"></i>
+                    批量删除
+                </a>
+            </span>
+            <span class="r">
+               共有数据：
+               <strong>54</strong>
+               条
+            </span>
+        </div>
+        <div class="mt-20">
+            <div class="dataTables_wrapper no-footer">
+                <div class="dataTables_length">
+                    <label>
+                        显示
+                        <select name="DataTables_Table_0_length" class="select">
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                        条
+                    </label>
+                </div>
+                <div class="dataTables_filter">
+                    <label>
+                       从当前数据中检索:
+                       <input type="search" class="input-text">
+                    </label>
+                </div>
+                <table class="table_zx">
+                    <thead>
+                        <tr class="text-c">
+                            <th width="25">
+                                <input type="checkbox" name="" value="" class="qx">
+                            </th>
+                            <th width="60">ID</th>
+                            <th width="60">用户名</th>
+                            <th width="892">留言内容</th>
+                            <th width="100">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="text-c">
+                            <td><input type="checkbox" value="" name="" ></td>
+                            <td>1</td>
+                            <td >
+                                <a href="javascript:;" class="portrait">
+                                    <img src="images/avatar-default-S.gif" alt="">
+                                </a>
+                            </td>
+                            <td class="text-l">
+                                <div class="c-999 f-12">
+                                    <a href="javascript:;" class="zxt">张三</a>
+                                    <span>2014-8-31 15:20</span>
+                                    <span>13000000000</span>
+                                    <span>admin@mail.com</span>
+                                </div>
+                                <div class="f-12 c-999">
+                                    <a href="javascript:;">http://www.123213213123.com</a>
+                                    
+                                </div>
+                                <div>留言内容</div>
+                            </td>
+                            <td class="f-14 td-manage">
+                                <a style="text-decoration:none" class="ml-5" href="javascript:;" title="编辑">
+                                    <i class="iconfont icon-bi bj"></i>
+                                </a>
+                                <a style="text-decoration:none" class="ml-5" href="javascript:;" title="删除">
+                                    <i class="iconfont icon-shanchu sc"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="text-c">
+                            <td><input type="checkbox" value="" name=""></td>
+                            <td>2</td>
+                            <td >
+                                <a href="javascript:;" class="portrait">
+                                    <img src="images/avatar-default-S.gif" alt="">
+                                </a>
+                            </td>
+                            <td class="text-l">
+                                <div class="c-999 f-12">
+                                    <a href="javascript:;" class="zxt">李四</a>
+                                    <span>2014-8-31 15:20</span>
+                                    <span>13000000000</span>
+                                    <span>admin@mail.com</span>
+                                </div>
+                                <div class="f-12 c-999">
+                                    <a href="javascript:;">http://www.123213213123.com</a>
+                                    
+                                </div>
+                                <div>留言内容</div>
+                            </td>
+                            <td class="f-14 td-manage">
+                                <a style="text-decoration:none" class="ml-5" href="javascript:;" title="编辑">
+                                    <i class="iconfont icon-bi bj"></i>
+                                </a>
+                                <a style="text-decoration:none" class="ml-5" href="javascript:;" title="删除">
+                                    <i class="iconfont icon-shanchu sc"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="text-c">
+                            <td><input type="checkbox" value="" name=""></td>
+                            <td>2</td>
+                            <td >
+                                <a href="javascript:;" class="portrait">
+                                    <img src="images/avatar-default-S.gif" alt="">
+                                </a>
+                            </td>
+                            <td class="text-l">
+                                <div class="c-999 f-12">
+                                    <a href="javascript:;" class="zxt">张五</a>
+                                    <span>2014-8-31 15:20</span>
+                                    <span>13000000000</span>
+                                    <span>admin@mail.com</span>
+                                </div>
+                                <div class="f-12 c-999">
+                                    <a href="javascript:;">http://www.123213213123.com</a>
+                                    
+                                </div>
+                                <div>留言内容</div>
+                            </td>
+                            <td class="f-14 td-manage">
+                                <a style="text-decoration:none" class="ml-5" href="javascript:;" title="编辑">
+                                    <i class="iconfont icon-bi bj"></i>
+                                </a>
+                                <a style="text-decoration:none" class="ml-5" href="javascript:;" title="删除">
+                                    <i class="iconfont icon-shanchu sc"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="text-c">
+                                <td><input type="checkbox" value="" name=""></td>
+                                <td>2</td>
+                                <td >
+                                    <a href="javascript:;" class="portrait">
+                                        <img src="images/avatar-default-S.gif" alt="">
+                                    </a>
+                                </td>
+                                <td class="text-l">
+                                    <div class="c-999 f-12">
+                                        <a href="javascript:;" class="zxt">张六</a>
+                                        <span>2014-8-31 15:20</span>
+                                        <span>13000000000</span>
+                                        <span>admin@mail.com</span>
+                                    </div>
+                                    <div class="f-12 c-999">
+                                        <a href="javascript:;">http://www.123213213123.com</a>
+                                        
+                                    </div>
+                                    <div>留言内容</div>
+                                </td>
+                                <td class="f-14 td-manage">
+                                    <a style="text-decoration:none" class="ml-5" href="javascript:;" title="编辑">
+                                        <i class="iconfont icon-bi bj"></i>
+                                    </a>
+                                    <a style="text-decoration:none" class="ml-5" href="javascript:;" title="删除">
+                                        <i class="iconfont icon-shanchu sc"></i>
+                                    </a>
+                                </td>
+                        </tr>
+                        <tr class="text-c">
+                            <td><input type="checkbox" value="" name=""></td>
+                            <td>2</td>
+                            <td >
+                                <a href="javascript:;" class="portrait">
+                                    <img src="images/avatar-default-S.gif" alt="">
+                                </a>
+                            </td>
+                            <td class="text-l">
+                                <div class="c-999 f-12">
+                                    <a href="javascript:;" class="zxt">张七</a>
+                                    <span>2014-8-31 15:20</span>
+                                    <span>13000000000</span>
+                                    <span>admin@mail.com</span>
+                                </div>
+                                <div class="f-12 c-999">
+                                    <a href="javascript:;">http://www.123213213123.com</a>
+                                    
+                                </div>
+                                <div>留言内容</div>
+                            </td>
+                            <td class="f-14 td-manage">
+                                <a style="text-decoration:none" class="ml-5" href="javascript:;" title="编辑">
+                                    <i class="iconfont icon-bi bj"></i>
+                                </a>
+                                <a style="text-decoration:none" class="ml-5" href="javascript:;" title="删除">
+                                    <i class="iconfont icon-shanchu sc"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="dataTables_info">显示 1 到 2 ，共 2 条</div>
+                <div class="dataTables_paginate">
+                    <a href="#" class="paginate_button">上一页</a>
+                    <span>
+                        <a href="#" class="current">1</a>
+                    </span>
+                    <a href="#" class="paginate_button">下一页</a>
+                </div>
+            </div> 
+        </div>
+        <div class="zdc" style="display: none;"></div>
+        <div class="box_up" style="display: none;">
+            <div class="layui-layer-title">信息</div>
+            <div id="" class="layui-layer-content">确认要下架吗？</div>
+            <span class="layui-layer-setwin">
+                <a href="javascript:;" class="layui-layer-ico layui-layer-close layui-layer-close1"></a>
+            </span>
+            <div class="layui-layer-btn">
+                <a href="javascript:;" class="layui-layer-btn0">确定</a>
+                <a href="javascript:;" class="layui-layer-btn1">取消</a>
+            </div>
+        </div>
+        <div class="box_pp" style="display: none;">
+            <div class="infor-title">张三</div>
+            <div id="" class="infor-content">
+                <img src="images/avatar-default.jpg" alt="">
+                <div class="information">
+                    <span class="f-18">张三</span>
+                    <span class="pl-10 f-12">余额：40</span>
+                    <p class="f-12">这家伙很懒，什么也没有留下</p>
+                </div>
+            </div>
+            <div class="pd-20">
+                <div>
+                    <span class="text-le">性别：</span>
+                    <span class="text-r">男</span>
+                </div>
+                <div>
+                    <span class="text-le">手机：</span>
+                    <span class="text-r">13000000000</span>
+                </div>
+                <div>
+                    <span class="text-le">手机：</span>
+                    <span class="text-r">13000000000</span>
+                </div>
+                <div>
+                    <span class="text-le">邮箱：</span>
+                    <span class="text-r">admin@mail.com</span>
+                </div>
+                <div>
+                    <span class="text-le">地址：</span>
+                    <span class="text-r">北京市 海淀区</span>
+                </div>
+                <div>
+                    <span class="text-le">注册时间：</span>
+                    <span class="text-r">2018.12.10</span>
+                </div>
+                <div>
+                    <span class="text-le">积分：</span>
+                    <span class="text-r">330</span>
+                </div>
+            </div>
+            <span class="layui-layer-setwin">
+                <a href="javascript:;" class="layui-layer-ico layui-layer-close layui-layer-close1"></a>
+            </span>
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/tool.js"></script>
+<script>
+   
+    window.onload = function(){
+        // 删除
+        let ss = $(".sc");
+        for(let i = 0;i<ss.length;i++){
+            ss[i].onclick = function(){
+                $(".zdc")[0].style.display = "block";
+                $(".box_up")[0].style.display = "block";
+                $(".layui-layer-content")[0].innerHTML = "确认要删除吗？";
+                $(".layui-layer-btn0")[0].onclick = function(){
+                    $(".zdc")[0].style.display = "none";
+                    $(".box_up")[0].style.display = "none";
+                    $(".sc")[0].parentElement.parentElement.parentElement.remove();
+                    }
+                $(".layui-layer-btn1")[0].onclick = function(){
+                    $(".zdc")[0].style.display = "none";
+                    $(".box_up")[0].style.display = "none";
+                  }
+                $(".layui-layer-ico")[0].onclick = function(){
+                    $(".zdc")[0].style.display = "none";
+                    $(".box_up")[0].style.display = "none";
+                }
+            }
+        }
+        // 全选、反选
+        $(".qx")[0].onclick = function(){
+            if (this.checked) {
+                for(var i=0;i<$("tbody")[0].children.length;i++){
+                    $("tbody")[0].children[i].firstElementChild.firstElementChild.checked = "checked";
+				}
+            } else {
+                for(var i=0;i<$("tbody")[0].children.length;i++){
+                    $("tbody")[0].children[i].firstElementChild.firstElementChild.checked = null;
+				}
+            }
+        }
+        // 头像
+        let kk = $(".portrait");
+        for(let i = 0;i<kk.length;i++){
+            kk[i].onclick = function(){
+                
+                if(kk[i].lastElementChild.style.display == "inline-block"){
+                    $(".zdc")[0].style.display = "block";
+                    $(".box_pp")[0].style.display = "block";
+                    $(".layui-layer-ico")[0].onclick = function(){
+                        $(".zdc")[0].style.display = "none";
+                        $(".box_pp")[0].style.display = "none"; 
+                    }
+                    
+                }else{
+                    $(".zdc")[0].style.display = "block";
+                    $(".box_pp")[0].style.display = "block";
+                    $(".layui-layer-ico")[0].onclick = function(){
+                        $(".zdc")[0].style.display = "none";
+                        $(".box_pp")[0].style.display = "none";
+                    }
+                    
+                }
+                
+            }
+        }
+        let cc = $(".zxt");
+        for(let i = 0;i<cc.length;i++){
+            cc[i].onclick = function(){
+                
+                if($(".zdc")[0].style.display == "none"){
+                    $(".zdc")[0].style.display = "block";
+                    $(".box_pp")[0].style.display = "block";
+                    $(".layui-layer-ico")[0].onclick = function(){
+                        $(".zdc")[0].style.display = "none";
+                        $(".box_pp")[0].style.display = "none"; 
+                    }
+                    
+                }else{
+                    $(".zdc")[0].style.display = "block";
+                    $(".box_pp")[0].style.display = "block";
+                    $(".layui-layer-ico")[0].onclick = function(){
+                        $(".zdc")[0].style.display = "none";
+                        $(".box_pp")[0].style.display = "none";
+                    }
+                    
+                }
+                
+            }
+        }
+        // 未完成
+        let bj = $(".bj");
+
+    }
+    // let cc = $("tbody")[0].children[0].firstElementChild.firstElementChild.checked;
+    // for(let i =0;i<cc.length;i++){
+    //     cc[i].firstElementChild.firstElementChild.checked;
+    // }
+    // console.log(cc);
+
+</script>

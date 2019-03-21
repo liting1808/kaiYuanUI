@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>骰子日历</title>
+    <style type="text/css">
+    html {
+        box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+        position: relative;
+    }
+
+    body {
+        margin: 0;
+        background-color: #363636
+    }
+
+    .stage {
+        height: 100vh;
+        -webkit-perspective: 1000px;
+        perspective: 1000px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media (max-width: 480px) {
+        .stage {
+            -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+        }
+    }
+
+    time {
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translate(-50%, 110px);
+        transform: translate(-50%, 110px);
+        color: #666;
+        font-size: 0.8em;
+    }
+
+    .group {
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        transition: 1000ms;
+    }
+
+    .group.g1 {
+        left: 110px;
+        z-index: 1;
+    }
+
+    .group.g2 {
+        left: -110px;
+        z-index: 2;
+    }
+
+    .group .d1,
+    .group .d3 {
+        left: -55px;
+    }
+
+    .group .d2,
+    .group .d4 {
+        left: 55px;
+    }
+
+    .dice {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        text-align: center;
+        font-size: 45px;
+        line-height: 2;
+        transition: 1000ms;
+    }
+
+    .dice .face {
+        position: absolute;
+        margin: -45px;
+        width: 90px;
+        height: 90px;
+        outline: 1px solid transparent;
+        opacity: 0.9;
+    }
+
+    .dice .face:nth-child(1) {
+        -webkit-transform: rotateY(0deg) translateZ(45px);
+        transform: rotateY(0deg) translateZ(45px);
+    }
+
+    .dice .face:nth-child(2) {
+        -webkit-transform: rotateY(90deg) translateZ(45px);
+        transform: rotateY(90deg) translateZ(45px);
+    }
+
+    .dice .face:nth-child(3) {
+        -webkit-transform: rotateY(180deg) translateZ(45px);
+        transform: rotateY(180deg) translateZ(45px);
+    }
+
+    .dice .face:nth-child(4) {
+        -webkit-transform: rotateY(270deg) translateZ(45px);
+        transform: rotateY(270deg) translateZ(45px);
+    }
+
+    .dice .face:nth-child(5) {
+        -webkit-transform: rotateX(90deg) translateZ(45px);
+        transform: rotateX(90deg) translateZ(45px);
+    }
+
+    .dice .face:nth-child(6) {
+        -webkit-transform: rotateX(-90deg) translateZ(45px);
+        transform: rotateX(-90deg) translateZ(45px);
+    }
+
+    .dice .face:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+    }
+
+    .dice.d1 .face,
+    .dice.d2 .face {
+        background-image: linear-gradient(-45deg, tomato, red);
+    }
+
+    .dice.d3 .face,
+    .dice.d4 .face {
+        background-image: linear-gradient(-45deg, yellowgreen, olive);
+    }
+
+    .num-0:after {
+        box-shadow: 25px 15px 0 5px rgba(255, 255, 255, 0.8), 35px 15px 0 5px rgba(255, 255, 255, 0.8), 45px 15px 0 5px rgba(255, 255, 255, 0.8), 55px 15px 0 5px rgba(255, 255, 255, 0.8), 65px 15px 0 5px rgba(255, 255, 255, 0.8), 25px 25px 0 5px rgba(255, 255, 255, 0.8), 65px 25px 0 5px rgba(255, 255, 255, 0.8), 25px 35px 0 5px rgba(255, 255, 255, 0.8), 65px 35px 0 5px rgba(255, 255, 255, 0.8), 25px 45px 0 5px rgba(255, 255, 255, 0.8), 65px 45px 0 5px rgba(255, 255, 255, 0.8), 25px 55px 0 5px rgba(255, 255, 255, 0.8), 65px 55px 0 5px rgba(255, 255, 255, 0.8), 25px 65px 0 5px rgba(255, 255, 255, 0.8), 65px 65px 0 5px rgba(255, 255, 255, 0.8), 25px 75px 0 5px rgba(255, 255, 255, 0.8), 35px 75px 0 5px rgba(255, 255, 255, 0.8), 45px 75px 0 5px rgba(255, 255, 255, 0.8), 55px 75px 0 5px rgba(255, 255, 255, 0.8), 65px 75px 0 5px rgba(255, 255, 255, 0.8);
+    }
+
+    .num-1:after {
+        box-shadow: 45px 15px 0 5px rgba(255, 255, 255, 0.8), 45px 25px 0 5px rgba(255, 255, 255, 0.8), 45px 35px 0 5px rgba(255, 255, 255, 0.8), 45px 45px 0 5px rgba(255, 255, 255, 0.8), 45px 55px 0 5px rgba(255, 255, 255, 0.8), 45px 65px 0 5px rgba(255, 255, 255, 0.8), 45px 75px 0 5px rgba(255, 255, 255, 0.8);
+    }
+
+    .num-2:after {
+        box-shadow: 25px 15px 0 5px rgba(255, 255, 255, 0.8), 35px 15px 0 5px rgba(255, 255, 255, 0.8), 45px 15px 0 5px rgba(255, 255, 255, 0.8), 55px 15px 0 5px rgba(255, 255, 255, 0.8), 65px 15px 0 5px rgba(255, 255, 255, 0.8), 65px 25px 0 5px rgba(255, 255, 255, 0.8), 65px 35px 0 5px rgba(255, 255, 255, 0.8), 25px 45px 0 5px rgba(255, 255, 255, 0.8), 35px 45px 0 5px rgba(255, 255, 255, 0.8), 45px 45px 0 5px rgba(255, 255, 255, 0.8), 55px 45px 0 5px rgba(255, 255, 255, 0.8), 65px 45px 0 5px rgba(255, 255, 255, 0.8), 25px 55px 0 5px rgba(255, 255, 255, 0.8), 25px 65px 0 5px rgba(255, 255, 255, 0.8), 25px 75px 0 5px rgba(255, 255, 255, 0.8), 35px 75px 0 5px rgba(255, 255, 255, 0.8), 45px 75px 0 5px rgba(255, 255, 255, 0.8), 55px 75px 0 5px rgba(255, 255, 255, 0.8), 65px 75px 0 5px rgba(255, 255, 255, 0.8);
+    }
+
+    .num-3:after {
+        box-shadow: 25px 15px 0 5px rgba(255, 255, 255, 0.8), 35px 15px 0 5px rgba(255, 255, 255, 0.8), 45px 15px 0 5px rgba(255, 255, 255, 0.8), 55px 15px 0 5px rgba(255, 255, 255, 0.8), 65px 15px 0 5px rgba(255, 255, 255, 0.8), 65px 25px 0 5px rgba(255, 255, 255, 0.8), 65px 35px 0 5px rgba(255, 255, 255, 0.8), 35px 45px 0 5px rgba(255, 255, 255, 0.8), 45px 45px 0 5px rgba(255, 255, 255, 0.8), 55px 45px 0 5px rgba(255, 255, 255, 0.8), 65px 45px 0 5px rgba(255, 255, 255, 0.8), 65px 55px 0 5px rgba(255, 255, 255, 0.8), 65px 65px 0 5px rgba(255, 255, 255, 0.8), 25px 75px 0 5px rgba(255, 255, 255, 0.8), 35px 75px 0 5px rgba(255, 255, 255, 0.8), 45px 75px 0 5px rgba(255, 255, 255, 0.8), 55px 75px 0 5px rgba(255, 255, 255, 0.8), 65px 75px 0 5px rgba(255, 255, 255, 0.8);
+    }
+
+    .num-4:after {
+        box-shadow: 25px 15px 0 5px rgba(255, 255, 255, 0.8), 65px 15px 0 5px rgba(255, 255, 255, 0.8), 25px 25px 0 5px rgba(255, 255, 255, 0.8), 65px 25px 0 5px rgba(255, 255, 255, 0.8), 25px 35px 0 5px rgba(255, 255, 255, 0.8), 65px 35px 0 5px rgba(255, 255, 255, 0.8), 25px 45px 0 5px rgba(255, 255, 255, 0.8), 35px 45px 0 5px rgba(255, 255, 255, 0.8), 45px 45px 0 5px rgba(255, 255, 255, 0.8), 55px 45px 0 5px rgba(255, 255, 255, 0.8), 65px 45px 0 5px rgba(255, 255, 255, 0.8), 65px 55px 0 5px rgba(255, 255, 255, 0.8), 65px 65px 0 5px rgba(255, 255, 255, 0.8), 65px 75px 0 5px rgba(255, 255, 255, 0.8);
+    }
+
+    .num-5:after {
+        box-shadow: 25px 15px 0 5px rgba(255, 255, 255, 0.8), 35px 15px 0 5px rgba(255, 255, 255, 0.8), 45px 15px 0 5px rgba(255, 255, 255, 0.8), 55px 15px 0 5px rgba(255, 255, 255, 0.8), 65px 15px 0 5px rgba(255, 255, 255, 0.8), 25px 25px 0 5px rgba(255, 255, 255, 0.8), 25px 35px 0 5px rgba(255, 255, 255, 0.8), 25px 45px 0 5px rgba(255, 255, 255, 0.8), 35px 45px 0 5px rgba(255, 255, 255, 0.8), 45px 45px 0 5px rgba(255, 255, 255, 0.8), 55px 45px 0 5px rgba(255, 255, 255, 0.8), 65px 45px 0 5px rgba(255, 255, 255, 0.8), 65px 55px 0 5px rgba(255, 255, 255, 0.8), 65px 65px 0 5px rgba(255, 255, 255, 0.8), 25px 75px 0 5px rgba(255, 255, 255, 0.8), 35px 75px 0 5px rgba(255, 255, 255, 0.8), 45px 75px 0 5px rgba(255, 255, 255, 0.8), 55px 75px 0 5px rgba(255, 255, 255, 0.8), 65px 75px 0 5px rgba(255, 255, 255, 0.8);
+    }
+
+    .num-6:after {
+        box-shadow: 25px 15px 0 5px rgba(255, 255, 255, 0.8), 35px 15px 0 5px rgba(255, 255, 255, 0.8), 45px 15px 0 5px rgba(255, 255, 255, 0.8), 55px 15px 0 5px rgba(255, 255, 255, 0.8), 65px 15px 0 5px rgba(255, 255, 255, 0.8), 25px 25px 0 5px rgba(255, 255, 255, 0.8), 25px 35px 0 5px rgba(255, 255, 255, 0.8), 25px 45px 0 5px rgba(255, 255, 255, 0.8), 35px 45px 0 5px rgba(255, 255, 255, 0.8), 45px 45px 0 5px rgba(255, 255, 255, 0.8), 55px 45px 0 5px rgba(255, 255, 255, 0.8), 65px 45px 0 5px rgba(255, 255, 255, 0.8), 25px 55px 0 5px rgba(255, 255, 255, 0.8), 65px 55px 0 5px rgba(255, 255, 255, 0.8), 25px 65px 0 5px rgba(255, 255, 255, 0.8), 65px 65px 0 5px rgba(255, 255, 255, 0.8), 25px 75px 0 5px rgba(255, 255, 255, 0.8), 35px 75px 0 5px rgba(255, 255, 255, 0.8), 45px 75px 0 5px rgba(255, 255, 255, 0.8), 55px 75px 0 5px rgba(255, 255, 255, 0.8), 65px 75px 0 5px rgba(255, 255, 255, 0.8);
+    }
+
+    .num-7:after {
+        box-shadow: 25px 15px 0 5px rgba(255, 255, 255, 0.8), 35px 15px 0 5px rgba(255, 255, 255, 0.8), 45px 15px 0 5px rgba(255, 255, 255, 0.8), 55px 15px 0 5px rgba(255, 255, 255, 0.8), 65px 15px 0 5px rgba(255, 255, 255, 0.8), 65px 25px 0 5px rgba(255, 255, 255, 0.8), 65px 35px 0 5px rgba(255, 255, 255, 0.8), 65px 45px 0 5px rgba(255, 255, 255, 0.8), 65px 55px 0 5px rgba(255, 255, 255, 0.8), 65px 65px 0 5px rgba(255, 255, 255, 0.8), 65px 75px 0 5px rgba(255, 255, 255, 0.8);
+    }
+
+    .num-8:after {
+        box-shadow: 25px 15px 0 5px rgba(255, 255, 255, 0.8), 35px 15px 0 5px rgba(255, 255, 255, 0.8), 45px 15px 0 5px rgba(255, 255, 255, 0.8), 55px 15px 0 5px rgba(255, 255, 255, 0.8), 65px 15px 0 5px rgba(255, 255, 255, 0.8), 25px 25px 0 5px rgba(255, 255, 255, 0.8), 65px 25px 0 5px rgba(255, 255, 255, 0.8), 25px 35px 0 5px rgba(255, 255, 255, 0.8), 65px 35px 0 5px rgba(255, 255, 255, 0.8), 25px 45px 0 5px rgba(255, 255, 255, 0.8), 35px 45px 0 5px rgba(255, 255, 255, 0.8), 45px 45px 0 5px rgba(255, 255, 255, 0.8), 55px 45px 0 5px rgba(255, 255, 255, 0.8), 65px 45px 0 5px rgba(255, 255, 255, 0.8), 25px 55px 0 5px rgba(255, 255, 255, 0.8), 65px 55px 0 5px rgba(255, 255, 255, 0.8), 25px 65px 0 5px rgba(255, 255, 255, 0.8), 65px 65px 0 5px rgba(255, 255, 255, 0.8), 25px 75px 0 5px rgba(255, 255, 255, 0.8), 35px 75px 0 5px rgba(255, 255, 255, 0.8), 45px 75px 0 5px rgba(255, 255, 255, 0.8), 55px 75px 0 5px rgba(255, 255, 255, 0.8), 65px 75px 0 5px rgba(255, 255, 255, 0.8);
+    }
+    #download {
+      display: block;
+      position: fixed;
+      z-index: 999999999999999999;
+      top: 20px;
+      right: 20px;
+      padding: 10px;
+      background: #12c2e9; /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      color: #fff;
+      text-shadow: 1px 1px 10px #000;
+      text-decoration: none;
+      border-radius: 10px;
+      animation: downl .2s linear infinite;
+    }
+
+    @keyframes downl {
+      0% {
+        transform: translateX(-2px);
+      }
+      50% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-2px);
+      }
+    </style>
+</head>
+
+<body>
+    <a id="download" href="/static/htmlDemo/JQuery/demo17/demo17.zip" download="骰子日历.zip">点击下载</a>
+    <div class="stage">
+        <!-- month -->
+        <div class="group g1">
+            <div class="dice d1">
+                <div class="face num-0"></div>
+                <div class="face num-1"></div>
+                <div class="face num-2"></div>
+                <div class="face num-4"></div>
+                <div class="face num-6"></div>
+                <div class="face num-8"></div>
+            </div>
+            <div class="dice d2">
+                <div class="face num-0"></div>
+                <div class="face num-1"></div>
+                <div class="face num-2"></div>
+                <div class="face num-3"></div>
+                <div class="face num-5"></div>
+                <div class="face num-7"></div>
+            </div>
+        </div>
+        <!-- date -->
+        <div class="group g2">
+            <div class="dice d3">
+                <div class="face num-0"></div>
+                <div class="face num-1"></div>
+                <div class="face num-2"></div>
+                <div class="face num-4"></div>
+                <div class="face num-6"></div>
+                <div class="face num-8"></div>
+            </div>
+            <div class="dice d4">
+                <div class="face num-0"></div>
+                <div class="face num-1"></div>
+                <div class="face num-2"></div>
+                <div class="face num-3"></div>
+                <div class="face num-5"></div>
+                <div class="face num-7"></div>
+            </div>
+        </div>
+        <time></time>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+var g1 = document.querySelector('.g1');
+var g2 = document.querySelector('.g2');
+var d1 = document.querySelector('.d1');
+var d2 = document.querySelector('.d2');
+var d3 = document.querySelector('.d3');
+var d4 = document.querySelector('.d4');
+var time = document.querySelector('time');
+
+var rotation = [
+    { x: 0, y: 0 }, // 0
+    { x: 0, y: 270 }, // 1
+    { x: 0, y: 180 }, // 2    
+    { x: 0, y: 90 }, // 3        
+    { x: 0, y: 90 }, // 4
+    { x: 270, y: 0 }, // 5
+    { x: 90, y: 0 }, // 6        
+    { x: 90, y: 0 }, // 7    
+    { x: 270, y: 0 }, // 8   
+    {
+        x: 90,
+        y: 180 // 9   
+    }
+];
+
+
+var count = 0;
+
+setInterval(function() {
+    //  current date + increment
+    var now = new Date();
+    now.setDate(now.getDate() + count);
+    var month = now.getMonth() + 1;
+    var date = now.getDate();
+
+    var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    time.textContent = now.toLocaleDateString('en', options);
+
+    count++;
+
+
+    //  face values
+    var n1 = month < 10 ? 0 : (month - month % 10) / 10;
+    var n2 = month < 10 ? month : month % 10;
+    var n3 = date < 10 ? 0 : (date - date % 10) / 10;
+    var n4 = date < 10 ? date : date % 10;
+
+    //  console.log(n1, n2, n3, n4)    
+
+    //  flip dice 
+    var flip1 = n2 % 2 === 0 || n2 === 9 || n1 === 3;
+    var flip2 = n4 % 2 === 0 || n4 === 9 || n3 === 3;
+
+
+    //  rotation 
+    var r1 = void 0,
+        r2 = void 0,
+        r3 = void 0,
+        r4 = void 0;
+
+    if (flip1) {
+        g1.style.transform = 'rotateY(180deg) rotateX(-30deg)';
+        r1 = rotation[n2];
+        r2 = rotation[n1];
+    } else {
+        g1.style.transform = 'rotateX(30deg)';
+        r1 = rotation[n1];
+        r2 = rotation[n2];
+    }
+
+    if (flip2) {
+        g2.style.transform = 'rotateY(180deg) rotateX(-30deg)';
+        r3 = rotation[n4];
+        r4 = rotation[n3];
+    } else {
+        g2.style.transform = 'rotateX(30deg)';
+        r3 = rotation[n3];
+        r4 = rotation[n4];
+    }
+
+    d1.style.transform = 'rotateX(' + r1.x + 'deg) rotateY(' + r1.y + 'deg) rotateY(' + (flip1 ? -180 : 0) + 'deg)';
+    d2.style.transform = 'rotateX(' + r2.x + 'deg) rotateY(' + r2.y + 'deg) rotateY(' + (flip1 ? -180 : 0) + 'deg)';
+    d3.style.transform = 'rotateX(' + r3.x + 'deg) rotateY(' + r3.y + 'deg) rotateY(' + (flip2 ? -180 : 0) + 'deg)';
+    d4.style.transform = 'rotateX(' + r4.x + 'deg) rotateY(' + r4.y + 'deg) rotateY(' + (flip2 ? -180 : 0) + 'deg)';
+
+
+}, 2000);
+</script>

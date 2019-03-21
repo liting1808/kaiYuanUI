@@ -1,0 +1,269 @@
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+ol,
+td,
+input,
+form,
+select,
+option,
+fieldset,
+legend,
+textarea {
+  margin: 0;
+  padding: 0; }
+
+img {
+  border: 0;
+  display: block; }
+
+ul li {
+  list-style: none; }
+
+a:hover {
+  cursor: pointer; }
+
+a {
+  text-decoration: none;
+
+   }
+ body{
+    font-size: 100%;
+    height: 100%;
+    background-color: #030829;
+}
+li{
+    list-style: none;
+}
+
+// 头部部分
+header{
+    width: 100%;
+    .titleNav{
+        float: left;
+        display: inline-block;
+        li{
+            display: inline-block;
+            float: left;
+            a{
+                width: 120px;
+                display: inline-block;
+                height: 50px;
+                line-height:50px;
+                margin: 12px 0px;
+                box-sizing: border-box;
+                color: #ffffff;
+                font-size: 14px;
+                text-align: center;
+                border-radius: 5px;
+            }
+            a:hover{
+                box-shadow: -10px 0px 15px #034c6a inset, /*å·¦è¾¹é˜´å½±*/
+                0px -10px 15px #034c6a inset, /*ä¸Šè¾¹é˜´å½±*/
+                10px 0px 15px #034c6a inset, /*å³è¾¹é˜´å½±*/
+                0px 10px 15px #034c6a inset;
+                border-radius: 5px;
+                border-bottom: 4px solid #4b8df8;
+            }
+           
+        }
+    
+        li:nth-child(1){
+            a{
+                box-shadow: -10px 0px 15px #034c6a inset, /*å·¦è¾¹é˜´å½±*/
+                0px -10px 15px #034c6a inset, /*ä¸Šè¾¹é˜´å½±*/
+                10px 0px 15px #034c6a inset, /*å³è¾¹é˜´å½±*/
+                0px 10px 15px #034c6a inset;
+                border-bottom: 4px solid #4b8df8;
+            }
+        }
+       
+        
+    }
+    .BigTitle{
+        width:400px;
+        margin: 0 auto;
+        height: 75px;        
+        background: url(../img/logoBg.png) no-repeat center;
+        background-size: 100% 100%;
+        h3{
+            font-size:22px;
+            color: #ffffff;
+            text-align: center;
+            line-height: 75px;
+        }
+    }
+}
+
+//导航部分
+nav{
+    height: 150px;
+    width: 100%;
+    .nav1{
+        width: 33.3%;
+        float: left;
+        margin: 20px 0px;
+        .nav1Info{
+            margin:0px 25px;
+            overflow: hidden;
+            background-color: #034c6a;
+            font-size: 14px;
+            color: #ffffff;
+            border-radius: 5px;
+
+            li{
+                height: 110px;
+                line-height: 150px;
+                width: 50%;
+                float: left;
+                overflow: hidden;
+                a{
+                float: left;
+                display: inline-block;
+                width:20%;
+                height: 40px;
+                margin: 0px 16px;
+                transform: translateY(-50%);
+                position: relative;
+                top: 55px;
+                img{
+                    width: 100%;
+                }
+                }
+                .textInfo{
+                    transform: translateY(-50%);
+                    position: relative;
+                    top: 55px;                 
+                    text-align: center;
+                    h6{
+                        font-size: 14px;
+                        line-height:35px;
+                        text-align: center;
+                    }
+                    h1{
+                        line-height: 35px;
+                        font-size: 28px;
+                        text-align: center;
+                    }
+
+            }
+            }
+            
+          
+        }
+        .count{
+            .textInfo{
+                h1{
+                    color:#ffff43;
+                }
+            }
+        }
+        .order{
+            .textInfo{
+                h1{
+                    color:#25f3e6 !important;
+                }
+            }
+        }
+        .hostpital{
+            .textInfo{
+                h1{
+                    color:#ff4e4e !important;
+                }
+            }
+        }
+        
+    }
+
+}
+
+//图标部分
+section{
+    overflow: hidden;
+   .secbox{
+       float: left;
+       width: 25%;
+
+       .secInfo{
+           margin: 0px 10px;
+           
+           .tab{
+               margin-top: 30px;
+               height: auto;
+                width: 100%;
+                height: 280px;
+                box-shadow: -10px 0px 15px #034c6a inset, /*å·¦è¾¹é˜´å½±*/
+                0px -10px 15px #034c6a inset, /*ä¸Šè¾¹é˜´å½±*/
+                10px 0px 15px #034c6a inset, /*å³è¾¹é˜´å½±*/
+                0px 10px 15px #034c6a inset;
+                border-radius: 5px;
+                position: relative;
+                .tabTitle{
+                    margin: 0 auto;
+                    background-color: #034c6a;
+                    position: absolute;                   
+                    left: 50%;
+                    top:-22px;
+                    z-index: 100;
+                    white-space: nowrap;
+                    transform: translateX(-50%);
+                     text-align: center;
+                     font-size: 14px;
+                     padding: 10px 30px;
+                     display: inline-block;
+                     color:#ffffff;
+                     border-radius: 18px;
+                     img{
+                         width: 18px;
+                         height: 18px;
+                         display: inline-block;
+                         vertical-align: middle;
+                     }
+                }
+           }
+           .tabCenter{
+               height: 600px;
+           }
+       }
+       
+   }
+   .conter{
+       width: 50%;
+   }
+}
+  
+//表格部分的样式
+#CountTab{
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+}
+#CountTab2,#CountTab3,#CountTab4{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+#allmap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family:"微软雅黑"; 
+    margin: auto;
+
+  
+}
+.BMap_mask{
+    box-shadow: -10px 0px 15px #034c6a inset, /*å·¦è¾¹é˜´å½±*/
+                0px -10px 15px #034c6a inset, /*ä¸Šè¾¹é˜´å½±*/
+                10px 0px 15px #034c6a inset, /*å³è¾¹é˜´å½±*/
+                0px 10px 15px #034c6a inset;
+                border-radius: 5px;
+}

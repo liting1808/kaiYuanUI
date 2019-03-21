@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/public.css" />
+    <link rel="stylesheet" href="css/register.css" />
+</head>
+
+<body>
+    <div class="bg">
+        <div class="yuan yuan1"></div>
+        <div class="yuan yuan2"></div>
+        <div class="yuan3"></div>
+        <div class="yuan4"></div>
+    </div>
+    <div class="main">
+        <img src="images/index/zhuce.png" />
+        <h3>登录</h3>
+        <input type="text" name="username" placeholder="用户名" class="input" />
+        <input type="password" name="userpass" placeholder="密码" class="input" />
+        <input type="email" name="useremail" placeholder="邮箱" class="input" />
+        <input id='one' type='checkbox' checked />
+        <label for='one' id="checkbox">
+            <img src="images/index/fuxuan2.png" class="labelImg" />
+            <span>保存详情</span>
+        </label>
+        <input id='tow' type='checkbox' checked />
+        <label for='tow' id="checkbox1">
+            <img src="images/index/fuxuan2.png" class="labelImg" />
+            <span>每周发送一次<a href="javascript:;">时事通讯</a></span>
+        </label>
+
+        <button class="regbtn">注册</button>
+        <a href="login.html" class="aBtn">已经拥有账号?</a><a href="login.html" class="aBtn aBtn1">点击登录</a>
+    </div>
+</body>
+
+</html>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script>
+    $(() => {
+        checkbox();
+    })
+    // chekbox
+    let checkbox = () => {
+        $("#checkbox").click(() => {
+            if ($("#checkbox").children(".labelImg").attr("src") == "images/index/fuxuan2.png") {
+                $("#checkbox").children(".labelImg").attr("src", "images/index/fuxuan1.png");
+            } else {
+                $("#checkbox").children(".labelImg").attr("src", "images/index/fuxuan2.png");
+            }
+        });
+        $("#checkbox1").click(() => {
+            if ($("#checkbox1").children(".labelImg").attr("src") == "images/index/fuxuan2.png") {
+                $("#checkbox1").children(".labelImg").attr("src", "images/index/fuxuan1.png");
+            } else {
+                $("#checkbox1").children(".labelImg").attr("src", "images/index/fuxuan2.png");
+            }
+        });
+    }
+</script>

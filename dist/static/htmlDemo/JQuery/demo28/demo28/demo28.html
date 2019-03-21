@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>鼠标移动时画画</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+      <link rel="stylesheet" href="css/style.css">
+  <style type="text/css">
+    #download {
+      display: block;
+      position: fixed;
+      z-index: 999999999999999999;
+      top: 20px;
+      right: 20px;
+      padding: 10px;
+      background: #12c2e9; /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      color: #fff;
+      text-shadow: 1px 1px 10px #000;
+      text-decoration: none;
+      border-radius: 10px;
+      animation: downl .2s linear infinite;
+    }
+
+    @keyframes downl {
+      0% {
+        transform: translateX(-2px);
+      }
+      50% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-2px);
+      }
+  </style>
+
+</head>
+
+<body>
+  <a id="download" href="/static/htmlDemo/JQuery/demo28/demo28.zip" download="鼠标移动时画画.zip">点击下载</a>
+  <div class="frame perspective">
+  <div class="preserve-3d" id="avatar">
+    <div class="body">
+      <img src="img/body.png">
+      <!--         head  -->
+
+       <div class="head">
+        <div class="bun">
+          <img src="img/bun.png">
+        </div>
+        <div class="eyes">
+        <img src="img/eyes.png">
+        </div>
+        <img src="img/head.png">
+      </div>
+
+<!--         upper arm -->
+        <div class="upperarm">
+        <img src="img/upperarm.png">
+          <div class="forearm">
+          <img src="img/forearm.png">
+            <div class="hand">
+            <img src="img/hand.png">
+            <div class="brush">
+              <img src="img/brush.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div id="wrap">
+</div>
+<span class="sig">by angela he</span>
+<div class="block-mobile">
+  <h3>this doesn't work on mobile</h3>
+  <p>try using a computer!</p>
+</div>
+ <script src="http://www.jq22.com/jquery/jquery-3.3.1.js"></script>
+
+
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
